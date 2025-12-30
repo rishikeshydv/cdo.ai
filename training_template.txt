@@ -1,0 +1,17 @@
+what does one training executor look like?
+{
+  "step3_cdo_brief": {...},
+  "ui_intent": {...},
+  "selected_strategy_id": "strategy_2",
+  "bucket": "A | B | C",
+  "creative_license": "...",
+  "motion_policy": "...",
+  "executor_input": "...",
+  "executor_output_code": "...",
+  "rationale": "...",
+  "quality_flags": {
+    "discipline": true,
+    "hierarchy": true,
+    "obedience": true
+  }
+}

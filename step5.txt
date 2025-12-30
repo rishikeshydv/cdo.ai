@@ -1,0 +1,7 @@
+input:
+1.) UI intent from step 4
+2.) Full CDO brief
+3.) Selected strategy
+
+output:
+next.js

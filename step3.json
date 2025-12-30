@@ -1,0 +1,166 @@
+{
+  "schema_id": "",
+  "title": "CDO Strategy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "primary_intent",
+    "key_risks",
+    "strategic_principles",
+    "avoidances",
+    "strategies"
+  ],
+  "properties": {
+    "primary_intent": {
+      "type": "string",
+      "enum": [
+        "reduce_skepticism",
+        "drive_conversion",
+        "signal_legitimacy",
+        "accelerate_understanding",
+        "increase_confidence"
+      ]
+    },
+
+    "key_risks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "type": "string",
+        "enum": [
+          "low_trust",
+          "overpromising",
+          "cognitive_overload",
+          "unclear_value_prop",
+          "premature_cta",
+          "visual_noise"
+        ]
+      },
+      "uniqueItems": true
+    },
+
+    "strategic_principles": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "enum": [
+          "clarity_over_density",
+          "credibility_over_creativity",
+          "familiarity_over_novelty",
+          "confidence_before_action",
+          "progressive_disclosure"
+        ]
+      },
+      "uniqueItems": true
+    },
+
+    "avoidances": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "enum": [
+          "flashy_motion",
+          "marketing_fluff",
+          "visual_clutter",
+          "aggressive_ctas",
+          "unsubstantiated_claims"
+        ]
+      },
+      "uniqueItems": true
+    },
+
+    "strategies": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "strategy_id",
+          "name",
+          "intent",
+          "rationale",
+          "hero_focus",
+          "information_order",
+          "risk_controls"
+        ],
+        "properties": {
+          "strategy_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 40
+          },
+          "intent": {
+            "type": "string",
+            "enum": [
+              "trust_first",
+              "authority_first",
+              "product_first",
+              "conversion_first"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 40,
+            "maxLength": 300,
+            "description": "Plain-language executive justification (no UI details)."
+          },
+          "hero_focus": {
+            "type": "string",
+            "enum": [
+              "authority",
+              "value_prop",
+              "product_visual",
+              "social_proof"
+            ]
+          },
+          "information_order": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 8,
+            "items": {
+              "type": "string",
+              "enum": [
+                "headline",
+                "subheadline",
+                "security_compliance",
+                "customer_logos",
+                "product_demo",
+                "benefits",
+                "testimonials",
+                "primary_cta",
+                "faq",
+                "footer"
+              ]
+            }
+          },
+          "risk_controls": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 4,
+            "items": {
+              "type": "string",
+              "enum": [
+                "delay_cta",
+                "increase_proof_density",
+                "simplify_language",
+                "limit_choices",
+                "reinforce_authority"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

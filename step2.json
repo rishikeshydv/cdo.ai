@@ -1,0 +1,45 @@
+{
+  "product_type": [
+    "B2B SaaS",
+    "B2C SaaS",
+    "marketplace",
+    "internal_tool",
+    "content_site"
+  ],
+  "industry": [
+    "fintech",
+    "fintech_compliance",
+    "healthcare",
+    "devtools",
+    "ai_platform",
+    "ecommerce",
+    "education",
+    "marketing",
+    "hr_tech",
+    "other"
+  ],
+  "page_type": [
+    "landing",
+    "pricing",
+    "dashboard",
+    "onboarding",
+    "auth",
+    "settings"
+  ],
+  "primary_user": [
+    "founder",
+    "developer",
+    "compliance_officer",
+    "operations_manager",
+    "marketer",
+    "end_customer",
+    "admin"
+  ],
+  "user_context": [
+    "first_time_visitor",
+    "evaluating",
+    "returning_user",
+    "power_user"
+  ],
+  "trust_sensitivity": ["low", "medium", "high"]
+}

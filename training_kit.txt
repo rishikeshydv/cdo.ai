@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KitDistillationExample",
+  "type": "object",
+  "required": [
+    "id",
+    "mode",
+    "source_kit",
+    "control_header",
+    "ui_intent",
+    "distillation_task",
+    "executor_output"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+
+    "mode": {
+      "type": "string",
+      "enum": ["kit_distillation"]
+    },
+
+    "source_kit": {
+      "type": "string",
+      "enum": ["aceternity_ui", "magic_ui", "tailwind_ui", "custom"]
+    },
+
+    "control_header": {
+      "type": "object",
+      "required": ["creative_license", "motion_policy"],
+      "properties": {
+        "creative_license": {
+          "type": "string",
+          "enum": ["restricted", "expressive"]
+        },
+        "motion_policy": {
+          "type": "string",
+          "enum": ["subtle", "expressive"]
+        }
+      }
+    },
+
+    "ui_intent": {
+      "type": "object",
+      "required": ["primary_focus", "content_density"],
+      "properties": {
+        "primary_focus": { "type": "string" },
+        "content_density": {
+          "type": "string",
+          "enum": ["low", "medium"]
+        }
+      }
+    },
+
+    "distillation_task": {
+      "type": "object",
+      "required": [
+        "description",
+        "constraints",
+        "forbidden_patterns"
+      ],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Describe the visual/interaction effect to recreate"
+        },
+        "constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "forbidden_patterns": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "executor_output": {
+      "type": "object",
+      "required": ["framework", "language", "code"],
+      "properties": {
+        "framework": {
+          "type": "string",
+          "enum": ["nextjs_app_router"]
+        },
+        "language": {
+          "type": "string",
+          "enum": ["tsx"]
+        },
+        "code": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

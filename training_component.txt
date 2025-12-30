@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ComponentMechanicsExample",
+  "type": "object",
+  "required": [
+    "id",
+    "mode",
+    "component_type",
+    "constraints",
+    "executor_output"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+
+    "mode": {
+      "type": "string",
+      "enum": ["component_mechanics"]
+    },
+
+    "component_type": {
+      "type": "string",
+      "enum": [
+        "button",
+        "input",
+        "select",
+        "modal",
+        "dropdown",
+        "table",
+        "pagination",
+        "form_section"
+      ]
+    },
+
+    "constraints": {
+      "type": "object",
+      "required": ["accessibility", "styling"],
+      "properties": {
+        "accessibility": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "styling": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "executor_output": {
+      "type": "object",
+      "required": ["framework", "language", "code"],
+      "properties": {
+        "framework": {
+          "type": "string",
+          "enum": ["nextjs_app_router"]
+        },
+        "language": {
+          "type": "string",
+          "enum": ["tsx"]
+        },
+        "code": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
