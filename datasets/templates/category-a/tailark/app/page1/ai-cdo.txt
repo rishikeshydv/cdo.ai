@@ -1,0 +1,91 @@
+<ROLE=EXECUTOR>/n/n
+<BUCKET=B>/n/n
+<UI_INTENT>/n
+{
+  "strategy_id": "product_first_clarity",
+  "primary_focus": "product_clarity",
+  "cta_policy": {
+    "timing": "immediate",
+    "intensity": "medium"
+  },
+  "proof_policy": "medium",
+  "content_density": "medium",
+  "motion_policy": "subtle",
+  "creative_license": "restricted",
+  "language_style": "clear",
+  "interaction_restraint": "moderate"
+}/n/n
+<CDO_BRIEF>/n
+{
+  "primary_intent": "demonstrate_product_value_before_validation",
+  "key_risks": [
+    "feature_confusion",
+    "unclear_value_proposition",
+    "overwhelming_first_time_users"
+  ],
+  "strategic_principles": [
+    "show_the_product_early",
+    "clarity_before_proof",
+    "progressive_validation"
+  ],
+  "avoidances": [
+    "abstract_marketing_claims",
+    "feature_bloat",
+    "delaying_product_visibility"
+  ],
+  "strategies": [
+    {
+      "strategy_id": "product_first_clarity",
+      "intent": "make_value_obvious_then_reinforce_with_proof",
+      "hero_focus": "product_value_prop_plus_visual",
+      "information_order": [
+        "hero",
+        "product_demo_visual",
+        "features",
+        "integrations",
+        "content",
+        "testimonials",
+        "stats",
+        "pricing",
+        "faqs",
+        "cta",
+        "footer"
+      ],
+      "risk_controls": [
+        "surface_core_product_capability_immediately",
+        "use_concrete_examples_over_slogans",
+        "place_proof_after_understanding_is_established",
+        "keep_pricing_simple_and_scannable"
+      ]
+    }
+  ]
+}
+/n/n
+<SELECTED_STRATEGY>/n
+{
+  "strategy_id": "product_first_clarity",
+  "intent": "make_value_obvious_then_reinforce_with_proof",
+  "hero_focus": "product_value_prop_plus_visual",
+  "information_order": [
+    "hero",
+    "product_demo_visual",
+    "features",
+    "integrations",
+    "content",
+    "testimonials",
+    "stats",
+    "pricing",
+    "faqs",
+    "cta",
+    "footer"
+  ],
+  "risk_controls": [
+    "surface_core_product_capability_immediately",
+    "use_concrete_examples_over_slogans",
+    "place_proof_after_understanding_is_established",
+    "keep_pricing_simple_and_scannable"
+  ]
+}/n/n
+<TASK>/n
+Create a product-focused landing page for a modern software tool. The page should immediately show the product through a demo or visual, clearly explain key features and integrations, provide supporting content, validate claims with testimonials and usage statistics, present pricing, answer common questions, and include a clear call-to-action.
+/n/n

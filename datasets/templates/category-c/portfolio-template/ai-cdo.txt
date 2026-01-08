@@ -1,0 +1,133 @@
+<ROLE=EXECUTOR>
+
+<BUCKET=C>
+
+<UI_INTENT>
+{
+  "strategy_id": "personality_plus_work_showcase",
+  "primary_focus": "brand_expression",
+  "cta_policy": {
+    "timing": "delayed",
+    "intensity": "soft"
+  },
+  "proof_policy": "qualitative",
+  "content_density": "medium",
+  "motion_policy": "expressive",
+  "creative_license": "expressive",
+  "language_style": "confident",
+  "interaction_restraint": "moderate"
+}
+
+<CDO_BRIEF>
+{
+  "primary_intent": "establish_personal_brand_and_showcase_work_then_invite_contact",
+  "key_risks": [
+    "appearing_generic",
+    "work_not_visible_early",
+    "tone_overpowers_clarity",
+    "contact_friction"
+  ],
+  "strategic_principles": [
+    "identity_is_the_hook",
+    "work_is_the_proof",
+    "keep_navigation_light_and_scroll_led",
+    "invite_contact_without_pressure"
+  ],
+  "avoidances": [
+    "corporate_saas_tone",
+    "aggressive_sales_ctas",
+    "dense_text_blocks_without_breaks",
+    "minimalist_blankness_without_personality"
+  ],
+  "strategies": [
+    {
+      "strategy_id": "personality_plus_work_showcase",
+      "intent": "hook_with_voice_then_validate_with_projects",
+      "hero_focus": "identity_statement_plus_roles",
+      "information_order": [
+        "availability_badge",
+        "hero_identity_statement",
+        "role_stack",
+        "showcase_gallery",
+        "projects_grid",
+        "personal_manifesto_or_voice_block",
+        "experience_history",
+        "contact_invite",
+        "social_links_footer"
+      ],
+      "risk_controls": [
+        "keep_copy_scannable",
+        "ensure_projects_have_clear_ctas",
+        "use_motion_as_storytelling_not_noise",
+        "make_contact_one_step"
+      ]
+    },
+    {
+      "strategy_id": "work_first_minimal_friction",
+      "intent": "lead_with_portfolio_then_add_context",
+      "hero_focus": "projects_immediately_visible",
+      "information_order": [
+        "availability_badge",
+        "hero",
+        "projects_grid",
+        "selected_case_studies",
+        "services_or_capabilities",
+        "experience_history",
+        "contact_cta",
+        "footer"
+      ],
+      "risk_controls": [
+        "reduce_intro_copy",
+        "keep_case_studies_short",
+        "contact_cta_after_proof"
+      ]
+    },
+    {
+      "strategy_id": "credibility_timeline_then_work",
+      "intent": "use_experience_as_trust_anchor",
+      "hero_focus": "roles_and_credibility",
+      "information_order": [
+        "availability_badge",
+        "hero_identity_statement",
+        "role_stack",
+        "experience_history",
+        "projects_grid",
+        "testimonials_or_quotes_optional",
+        "contact_invite",
+        "footer"
+      ],
+      "risk_controls": [
+        "avoid_overclaiming",
+        "keep_experience_entries_consistent",
+        "ensure_work_still_appears_above_fold"
+      ]
+    }
+  ]
+}
+
+<SELECTED_STRATEGY>
+{
+  "strategy_id": "personality_plus_work_showcase",
+  "intent": "hook_with_voice_then_validate_with_projects",
+  "hero_focus": "identity_statement_plus_roles",
+  "information_order": [
+    "availability_badge",
+    "hero_identity_statement",
+    "role_stack",
+    "showcase_gallery",
+    "projects_grid",
+    "personal_manifesto_or_voice_block",
+    "experience_history",
+    "contact_invite",
+    "social_links_footer"
+  ],
+  "risk_controls": [
+    "keep_copy_scannable",
+    "ensure_projects_have_clear_ctas",
+    "use_motion_as_storytelling_not_noise",
+    "make_contact_one_step"
+  ]
+}
+
+<TASK>
+Create a modern, expressive portfolio website for a designer/developer named “YCF”. It should include an availability status, a bold hero identity statement, a short list of roles (design engineer, product designer, UX designer, frontend engineer), a visual showcase gallery, a projects section with “view case” links, an experience history timeline, and a “Let’s work together” contact section with social links in the footer.

@@ -8,7 +8,7 @@ from transformers import AutoTokenizer
 
 DEFAULT_MODEL = "meta-llama/Meta-Llama-3.1-70B-Instruct"
 # Fallback HF token; will be overridden by HF_TOKEN env if set.
-DEFAULT_TOKEN = os.getenv("HF_TOKEN", "HF_TOKEN")
+DEFAULT_TOKEN = os.getenv("HF_TOKEN")
 
 
 def _parse_record(line: str):

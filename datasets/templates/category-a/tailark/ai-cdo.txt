@@ -1,0 +1,91 @@
+<ROLE=EXECUTOR>/n/n
+<BUCKET=A>/n/n
+<UI_INTENT>/n
+{
+  "strategy_id": "trust_first_authority",
+  "primary_focus": "authority",
+  "cta_policy": {
+    "timing": "delayed",
+    "intensity": "soft"
+  },
+  "proof_policy": "heavy",
+  "content_density": "medium",
+  "motion_policy": "none",
+  "creative_license": "none",
+  "language_style": "precise",
+  "interaction_restraint": "strict"
+}
+/n/n
+<CDO_BRIEF>/n
+{
+  "primary_intent": "increase_confidence_before_requesting_action",
+  "key_risks": [
+    "low_initial_trust",
+    "skepticism_toward_claims",
+    "premature_conversion_pressure"
+  ],
+  "strategic_principles": [
+    "proof_before_persuasion",
+    "authority_over_creativity",
+    "confidence_before_action"
+  ],
+  "avoidances": [
+    "early_hard_ctas",
+    "marketing_hype_language",
+    "unverified_claims"
+  ],
+  "strategies": [
+    {
+      "strategy_id": "trust_first_authority",
+      "intent": "establish_legitimacy_before_conversion",
+      "hero_focus": "authority_and_risk_reduction",
+      "information_order": [
+        "hero",
+        "logo_cloud",
+        "stats",
+        "testimonials",
+        "features",
+        "content",
+        "integrations",
+        "pricing",
+        "faqs",
+        "cta",
+        "footer"
+      ],
+      "risk_controls": [
+        "lead_with_third_party_validation",
+        "quantify_credibility_early",
+        "delay_primary_cta_until_after_proof",
+        "use_measured_and_specific_language"
+      ]
+    }
+  ]
+}/n/n
+<SELECTED_STRATEGY>/n
+{
+  "strategy_id": "trust_first_authority",
+  "intent": "establish_legitimacy_before_conversion",
+  "hero_focus": "authority_and_risk_reduction",
+  "information_order": [
+    "hero",
+    "logo_cloud",
+    "stats",
+    "testimonials",
+    "features",
+    "content",
+    "integrations",
+    "pricing",
+    "faqs",
+    "cta",
+    "footer"
+  ],
+  "risk_controls": [
+    "lead_with_third_party_validation",
+    "quantify_credibility_early",
+    "delay_primary_cta_until_after_proof",
+    "use_measured_and_specific_language"
+  ]
+}/n/n
+<TASK>/n
+Create a trust-first landing page for a professional software product. The page should emphasize credibility and authority, highlight customer logos, usage statistics, and testimonials early, explain features and integrations clearly, present pricing transparently, answer common questions, and include a low-pressure call-to-action near the end.
+/n/n

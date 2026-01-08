@@ -1,0 +1,148 @@
+<ROLE=EXECUTOR>\n\n
+<BUCKET=B>\n\n
+<UI_INTENT>\n
+{
+  "strategy_id": "conversion_with_proof",
+  "primary_focus": "conversion",
+  "cta_policy": {
+    "timing": "immediate",
+    "intensity": "medium"
+  },
+  "proof_policy": "heavy",
+  "content_density": "high",
+  "motion_policy": "subtle",
+  "creative_license": "restricted",
+  "language_style": "precise",
+  "interaction_restraint": "moderate"
+}\n\n
+<CDO_BRIEF>\n
+{
+  "primary_intent": "drive_trial_or_template_adoption_with_strong_product_team_credibility",
+  "key_risks": [
+    "low_trust",
+    "cta_competition",
+    "feature_overload",
+    "pricing_friction"
+  ],
+  "strategic_principles": [
+    "clarity_before_cleverness",
+    "proof_near_decision_points",
+    "product_story_supported_by_interfaces",
+    "keep_motion_supportive_not_distracting"
+  ],
+  "avoidances": [
+    "vague_claims",
+    "excessive_motion",
+    "too_many_primary_ctas",
+    "burying_pricing"
+  ],
+  "strategies": [
+    {
+      "strategy_id": "conversion_with_proof",
+      "intent": "convert_visitors_to_trial_or_template_get",
+      "hero_focus": "clear_value_prop_plus_primary_cta",
+      "information_order": [
+        "top_nav",
+        "headline",
+        "subheadline",
+        "primary_cta",
+        "builder_credit",
+        "hero_visual",
+        "workflow_features",
+        "customer_logos",
+        "product_sections_with_visuals",
+        "testimonials_carousel",
+        "pricing",
+        "faq",
+        "final_cta",
+        "footer"
+      ],
+      "risk_controls": [
+        "keep_cta_copy_non_pushy",
+        "anchor_claims_with_proof",
+        "limit_motion_to_microinteractions",
+        "use_scannable_sections"
+      ]
+    },
+    {
+      "strategy_id": "product_clarity_first",
+      "intent": "reduce_uncertainty_before_asking_for_action",
+      "hero_focus": "what_it_is_who_its_for",
+      "information_order": [
+        "top_nav",
+        "headline",
+        "subheadline",
+        "hero_visual",
+        "workflow_features",
+        "product_sections_with_visuals",
+        "customer_logos",
+        "testimonials",
+        "pricing",
+        "primary_cta",
+        "faq",
+        "footer"
+      ],
+      "risk_controls": [
+        "avoid_cta_overuse",
+        "show_interfaces_before_pricing",
+        "keep_copy_concrete",
+        "ensure_section_order_supports_comprehension"
+      ]
+    },
+    {
+      "strategy_id": "pricing_led_transparency",
+      "intent": "win_by_clear_plans_and_upfront_value",
+      "hero_focus": "simple_promise_plus_plan_anchor",
+      "information_order": [
+        "top_nav",
+        "headline",
+        "subheadline",
+        "customer_logos",
+        "pricing",
+        "plan_benefits",
+        "features",
+        "testimonials",
+        "faq",
+        "final_cta",
+        "footer"
+      ],
+      "risk_controls": [
+        "keep_plans_simple",
+        "avoid_surprise_constraints",
+        "reinforce_value_per_tier",
+        "place_proof_near_pricing"
+      ]
+    }
+  ]
+}\n\n
+<SELECTED_STRATEGY>\n
+{
+  "strategy_id": "conversion_with_proof",
+  "intent": "convert_visitors_to_trial_or_template_get",
+  "hero_focus": "clear_value_prop_plus_primary_cta",
+  "information_order": [
+    "top_nav",
+    "headline",
+    "subheadline",
+    "primary_cta",
+    "builder_credit",
+    "hero_visual",
+    "workflow_features",
+    "customer_logos",
+    "product_sections_with_visuals",
+    "testimonials_carousel",
+    "pricing",
+    "faq",
+    "final_cta",
+    "footer"
+  ],
+  "risk_controls": [
+    "keep_cta_copy_non_pushy",
+    "anchor_claims_with_proof",
+    "limit_motion_to_microinteractions",
+    "use_scannable_sections"
+  ]
+}\n\n
+<TASK>\n
+Create a multi-page marketing website for a new project planning tool called “Mainline”. The site should include a home/landing page with a clear hero and product screenshots, a trusted-by logo section, feature sections, testimonials, pricing plans, an FAQ section, and a final CTA. Also include separate About, Pricing, FAQ, Contact, and Login pages accessible from the top navigation.
+\n\n

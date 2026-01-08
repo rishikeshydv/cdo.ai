@@ -1,0 +1,123 @@
+<ROLE=EXECUTOR>\n\n
+<BUCKET=C>\n\n
+<UI_INTENT>\n
+{
+  "strategy_id": "brand_authority_through_work",
+  "primary_focus": "brand_expression",
+  "cta_policy": {
+    "timing": "delayed",
+    "intensity": "soft"
+  },
+  "proof_policy": "qualitative",
+  "content_density": "medium",
+  "motion_policy": "expressive",
+  "creative_license": "expressive",
+  "language_style": "confident",
+  "interaction_restraint": "moderate"
+}\n\n
+<CDO_BRIEF>\n
+{
+  "primary_intent": "establish_creative_legitimacy",
+  "key_risks": ["appearing_generic", "over_explaining_value", "weak_brand_signal"],
+  "strategic_principles": [
+    "taste_is_the_signal",
+    "work_over_words",
+    "confidence_without_pressure"
+  ],
+  "avoidances": [
+    "generic_agency_copy",
+    "early_hard_ctas",
+    "template_like_layouts"
+  ],
+  "strategies": [
+  {
+    "strategy_id": "brand_authority_through_work",
+    "intent": "establish_creative_legitimacy",
+    "hero_focus": "taste_and_confidence",
+    "information_order": [
+      "headline",
+      "subheadline",
+      "visual_identity_statement",
+      "selected_work",
+      "services",
+      "process_overview",
+      "testimonials",
+      "primary_cta",
+      "footer"
+    ],
+    "risk_controls": [
+      "avoid_over_explaining",
+      "let_work_speak",
+      "limit_cta_frequency"
+    ]
+  },
+  {
+    "strategy_id": "portfolio_led_conversion",
+    "intent": "attract_high_intent_clients",
+    "hero_focus": "capability_plus_examples",
+    "information_order": [
+      "headline",
+      "subheadline",
+      "selected_work",
+      "case_studies",
+      "services",
+      "client_logos",
+      "testimonials",
+      "primary_cta",
+      "footer"
+    ],
+    "risk_controls": [
+      "show_depth_not_breadth",
+      "avoid_generic_service_copy",
+      "place_cta_after_proof"
+    ]
+  },
+  {
+    "strategy_id": "creative_signal_over_scale",
+    "intent": "filter_for_right_clients",
+    "hero_focus": "distinctive_point_of_view",
+    "information_order": [
+      "headline",
+      "subheadline",
+      "manifesto_or_philosophy",
+      "selected_work",
+      "services",
+      "testimonials",
+      "contact_cta",
+      "footer"
+    ],
+    "risk_controls": [
+      "avoid_mass_market_language",
+      "embrace_selectivity",
+      "keep_contact_cta_low_pressure"
+    ]
+  }
+]
+}\n\n
+<SELECTED_STRATEGY>\n
+{
+  "strategy_id": "brand_authority_through_work",
+  "intent": "establish_creative_legitimacy",
+  "hero_focus": "taste_and_confidence",
+  "information_order": [
+    "headline",
+    "subheadline",
+    "visual_identity_statement",
+    "selected_work",
+    "services",
+    "process_overview",
+    "testimonials",
+    "primary_cta",
+    "footer"
+  ],
+  "risk_controls": [
+    "avoid_over_explaining",
+    "let_work_speak",
+    "limit_cta_frequency"
+  ]
+}\n\n
+<TASK>\n
+Create a launch landing page for a creative digital agency called “Veo Studio”. The page should introduce the agency with a strong brand statement, showcase selected work/portfolio, describe services and process, include testimonials or client proof, and end with a low-pressure contact CTA for booking a call or starting a project.
+\n\n
+
+

@@ -1,0 +1,135 @@
+<ROLE=EXECUTOR>/n/n
+<BUCKET=A>/n/n
+<UI_INTENT>/n
+{
+  "strategy_id": "safety_trust_then_inquiry",
+  "primary_focus": "authority",
+  "cta_policy": {
+    "timing": "immediate",
+    "intensity": "soft"
+  },
+  "proof_policy": "heavy",
+  "content_density": "high",
+  "motion_policy": "none",
+  "creative_license": "none",
+  "language_style": "precise",
+  "interaction_restraint": "strict"
+}/n/n
+<CDO_BRIEF>/n
+{
+  "primary_intent": "signal_safety_legitimacy_and_enable_inquiry",
+  "key_risks": [
+    "low_trust",
+    "overpromising_safety",
+    "premature_cta",
+    "feature_confusion"
+  ],
+  "strategic_principles": [
+    "credibility_over_creativity",
+    "measured_claims_only",
+    "proof_near_decision_points",
+    "clarity_before_conversion"
+  ],
+  "avoidances": [
+    "aggressive_sales_language",
+    "absolute_security_claims",
+    "flashy_motion",
+    "brand_storytelling_fluff"
+  ],
+  "strategies": [
+    {
+      "strategy_id": "safety_trust_then_inquiry",
+      "intent": "convert_visitors_to_structured_inquiries",
+      "hero_focus": "safety_value_prop",
+      "information_order": [
+        "headline",
+        "subheadline",
+        "primary_cta",
+        "secondary_cta",
+        "why_choose_us_benefits",
+        "scale_proof",
+        "industries_served",
+        "feature_comparison",
+        "faq",
+        "testimonials",
+        "final_cta",
+        "footer"
+      ],
+      "risk_controls": [
+        "soften_cta_language",
+        "reinforce_trust_before_quote",
+        "use_specific_benefits_not_hype"
+      ]
+    },
+    {
+      "strategy_id": "proof_led_reassurance",
+      "intent": "reduce_anxiety_then_prompt_action",
+      "hero_focus": "reassurance_plus_social_proof",
+      "information_order": [
+        "headline",
+        "subheadline",
+        "scale_proof",
+        "why_choose_us_benefits",
+        "feature_comparison",
+        "faq_security",
+        "testimonials",
+        "primary_cta",
+        "footer"
+      ],
+      "risk_controls": [
+        "put_proof_above_features",
+        "answer_security_questions_early",
+        "avoid_multiple_primary_ctas"
+      ]
+    },
+    {
+      "strategy_id": "comparison_clarity_first",
+      "intent": "win_by_clear_differentiation",
+      "hero_focus": "simple_promise_plus_clarity",
+      "information_order": [
+        "headline",
+        "subheadline",
+        "why_choose_us_benefits",
+        "feature_comparison",
+        "industries_served",
+        "faq",
+        "testimonials",
+        "primary_cta",
+        "footer"
+      ],
+      "risk_controls": [
+        "keep_comparison_scannable",
+        "avoid_feature_bloat",
+        "use_consistent_terms"
+      ]
+    }
+  ]
+}/n/n
+<SELECTED_STRATEGY>/n
+{
+  "strategy_id": "safety_trust_then_inquiry",
+  "intent": "convert_visitors_to_structured_inquiries",
+  "hero_focus": "safety_value_prop",
+  "information_order": [
+    "headline",
+    "subheadline",
+    "primary_cta",
+    "secondary_cta",
+    "why_choose_us_benefits",
+    "scale_proof",
+    "industries_served",
+    "feature_comparison",
+    "faq",
+    "testimonials",
+    "final_cta",
+    "footer"
+  ],
+  "risk_controls": [
+    "soften_cta_language",
+    "reinforce_trust_before_quote",
+    "use_specific_benefits_not_hype"
+  ]
+}/n/n
+<TASK>/n
+Create a conservative, trust-first landing page for a home safety and security product called “HomeGuardian”. Include a clear hero with two CTAs (“Make a Request” and “Learn More”), a benefits section, a scale/proof statement, industries served, a feature comparison table, FAQs, testimonials, and a “Get a free quote” CTA later on the page.
+/n/n
