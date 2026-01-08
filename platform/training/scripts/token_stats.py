@@ -5,9 +5,13 @@ from pathlib import Path
 import os
 import numpy as np
 from transformers import AutoTokenizer
+from dotenv import load_dotenv
+
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+load_dotenv(ROOT_DIR / ".env.developement")
 
 DEFAULT_MODEL = "meta-llama/Meta-Llama-3.1-70B-Instruct"
-# Fallback HF token; will be overridden by HF_TOKEN env if set.
+# Token is read from HF_TOKEN env var (no hardcoded fallback).
 DEFAULT_TOKEN = os.getenv("HF_TOKEN")
 
 
@@ -28,7 +32,7 @@ def _normalize_text(val: str) -> str:
 
 
 def main():
-    default_in = Path(__file__).resolve().parent.parent / "data" / "sft_raw_jsonl"
+    default_in = Path(__file__).resolve().parent.parent / "data" / "sft_data.jsonl"
 
     ap = argparse.ArgumentParser()
     ap.add_argument(

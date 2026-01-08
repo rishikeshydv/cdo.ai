@@ -1,0 +1,131 @@
+strategy -> UI intent translation
+you feed 1 strategy at a time to get a json of UI intent
+
+"creative_license": ["none", "restricted", "expressive"]
+
+Controlled creative latitude improves perceived differentiation without harming trust when gated by strategic intent.
+
+UI Intent JSON:
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UI Intent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "strategy_id",
+    "primary_focus",
+    "cta_policy",
+    "proof_policy",
+    "content_density",
+    "motion_policy",
+    "creative_license",
+    "language_style",
+    "interaction_restraint"
+  ],
+  "properties": {
+    "strategy_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$",
+      "description": "ID of the selected strategy from the CDO Strategy IR."
+    },
+
+    "primary_focus": {
+      "type": "string",
+      "enum": [
+        "authority",
+        "value_prop",
+        "product_clarity",
+        "social_proof"
+      ],
+      "description": "What the UI should emphasize first and most strongly."
+    },
+
+    "cta_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["timing", "intensity"],
+      "properties": {
+        "timing": {
+          "type": "string",
+          "enum": [
+            "immediate",
+            "delayed",
+            "progressive"
+          ],
+          "description": "When the primary CTA should appear."
+        },
+        "intensity": {
+          "type": "string",
+          "enum": [
+            "soft",
+            "neutral",
+            "assertive"
+          ],
+          "description": "How visually and linguistically forceful the CTA should be."
+        }
+      }
+    },
+
+    "proof_policy": {
+      "type": "string",
+      "enum": [
+        "minimal",
+        "balanced",
+        "heavy"
+      ],
+      "description": "Amount of credibility and proof signals to surface."
+    },
+
+    "content_density": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "How much information is shown per viewport."
+    },
+
+    "motion_policy": {
+      "type": "string",
+      "enum": [
+        "none",
+        "subtle",
+        "expressive"
+      ],
+      "description": "Allowed level of animation and motion."
+    },
+
+    "creative_license": {
+      "type": "string",
+      "enum": [
+        "none",
+        "restricted",
+        "expressive"
+      ],
+      "description": "Executive permission for visual creativity and experimentation."
+    },
+
+    "language_style": {
+      "type": "string",
+      "enum": [
+        "precise",
+        "plain",
+        "confident",
+        "inspirational"
+      ],
+      "description": "Tone and sharpness of written UI copy."
+    },
+
+    "interaction_restraint": {
+      "type": "string",
+      "enum": [
+        "strict",
+        "moderate",
+        "loose"
+      ],
+      "description": "How conservative or playful interactions should feel."
+    }
+  }
+}
