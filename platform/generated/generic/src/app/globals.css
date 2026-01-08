@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #0b3d91;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-neutral-100 text-neutral-700 antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.container {
+  @apply max-w-4xl mx-auto px-6;
+}
+
+.header-compact {
+  @apply flex items-center justify-between py-6;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-sm p-6;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-brand text-white hover:bg-brand-light transition-colors;
+}
+
+.btn-outline {
+  @apply border border-neutral-200 text-neutral-700 bg-white hover:bg-neutral-100 transition-colors;
+}
+
+.small-proof {
+  @apply text-xs text-neutral-500;
+}

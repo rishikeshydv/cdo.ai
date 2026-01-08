@@ -1,0 +1,309 @@
+# 🟦 Bucket A — Disciplined Core
+
+`creative_license: none`
+`motion_policy: none | subtle`
+
+> **Goal:** Maximum trust, predictability, and shippability
+> **Mental model:** “If this broke, people would panic.”
+
+---
+
+## 1. SaaS Application Dashboards (Core Screens)
+
+**Concrete surfaces:**
+
+* Analytics overview dashboards
+* User management tables
+* Billing & subscription pages
+* Role / permissions management
+* Audit logs & activity feeds
+
+**Real-world equivalents (for intuition):**
+
+* Stripe Dashboard (Balances, Payments, Customers)
+* GitHub Repository Settings
+* AWS IAM / Billing Console
+* Linear project overview
+* Notion workspace settings
+
+**Why Bucket A:**
+Users expect **stability, not delight**. Any surprise is a bug.
+
+---
+
+## 2. Admin & Internal Tool Interfaces
+
+**Concrete surfaces:**
+
+* CRUD admin panels
+* Moderation queues
+* Content approval workflows
+* Back-office tools
+* Internal analytics tools
+
+**Real-world equivalents:**
+
+* Shopify Admin
+* Retool-generated tools
+* Supabase project dashboard
+* Sanity CMS admin
+* Zendesk admin settings
+
+**Why Bucket A:**
+These are *tools*, not experiences. Efficiency > expression.
+
+---
+
+## 3. Regulated / Trust-Heavy Landing Pages
+
+**Concrete surfaces:**
+
+* Bank onboarding pages
+* Compliance software landing pages
+* Healthcare portals
+* Insurance plan overview pages
+* Government / institutional product sites
+
+**Real-world equivalents:**
+
+* Plaid enterprise landing pages
+* Stripe compliance/security pages
+* Epic Systems patient portals
+* Government SaaS tools
+* Healthcare provider portals
+
+**Why Bucket A:**
+Trust is built through **familiarity and calm**.
+
+---
+
+## 4. Authentication & Security Flows
+
+**Concrete surfaces:**
+
+* Login / signup
+* Password reset
+* MFA setup
+* Device verification
+* Security alerts
+
+**Why Bucket A:**
+Users are already anxious. Visual novelty increases stress.
+
+---
+
+### 🚫 Explicitly excluded from Bucket A
+
+* Animated heroes
+* Narrative scroll
+* Brand-led storytelling
+* Visual experimentation
+
+---
+
+# 🟩 Bucket B — Restricted Creative
+
+`creative_license: restricted`
+`motion_policy: subtle`
+
+> **Goal:** Premium feel + differentiation without risk
+> **Mental model:** “This feels modern and well-crafted.”
+
+---
+
+## 1. SaaS Marketing Landing Pages
+
+**Concrete surfaces:**
+
+* Homepage hero + value proposition
+* Features overview
+* “How it works” pages
+* Use-case landing pages
+* Comparison pages
+
+**Real-world equivalents:**
+
+* Linear marketing site
+* Vercel product pages
+* Webflow homepage
+* Figma marketing pages
+* Framer homepage
+
+**Why Bucket B:**
+You can be expressive — but clarity still wins.
+
+---
+
+## 2. Product Introduction / Onboarding Pages
+
+**Concrete surfaces:**
+
+* First-time user welcome pages
+* Feature walkthroughs
+* Interactive product tours
+* Empty states with guidance
+
+**Real-world equivalents:**
+
+* Notion onboarding
+* Slack first-run experience
+* Figma empty states
+* Airtable setup flows
+
+**Why Bucket B:**
+These pages benefit from warmth and polish, but must remain clear.
+
+---
+
+## 3. Crypto & Web3 Dashboards (Most of Them)
+
+**Concrete surfaces:**
+
+* Portfolio overview pages
+* Token balance dashboards
+* Trading history pages
+* NFT gallery views
+
+**Real-world equivalents:**
+
+* Coinbase dashboard
+* Phantom wallet UI
+* Uniswap dashboard
+* Etherscan UI (modern versions)
+
+**Why Bucket B:**
+Crypto allows *some* expressiveness, but usability is still critical.
+
+---
+
+## 4. Pricing & Plan Selection Pages
+
+**Concrete surfaces:**
+
+* Tier comparison tables
+* Feature matrices
+* Upgrade prompts
+* Enterprise contact pages
+
+**Why Bucket B:**
+Visual polish helps conversion, but aggressive theatrics hurt trust.
+
+---
+
+### 🚫 Explicitly excluded from Bucket B
+
+* Scroll-driven storytelling
+* Continuous animation
+* Experimental navigation
+* Layouts that obscure information
+
+---
+
+# 🟥 Bucket C — Expressive Creative
+
+`creative_license: expressive`
+`motion_policy: expressive`
+
+> **Goal:** Emotional impact, identity, memorability
+> **Mental model:** “This is a moment, not a tool.”
+
+---
+
+## 1. Campaign & Launch Pages
+
+**Concrete surfaces:**
+
+* Product launch microsites
+* Feature announcement pages
+* Rebrand announcements
+* Event promotion pages
+
+**Real-world equivalents:**
+
+* Apple product launch pages
+* Startup rebrand microsites
+* Feature drop landing pages
+
+**Why Bucket C:**
+These are about **storytelling**, not efficiency.
+
+---
+
+## 2. Brand-Forward Homepages
+
+**Concrete surfaces:**
+
+* Agency homepages
+* Studio portfolios
+* Creative product brands
+* Founder-led brand sites
+
+**Real-world equivalents:**
+
+* Design agency sites
+* Creative studios
+* Personal brand sites
+* Portfolio sites
+
+**Why Bucket C:**
+Brand expression is the primary function.
+
+---
+
+## 3. Expressive Crypto / Web3 Experiences
+
+**Concrete surfaces:**
+
+* DeFi protocol homepages
+* NFT mint pages
+* DAO portals
+* Web3 campaign sites
+
+**Real-world equivalents:**
+
+* NFT project launches
+* DeFi protocol marketing pages
+
+**Why Bucket C:**
+Identity and belief > predictability.
+
+---
+
+## 4. Narrative / Story-Driven Pages
+
+**Concrete surfaces:**
+
+* Scroll-based storytelling
+* Long-form brand narratives
+* Interactive explainer pages
+
+**Why Bucket C:**
+These intentionally break conventions to guide emotion.
+
+---
+
+### ⚠️ Important constraint
+
+These **must never** appear without:
+
+```json
+"creative_license": "expressive"
+```
+
+They are *opt-in only*.
+
+---
+
+# ✅ Final Mental Map (Use This for Labeling)
+
+Ask **one question** when labeling:
+
+> “Is this UI primarily a **tool**, a **product**, or a **moment**?”
+
+| Answer  | Bucket              |
+| ------- | ------------------- |
+| Tool    | Disciplined Core    |
+| Product | Restricted Creative |
+| Moment  | Expressive Creative |
+
+That rule will not fail you.

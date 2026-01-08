@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: theme(colors.brand.DEFAULT);
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-slate-800 antialiased;
+}
+
+/* subtle focus for strict interaction restraint */
+:focus {
+  outline: 2px solid rgba(11,110,79,0.12);
+  outline-offset: 2px;
+}
+
+/* small utility used for constrained content */
+.container {
+  max-width: 56rem;
+}
