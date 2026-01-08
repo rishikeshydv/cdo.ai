@@ -10,3 +10,8 @@ platform/**/*.pyc
 .env*
 .venv
 __pycache__/
+.next/
+node_modules/
+platform/generated/**/.next/
+platform/generated/**/node_modules/
+*.DS_Store
