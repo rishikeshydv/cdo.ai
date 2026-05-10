@@ -1,0 +1,5 @@
+{
+  "base_model": "gpt-4.1-2025-04-14.ft-b85634969bae4d8b9b5eab22ad407389",
+  "dpo_model_id": "gpt-4.1-2025-04-14.ft-6357b2f5c6d54094ad51261db4db0a27",
+  "job_id": "ftjob-6357b2f5c6d54094ad51261db4db0a27"
+}

@@ -34,7 +34,6 @@ model = AutoModelForCausalLM.from_pretrained(
     trust_remote_code=True,
 )
 
-# Ensure a valid pad token for generation.
 model.generation_config.pad_token_id = tokenizer.eos_token_id
 
 messages = [

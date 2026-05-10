@@ -1,4 +1,6 @@
 datasets/
+demo/
+misc/
 
 platform/.venv/
 platform/**/.venv/

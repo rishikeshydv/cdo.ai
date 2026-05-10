@@ -6,9 +6,6 @@ from typing import Dict, Iterable, List, Optional
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# --------------------------------------------------------------------------- #
-# Setup
-# --------------------------------------------------------------------------- #
 
 # Find project root (current directory)
 BASE_DIR = Path(__file__).resolve().parent

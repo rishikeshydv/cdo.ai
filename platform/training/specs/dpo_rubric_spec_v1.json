@@ -1,0 +1,121 @@
+{
+  "rubric_version": "dpo_rubric_v1",
+  "description": "Strict DPO rubric for AI-CDO pair evaluation, aligned to H1-H5 and PQPT.",
+  "gates": {
+    "min_chosen_total": 0.70,
+    "min_margin": 0.10,
+    "max_chosen_critical_failures": 0,
+    "require_h4_context": true,
+    "require_issue_resolution_gain": true
+  },
+  "critical_checks": [
+    "json_valid",
+    "target_path_match",
+    "non_empty_content",
+    "syntax_balance"
+  ],
+  "pqpt": {
+    "dimensions": {
+      "strategic_coherence": {
+        "weight": 0.30,
+        "criteria": [
+          "strategy_keyword_alignment",
+          "policy_compliance",
+          "target_path_match"
+        ]
+      },
+      "premium_trust_calibration": {
+        "weight": 0.20,
+        "criteria": [
+          "cta_timing_compliance",
+          "motion_policy_compliance",
+          "creative_policy_compliance"
+        ]
+      },
+      "production_readiness": {
+        "weight": 0.35,
+        "criteria": [
+          "json_valid",
+          "target_path_match",
+          "non_empty_content",
+          "syntax_balance",
+          "class_attr_regression_absent",
+          "modularity_proxy"
+        ]
+      },
+      "usability_and_modularity": {
+        "weight": 0.15,
+        "criteria": [
+          "modularity_proxy",
+          "issue_resolution_rate"
+        ]
+      }
+    }
+  },
+  "hypothesis_mapping": {
+    "H1": {
+      "name": "Preference superiority",
+      "pair_signal": "h1_preference_strength",
+      "derived_from": [
+        "chosen_total",
+        "rejected_total",
+        "pair_margin"
+      ]
+    },
+    "H2": {
+      "name": "Business alignment improvement",
+      "pair_signal": "h2_business_alignment_delta",
+      "derived_from": [
+        "strategic_coherence_delta",
+        "policy_compliance_delta"
+      ]
+    },
+    "H3": {
+      "name": "Meaningful strategic distinctness",
+      "pair_signal": "h3_distinctness_signal",
+      "derived_from": [
+        "chosen_rejected_distance",
+        "strategy_context_present"
+      ]
+    },
+    "H4": {
+      "name": "Rationale and collaboration readiness",
+      "pair_signal": "h4_explainability_context",
+      "derived_from": [
+        "has_ui_intent",
+        "has_cdo_brief",
+        "has_selected_strategy",
+        "has_task"
+      ]
+    },
+    "H5": {
+      "name": "Faster time-to-acceptable proxy",
+      "pair_signal": "h5_time_to_acceptable_proxy",
+      "derived_from": [
+        "issue_resolution_delta",
+        "production_readiness_delta"
+      ]
+    }
+  },
+  "dpo_output_schema": {
+    "required_fields": [
+      "id",
+      "project",
+      "bucket",
+      "system",
+      "prompt",
+      "chosen",
+      "rejected",
+      "rubric"
+    ],
+    "rubric_fields": [
+      "rubric_version",
+      "chosen_total",
+      "rejected_total",
+      "pair_margin",
+      "pqpt",
+      "hypotheses",
+      "gate_pass"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+
+
+pip install --force-reinstall \
+  "numpy==1.26.4" "scipy==1.11.4" "pandas==2.1.4" "fsspec==2023.10.0" \
+  "pyyaml==6.0.1" "attrs==23.1.0" \
+  "datasets==2.15.0" "accelerate==0.32.1" \
+  "transformers==4.44.2" "huggingface-hub==0.25.2" "tokenizers==0.19.1" \
+  "pyarrow==14.0.2"
+
+pip install --no-deps "torch==2.2.2" "torchvision==0.17.2" "torchaudio==2.2.2"
+
+pip install "peft==0.11.1"
+
+pip install "huggingface-hub==0.25.2"
+
+make sure to use this new command for huggingface login
+huggingface-cli login   # or: python -m huggingface_hub login
+
+

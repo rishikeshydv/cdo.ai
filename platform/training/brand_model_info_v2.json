@@ -1,0 +1,9 @@
+{
+  "job_id": "ftjob-7a2c06d572c6403d95249fd4e7c04b33",
+  "base_model": "gpt-4.1-2025-04-14",
+  "train_file_id": "file-2d398524763b4fddb014f0ab430bba2a",
+  "val_file_id": "file-bf105b8101a84da3b71e05f1f26b1e4a",
+  "fine_tuned_model": "gpt-4.1-2025-04-14.ft-7a2c06d572c6403d95249fd4e7c04b33",
+  "deployment": "",
+  "status": "succeeded"
+}
