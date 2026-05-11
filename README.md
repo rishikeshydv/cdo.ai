@@ -1415,29 +1415,31 @@ modu
 <details>
 <summary><strong>v0.dev · Baseline</strong> — 1 step</summary>
 
-**Step 1 · Direct Generation** (17365 ms)
+**Step 1 · Direct Generation** (11214 ms)
 ```json
-import React from 'react';
+'use client';
+
+import { ArrowRight, BarChart3, Shield, Zap } from 'lucide-react';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       {/* Navbar */}
-      <nav className="border-b border-slate-800 bg-slate-950/95 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded bg-emerald-500"></div>
-              <span className="text-lg font-semibold">CashFlow</span>
+      <nav className="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded bg-emerald-500 flex items-center justify-center font-bold text-sm">
+              CF
             </div>
-            <div className="hidden md:flex gap-8">
-              <a href="#features" className="text-sm text-slate-300 hover:text-white transition">
-                Features
-              </a>
-              <a href="#security" className="text-sm text-slate-300 hover:text-white transition">
-                Security
-              </a>
-              <a href="#pricing" className="text-sm text-slate-300 hover:text-white trans
+            <span className="font-semibold text-lg">CashFlow</span>
+          </div>
+          <div className="flex items-center gap-8">
+            <a href="#features" className="text-slate-300 hover:text-white transition text-sm">
+              Features
+            </a>
+            <a href="#security" className="text-slate-300 hover:text-white transition text-sm">
+              Security
+            </a
 ```
 
 </details>
@@ -1445,7 +1447,7 @@ export default function Home() {
 <details>
 <summary><strong>SFT only</strong> — 2 steps</summary>
 
-**Step 2 · Classification** (4185 ms)
+**Step 2 · Classification** (1621 ms)
 ```json
 {
   "product_type": "B2B SaaS",
@@ -1457,18 +1459,13 @@ export default function Home() {
 }
 ```
 
-**Step 5 · Code Generation (no CDO strategy)** (108166 ms)
+**Step 5 · Code Generation (no CDO strategy)** (84537 ms)
 ```json
 {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "```json
-{
-  \"files\": [
-    {
-      \"path\": \"src/app/page.tsx\",
-      \"content\": \"export default function Home() {\n  return (\n    <div className=\\"min-h-screen bg-gray-950 text-gray-100\\">\n      {/* Sticky Nav */}\n      <nav className=\\"sticky top-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800\\">\n        <div className=\\"max-w-7xl mx-auto px-6 py-4 flex items-center justify-between\\">\n          <div className=\\"flex items-center gap-2\\">\n            <div className=\\"w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center\\">\n              <svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" fill=\\"none\\">\n                <path d
+      "content": "```json\n{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"export default function Home() {\\n  return (\\n    <div className=\\\"min-h-screen bg-gray-950 text-gray-100\\\">\\n\\n      {/* Sticky Nav */}\\n      <nav className=\\\"sticky top-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800\\\">\\n        <div className=\\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\\">\\n          <div className=\\\"flex items-center gap-2\\\">\\n            <div className=\\\"w-7 h-7 rounded-lg bg-indigo-500 flex items-center justify-center\\\">\\n              <span className=\\\"text-white text-xs font-bold\\\">Y</span>\\n            </div>\\n            <span clas
 ```
 
 </details>
@@ -1476,7 +1473,7 @@ export default function Home() {
 <details>
 <summary><strong>AI CDO · Best</strong> — 5 steps</summary>
 
-**Step 2 · Classification** (1164 ms)
+**Step 2 · Classification** (1517 ms)
 ```json
 {
   "product_type": "B2B SaaS",
@@ -1488,14 +1485,14 @@ export default function Home() {
 }
 ```
 
-**Step 3 · CDO Strategy** (5918 ms)
+**Step 3 · CDO Strategy** (6642 ms)
 ```json
 {
   "primary_intent": "signal_legitimacy",
   "key_risks": [
     "low_trust",
-    "unclear_value_prop",
-    "premature_cta"
+    "overpromising",
+    "unclear_value_prop"
   ],
   "strategic_principles": [
     "credibility_over_creativity",
@@ -1509,7 +1506,7 @@ export default function Home() {
   ],
   "strategies": [
     {
-      "name": "Authority-Led Credibility",
+      "name": "Authority-Led Legitimacy",
       "intent": "authority_first",
       "hero_focus": "authority",
       "information_order": [
@@ -1528,53 +1525,46 @@ export default function Home() {
         "increase_proof_density",
         "delay_cta"
       ],
-      "rationale": "Lead with regulatory legitimacy and institutional credibility to address the high trust sensitivity of CFOs evaluating where to place si
+      "rationale": "CFOs custodying significant capital prioritize institutional credibility above all. Leading with regulatory posture and proof reduces per
 ```
 
-**Step 3.5 · Brand Traits** (16142 ms)
+**Step 3.5 · Brand Traits** (17215 ms)
 ```json
 {
   "brand_personality": {
     "primary_traits": [
       "sophisticated",
       "precise",
-      "authoritative"
-    ],
-    "secondary_traits": [
-      "calm",
-      "institutional",
+      "authoritative",
       "data-driven"
     ],
-    "tone_of_voice": "confident-expert",
-    "formality_level": "formal",
-    "energy_level": "composed"
+    "tone": "confident-analytical",
+    "formality": "high",
+    "energy": "calm-deliberate"
   },
   "visual_identity": {
-    "design_archetype": "premium-financial",
-    "aesthetic_direction": "dark-mode-institutional",
-    "visual_complexity": "refined-detailed",
-    "mood": "serious-trustworthy",
-    "inspiration_references": [
-      "Ramp",
-      "Arc",
-      "Brex Premium",
-      "Bloomberg Terminal",
-      "Linear"
-    ]
-  },
-  "color_system": {
-    "palette_type": "dark-premium-monochrome-with-accent",
-    "primary_color": {
-      "hue": "deep-charcoal-near-black",
-      "usage": "primary background, dominant surface",
-      "hex_suggestion": "#0A0B0D"
+    "mode": "dark",
+    "aesthetic": "premium-financial-terminal",
+    "color_palette": {
+      "background": "#0A0B0D",
+      "surface": "#121418",
+      "surface_elevated": "#1A1D23",
+      "border": "#262A31",
+      "border_subtle": "#1F232A",
+      "text_primary": "#F5F7FA",
+      "text_secondary": "#A1A8B3",
+      "text_tertiary": "#6B7280",
+      "accent_primary": "#7FFFB0",
+      "accent_secondary": "#4ADE80",
+      "accent_muted": "#1F3A2A",
+      "data_positive": "#7FFFB0",
+      "data_negative": "#F87171",
+      "data_neutral": "#60A5FA"
     },
-    "secondary_color": {
-      "hue": "elevated-graphite",
-      "usage": "card surfaces, elevated panel
+    "color_strategy": "Near-black canvas with mint-green yield accents to evoke financial terminals and Bloomberg-style precision; green signals yield/growth without being flash
 ```
 
-**Step 4 · UI Intent** (2096 ms)
+**Step 4 · UI Intent** (2147 ms)
 ```json
 {
   "primary_focus": "value_prop",
@@ -1591,43 +1581,17 @@ export default function Home() {
 }
 ```
 
-**Step 5 · Code Generation** (99249 ms)
+**Step 5 · Code Generation** (95543 ms)
 ```json
 {
   "files": [
     {
       "path": "package.json",
-      "content": "{
-  \"name\": \"ledger-treasury\",
-  \"version\": \"0.1.0\",
-  \"private\": true,
-  \"scripts\": {
-    \"dev\": \"next dev\",
-    \"build\": \"next build\",
-    \"start\": \"next start\",
-    \"lint\": \"next lint\"
-  },
-  \"dependencies\": {
-    \"next\": \"14.2.5\",
-    \"react\": \"18.3.1\",
-    \"react-dom\": \"18.3.1\"
-  },
-  \"devDependencies\": {
-    \"@types/node\": \"20.12.7\",
-    \"@types/react\": \"18.3.3\",
-    \"@types/react-dom\": \"18.3.0\",
-    \"autoprefixer\": \"10.4.19\",
-    \"postcss\": \"8.4.38\",
-    \"tailwindcss\": \"3.4.6\",
-    \"typescript\": \"5.4.5\"
-  }
-}
-"
+      "content": "{\n  \"name\": \"clarified-value-prop\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.11.30\",\n    \"@types/react\": \"18.2.73\",\n    \"@types/react-dom\": \"18.2.22\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.4\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */
-const
+      "content": "/** @type {import('next').NextConfig} *
 ```
 
 </details>
