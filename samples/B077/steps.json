@@ -1,0 +1,79 @@
+{
+  "session_id": "2026-05-11T21-13-08",
+  "prompt": "Direct-to-consumer electric commuter bike brand for urban commuters 25\u201345 seeking a car replacement \u2014 bold, high-contrast, and performance-forward with range stats, commute cost savings calculator, and test ride finder. Positioned against entry-level e-bikes as more commuter-engineered",
+  "models": {
+    "v0": [
+      {
+        "step": 1,
+        "name": "Direct Generation",
+        "input": "Direct-to-consumer electric commuter bike brand for urban commuters 25\u201345 seeking a car replacement \u2014 bold, high-contrast, and performance-forward with range stats, commute cost savings calculator, and test ride finder. Positioned against entry-level e-bikes as more commuter-engineered",
+        "output": "import React from 'react';\n\nexport default function Home() {\n  const [commuteDays, setCommuteDays] = React.useState(20);\n  const [distancePerDay, setDistancePerDay] = React.useState(10);\n  \n  const monthlySavings = Math.round((commuteDays * distancePerDay * 0.15) / 100 * 1000);\n\n  return (\n    <div className=\"min-h-screen bg-white\">\n      {/* Navbar */}\n      <nav className=\"border-b border-gray-200\">\n        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between\">\n          <div className=\"flex items-center gap-2\">\n            <div className=\"w-8 h-8 bg-black rounded-full\"></div>\n            <span className=\"font-bold text-lg\">UrbanPulse</span>\n          </div>\n          <div className=\"flex items-center gap-8\">\n            <a href=\"#features\" className=\"text-sm text-gray-600 hover:text-black\">Features</a>\n            <a href=\"#savings\" className=\"text-sm text-gray-600 hover:text-black\">Savings</a>\n            <a href=\"#footer\" className=\"text-sm",
+        "elapsed_ms": 14134
+      }
+    ],
+    "sft": [
+      {
+        "step": 2,
+        "name": "Classification",
+        "input": "Direct-to-consumer electric commuter bike brand for urban commuters 25\u201345 seeking a car replacement \u2014 bold, high-contrast, and performance-forward with range stats, commute cost savings calculator, and test ride finder. Positioned against entry-level e-bikes as more commuter-engineered",
+        "output": "{\n  \"product_type\": \"B2C SaaS\",\n  \"industry\": \"ecommerce\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"evaluating\",\n  \"trust_sensitivity\": \"medium\"\n}",
+        "elapsed_ms": 1230
+      },
+      {
+        "step": 5,
+        "name": "Code Generation (no CDO strategy)",
+        "input": "classification \u2192 code",
+        "output": "{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"```json\\n{\\n  \\\"files\\\": [\\n    {\\n      \\\"path\\\": \\\"src/app/page.tsx\\\",\\n      \\\"content\\\": \\\"\\\\\\\"use client\\\\\\\";\\\\nimport { useState } from \\\\\\\"react\\\\\\\";\\\\nimport {\\\\n  Zap,\\\\n  MapPin,\\\\n  TrendingDown,\\\\n  Shield,\\\\n  Wind,\\\\n  Battery,\\\\n  ChevronRight,\\\\n  Star,\\\\n  ArrowRight,\\\\n  Check,\\\\n  Menu,\\\\n  X,\\\\n  Bike,\\\\n  DollarSign,\\\\n  Clock,\\\\n  Leaf,\\\\n} from \\\\\\\"lucide-react\\\\\\\";\\\\n\\\\nexport default function Home() {\\\\n  const [mobileOpen, setMobileOpen] = useState(false);\\\\n  const [miles, setMiles] = useState(10);\\\\n  const [daysPerWeek, setDaysPerWeek] = useState(5);\\\\n\\\\n  const gasCostPerMile = 0.18;\\\\n  const ebikeCostPerMile = 0.01;\\\\n  const weeklyGas = miles * 2 * daysPerWeek * gasCostPerMile;\\\\n  co",
+        "elapsed_ms": 102277
+      }
+    ],
+    "aicdo": [
+      {
+        "step": 2,
+        "name": "Classification",
+        "input": "Direct-to-consumer electric commuter bike brand for urban commuters 25\u201345 seeking a car replacement \u2014 bold, high-contrast, and performance-forward with range stats, commute cost savings calculator, and test ride finder. Positioned against entry-level e-bikes as more commuter-engineered",
+        "output": "{\n  \"product_type\": \"content_site\",\n  \"industry\": \"ecommerce\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"first_time_visitor\",\n  \"trust_sensitivity\": \"medium\"\n}",
+        "elapsed_ms": 2313
+      },
+      {
+        "step": 3,
+        "name": "CDO Strategy",
+        "input": "step2 \u2192 strategy",
+        "output": "{\n  \"primary_intent\": \"drive_conversion\",\n  \"key_risks\": [\n    \"unclear_value_prop\",\n    \"overpromising\",\n    \"premature_cta\"\n  ],\n  \"strategic_principles\": [\n    \"confidence_before_action\",\n    \"clarity_over_density\",\n    \"credibility_over_creativity\"\n  ],\n  \"avoidances\": [\n    \"marketing_fluff\",\n    \"unsubstantiated_claims\",\n    \"aggressive_ctas\"\n  ],\n  \"strategies\": [\n    {\n      \"name\": \"Performance Proof\",\n      \"intent\": \"product_first\",\n      \"hero_focus\": \"value_prop\",\n      \"information_order\": [\n        \"headline\",\n        \"subheadline\",\n        \"product_demo\",\n        \"benefits\",\n        \"testimonials\",\n        \"primary_cta\",\n        \"faq\",\n        \"footer\"\n      ],\n      \"risk_controls\": [\n        \"increase_proof_density\",\n        \"simplify_language\"\n      ],\n      \"rationale\": \"Lead with concrete commuter-engineered differentiation and quantified performance to establish category superiority before inviting action.\"\n    },\n    {\n      \"name\": \"Confidence Through Utility\",\n",
+        "elapsed_ms": 5928
+      },
+      {
+        "step": "3.5",
+        "name": "Brand Traits",
+        "input": "strategy \u2192 brand traits",
+        "output": "{\n  \"brand_personality\": {\n    \"primary_traits\": [\n      \"bold\",\n      \"performance-driven\",\n      \"engineered\",\n      \"confident\"\n    ],\n    \"tone\": \"assertive and technical with urban edge\",\n    \"voice_attributes\": [\n      \"direct\",\n      \"spec-forward\",\n      \"punchy\",\n      \"credible\"\n    ]\n  },\n  \"visual_identity\": {\n    \"aesthetic\": \"high-contrast performance tech\",\n    \"design_language\": \"industrial-modern with motorsport influence\",\n    \"visual_weight\": \"heavy\",\n    \"imagery_style\": \"cinematic urban commute photography with motion blur, dawn cityscapes, and detail shots of engineered components\"\n  },\n  \"color_direction\": {\n    \"palette_type\": \"high_contrast_mono_with_accent\",\n    \"primary_mood\": \"electric and decisive\",\n    \"background_treatment\": \"deep near-black with sharp white space breaks\",\n    \"suggested_palette\": {\n      \"base\": \"#0A0A0B\",\n      \"surface\": \"#15161A\",\n      \"text_primary\": \"#F5F5F2\",\n      \"text_secondary\": \"#9A9CA3\",\n      \"accent_primary\": \"#D7FF1E\",\n  ",
+        "elapsed_ms": 14195
+      },
+      {
+        "step": 4,
+        "name": "UI Intent",
+        "input": "strategy + brand \u2192 UI constraints",
+        "output": "{\n  \"primary_focus\": \"social_proof\",\n  \"cta_policy\": {\n    \"timing\": \"delayed\",\n    \"intensity\": \"assertive\"\n  },\n  \"proof_policy\": \"heavy\",\n  \"content_density\": \"medium\",\n  \"motion_policy\": \"subtle\",\n  \"creative_license\": \"restricted\",\n  \"language_style\": \"confident\",\n  \"interaction_restraint\": \"moderate\"\n}",
+        "elapsed_ms": 3394
+      },
+      {
+        "step": 5,
+        "name": "Code Generation",
+        "input": "UI intent + strategy \u2192 Next.js manifest",
+        "output": "{\n  \"files\": [\n    {\n      \"path\": \"package.json\",\n      \"content\": \"{\\n  \\\"name\\\": \\\"validated-conversion\\\",\\n  \\\"version\\\": \\\"0.1.0\\\",\\n  \\\"private\\\": true,\\n  \\\"scripts\\\": {\\n    \\\"dev\\\": \\\"next dev\\\",\\n    \\\"build\\\": \\\"next build\\\",\\n    \\\"start\\\": \\\"next start\\\",\\n    \\\"lint\\\": \\\"next lint\\\"\\n  },\\n  \\\"dependencies\\\": {\\n    \\\"next\\\": \\\"14.2.5\\\",\\n    \\\"react\\\": \\\"18.3.1\\\",\\n    \\\"react-dom\\\": \\\"18.3.1\\\"\\n  },\\n  \\\"devDependencies\\\": {\\n    \\\"@types/node\\\": \\\"20.11.0\\\",\\n    \\\"@types/react\\\": \\\"18.3.3\\\",\\n    \\\"@types/react-dom\\\": \\\"18.3.0\\\",\\n    \\\"autoprefixer\\\": \\\"10.4.19\\\",\\n    \\\"postcss\\\": \\\"8.4.39\\\",\\n    \\\"tailwindcss\\\": \\\"3.4.7\\\",\\n    \\\"typescript\\\": \\\"5.4.5\\\"\\n  }\\n}\\n\"\n    },\n    {\n      \"path\": \"next.config.js\",\n      \"content\": \"/** @type {import('next').NextConfig} */\\n",
+        "elapsed_ms": 58976
+      }
+    ]
+  },
+  "totals": {
+    "v0": {
+      "elapsed_sec": 28.04
+    },
+    "sft": {
+      "elapsed_sec": 136.87
+    },
+    "aicdo": {
+      "elapsed_sec": 118.9
+    }
+  }
+}

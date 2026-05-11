@@ -1,0 +1,79 @@
+{
+  "session_id": "2026-05-11T21-13-04",
+  "prompt": "Coding bootcamp for career changers entering software development \u2014 motivating, outcome-focused, and credible with strong job placement rates, average starting salary stats, and employer partner logos. Positioned against top bootcamps as more mentorship-intensive",
+  "models": {
+    "v0": [
+      {
+        "step": 1,
+        "name": "Direct Generation",
+        "input": "Coding bootcamp for career changers entering software development \u2014 motivating, outcome-focused, and credible with strong job placement rates, average starting salary stats, and employer partner logos. Positioned against top bootcamps as more mentorship-intensive",
+        "output": "'use client';\n\nimport React from 'react';\n\nexport default function Home() {\n  return (\n    <div className=\"min-h-screen bg-white\">\n      {/* Navbar */}\n      <nav className=\"border-b border-gray-200\">\n        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between\">\n          <div className=\"flex items-center space-x-2\">\n            <div className=\"w-8 h-8 bg-blue-600 rounded\"></div>\n            <span className=\"text-xl font-bold text-gray-900\">CodePath</span>\n          </div>\n          <div className=\"hidden md:flex space-x-8\">\n            <a href=\"#\" className=\"text-gray-700 hover:text-gray-900\">Program</a>\n            <a href=\"#\" className=\"text-gray-700 hover:text-gray-900\">Outcomes</a>\n            <a href=\"#\" className=\"text-gray-700 hover:text-gray-900\">About</a>\n            <a href=\"#\" className=\"text-gray-700 hover:text-gray-900\">Contact</a>\n          </div>\n          <button className=\"bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue",
+        "elapsed_ms": 15442
+      }
+    ],
+    "sft": [
+      {
+        "step": 2,
+        "name": "Classification",
+        "input": "Coding bootcamp for career changers entering software development \u2014 motivating, outcome-focused, and credible with strong job placement rates, average starting salary stats, and employer partner logos. Positioned against top bootcamps as more mentorship-intensive",
+        "output": "{\n  \"product_type\": \"B2C SaaS\",\n  \"industry\": \"education\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"evaluating\",\n  \"trust_sensitivity\": \"high\"\n}",
+        "elapsed_ms": 1145
+      },
+      {
+        "step": 5,
+        "name": "Code Generation (no CDO strategy)",
+        "input": "classification \u2192 code",
+        "output": "{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"{\\\"files\\\":[{\\\"path\\\":\\\"src/app/page.tsx\\\",\\\"content\\\":\\\"'use client';\\\\nimport { useState } from 'react';\\\\nimport {\\\\n  Code2,\\\\n  Users,\\\\n  Briefcase,\\\\n  TrendingUp,\\\\n  CheckCircle,\\\\n  Star,\\\\n  ArrowRight,\\\\n  Menu,\\\\n  X,\\\\n  BookOpen,\\\\n  MessageSquare,\\\\n  Award,\\\\n  Clock,\\\\n  ChevronRight,\\\\n  Zap,\\\\n  Globe,\\\\n  Shield,\\\\n} from 'lucide-react';\\\\n\\\\nexport default function Home() {\\\\n  const [menuOpen, setMenuOpen] = useState(false);\\\\n\\\\n  const features = [\\\\n    {\\\\n      icon: <Users className=\\\\\\\"w-6 h-6\\\\\\\" />,\\\\n      title: 'Dedicated 1-on-1 Mentorship',\\\\n      description:\\\\n        'Every student gets a senior engineer mentor with weekly live sessions, code reviews, and career coaching \\u2014 ",
+        "elapsed_ms": 100019
+      }
+    ],
+    "aicdo": [
+      {
+        "step": 2,
+        "name": "Classification",
+        "input": "Coding bootcamp for career changers entering software development \u2014 motivating, outcome-focused, and credible with strong job placement rates, average starting salary stats, and employer partner logos. Positioned against top bootcamps as more mentorship-intensive",
+        "output": "{\n  \"product_type\": \"content_site\",\n  \"industry\": \"education\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"first_time_visitor\",\n  \"trust_sensitivity\": \"high\"\n}",
+        "elapsed_ms": 4733
+      },
+      {
+        "step": 3,
+        "name": "CDO Strategy",
+        "input": "step2 \u2192 strategy",
+        "output": "{\n  \"primary_intent\": \"increase_confidence\",\n  \"key_risks\": [\n    \"overpromising\",\n    \"low_trust\",\n    \"unclear_value_prop\"\n  ],\n  \"strategic_principles\": [\n    \"credibility_over_creativity\",\n    \"confidence_before_action\",\n    \"clarity_over_density\"\n  ],\n  \"avoidances\": [\n    \"unsubstantiated_claims\",\n    \"marketing_fluff\",\n    \"aggressive_ctas\"\n  ],\n  \"strategies\": [\n    {\n      \"name\": \"Outcomes-Backed Credibility\",\n      \"intent\": \"trust_first\",\n      \"hero_focus\": \"value_prop\",\n      \"information_order\": [\n        \"headline\",\n        \"subheadline\",\n        \"customer_logos\",\n        \"benefits\",\n        \"testimonials\",\n        \"primary_cta\",\n        \"faq\",\n        \"footer\"\n      ],\n      \"risk_controls\": [\n        \"increase_proof_density\",\n        \"delay_cta\",\n        \"simplify_language\"\n      ],\n      \"rationale\": \"Lead with verifiable outcomes and employer validation to neutralize skepticism inherent to bootcamp claims, earning the right to ask for action only after proof is esta",
+        "elapsed_ms": 6975
+      },
+      {
+        "step": "3.5",
+        "name": "Brand Traits",
+        "input": "strategy \u2192 brand traits",
+        "output": "{\n  \"brand_personality\": {\n    \"primary_traits\": [\n      \"motivating\",\n      \"credible\",\n      \"supportive\"\n    ],\n    \"tone\": \"encouraging-professional\",\n    \"formality\": \"approachable\",\n    \"energy\": \"high\",\n    \"rationale\": \"Career changers need motivation balanced with credibility. Supportive tone reflects mentorship-intensive positioning while professional formality builds trust around major life decision.\"\n  },\n  \"visual_style\": {\n    \"aesthetic\": \"modern-editorial\",\n    \"design_language\": \"human-centered-professional\",\n    \"visual_density\": \"balanced\",\n    \"imagery_style\": \"authentic-portraits\",\n    \"iconography\": \"rounded-functional\",\n    \"rationale\": \"Editorial aesthetic supports testimonial-heavy narrative. Authentic portraits of real graduates reinforce peer credibility over stock imagery.\"\n  },\n  \"color_direction\": {\n    \"palette_type\": \"confident-warm\",\n    \"primary_hue\": \"deep-blue\",\n    \"accent_strategy\": \"energetic-accent\",\n    \"accent_hue\": \"vibrant-coral\",\n    \"neutra",
+        "elapsed_ms": 15700
+      },
+      {
+        "step": 4,
+        "name": "UI Intent",
+        "input": "strategy + brand \u2192 UI constraints",
+        "output": "{\n  \"primary_focus\": \"social_proof\",\n  \"cta_policy\": {\n    \"timing\": \"delayed\",\n    \"intensity\": \"neutral\"\n  },\n  \"proof_policy\": \"heavy\",\n  \"content_density\": \"medium\",\n  \"motion_policy\": \"subtle\",\n  \"creative_license\": \"restricted\",\n  \"language_style\": \"plain\",\n  \"interaction_restraint\": \"moderate\"\n}",
+        "elapsed_ms": 4658
+      },
+      {
+        "step": 5,
+        "name": "Code Generation",
+        "input": "UI intent + strategy \u2192 Next.js manifest",
+        "output": "{\n  \"files\": [\n    {\n      \"path\": \"package.json\",\n      \"content\": \"{\\n  \\\"name\\\": \\\"career-narrative\\\",\\n  \\\"version\\\": \\\"0.1.0\\\",\\n  \\\"private\\\": true,\\n  \\\"scripts\\\": {\\n    \\\"dev\\\": \\\"next dev\\\",\\n    \\\"build\\\": \\\"next build\\\",\\n    \\\"start\\\": \\\"next start\\\",\\n    \\\"lint\\\": \\\"next lint\\\"\\n  },\\n  \\\"dependencies\\\": {\\n    \\\"next\\\": \\\"14.2.5\\\",\\n    \\\"react\\\": \\\"18.3.1\\\",\\n    \\\"react-dom\\\": \\\"18.3.1\\\"\\n  },\\n  \\\"devDependencies\\\": {\\n    \\\"@types/node\\\": \\\"20.11.0\\\",\\n    \\\"@types/react\\\": \\\"18.3.3\\\",\\n    \\\"@types/react-dom\\\": \\\"18.3.0\\\",\\n    \\\"autoprefixer\\\": \\\"10.4.19\\\",\\n    \\\"postcss\\\": \\\"8.4.38\\\",\\n    \\\"tailwindcss\\\": \\\"3.4.7\\\",\\n    \\\"typescript\\\": \\\"5.4.5\\\"\\n  }\\n}\\n\"\n    },\n    {\n      \"path\": \"next.config.js\",\n      \"content\": \"/** @type {import('next').NextConfig} */\\nmodu",
+        "elapsed_ms": 53691
+      }
+    ]
+  },
+  "totals": {
+    "v0": {
+      "elapsed_sec": 29.81
+    },
+    "sft": {
+      "elapsed_sec": 136.65
+    },
+    "aicdo": {
+      "elapsed_sec": 117.96
+    }
+  }
+}

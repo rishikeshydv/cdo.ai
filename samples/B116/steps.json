@@ -1,0 +1,79 @@
+{
+  "session_id": "2026-05-11T21-13-10",
+  "prompt": "Immigration legal aid nonprofit providing pro bono services to immigrants and asylum seekers \u2014 compassionate, trustworthy, and multilingual with cases handled stats, languages supported, and pro bono attorney network. Positioned as the most accessible immigration legal resource for unrepresented immigrants",
+  "models": {
+    "v0": [
+      {
+        "step": 1,
+        "name": "Direct Generation",
+        "input": "Immigration legal aid nonprofit providing pro bono services to immigrants and asylum seekers \u2014 compassionate, trustworthy, and multilingual with cases handled stats, languages supported, and pro bono attorney network. Positioned as the most accessible immigration legal resource for unrepresented immigrants",
+        "output": "import Link from 'next/link';\n\nexport default function Home() {\n  return (\n    <div className=\"min-h-screen flex flex-col bg-white\">\n      {/* Navbar */}\n      <nav className=\"border-b border-gray-200\">\n        <div className=\"max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between\">\n          <div className=\"flex items-center gap-2\">\n            <div className=\"w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center\">\n              <span className=\"text-white text-sm font-bold\">L</span>\n            </div>\n            <span className=\"text-xl font-semibold text-gray-900\">LegalAid</span>\n          </div>\n          <div className=\"hidden md:flex gap-8\">\n            <Link href=\"#\" className=\"text-gray-600 hover:text-gray-900 text-sm\">\n              About\n            </Link>\n            <Link href=\"#\" className=\"text-gray-600 hover:text-gray-900 text-sm\">\n              Services\n            </Link>\n            <Link href=\"#\" className=\"text-gray-600 hover:tex",
+        "elapsed_ms": 15056
+      }
+    ],
+    "sft": [
+      {
+        "step": 2,
+        "name": "Classification",
+        "input": "Immigration legal aid nonprofit providing pro bono services to immigrants and asylum seekers \u2014 compassionate, trustworthy, and multilingual with cases handled stats, languages supported, and pro bono attorney network. Positioned as the most accessible immigration legal resource for unrepresented immigrants",
+        "output": "{\n  \"product_type\": \"content_site\",\n  \"industry\": \"other\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"first_time_visitor\",\n  \"trust_sensitivity\": \"high\"\n}",
+        "elapsed_ms": 1463
+      },
+      {
+        "step": 5,
+        "name": "Code Generation (no CDO strategy)",
+        "input": "classification \u2192 code",
+        "output": "{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"{\\\"files\\\":[{\\\"path\\\":\\\"src/app/page.tsx\\\",\\\"content\\\":\\\"'use client';\\\\nimport {\\\\n  Globe,\\\\n  Shield,\\\\n  Users,\\\\n  Scale,\\\\n  Phone,\\\\n  Mail,\\\\n  MapPin,\\\\n  ChevronRight,\\\\n  CheckCircle,\\\\n  Heart,\\\\n  BookOpen,\\\\n  Handshake,\\\\n  Star,\\\\n  ArrowRight,\\\\n  FileText,\\\\n  Clock,\\\\n  Award\\\\n} from 'lucide-react';\\\\nimport { useState } from 'react';\\\\n\\\\nexport default function Home() {\\\\n  const [menuOpen, setMenuOpen] = useState(false);\\\\n\\\\n  return (\\\\n    <div className=\\\\\\\"min-h-screen bg-white font-sans\\\\\\\">\\\\n      {/* Sticky Nav */}\\\\n      <header className=\\\\\\\"sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100 shadow-sm\\\\\\\">\\\\n        <div className=\\\\\\\"max-w-7xl mx-auto px-6 py-4 fl",
+        "elapsed_ms": 89701
+      }
+    ],
+    "aicdo": [
+      {
+        "step": 2,
+        "name": "Classification",
+        "input": "Immigration legal aid nonprofit providing pro bono services to immigrants and asylum seekers \u2014 compassionate, trustworthy, and multilingual with cases handled stats, languages supported, and pro bono attorney network. Positioned as the most accessible immigration legal resource for unrepresented immigrants",
+        "output": "{\n  \"product_type\": \"content_site\",\n  \"industry\": \"other\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"first_time_visitor\",\n  \"trust_sensitivity\": \"high\"\n}",
+        "elapsed_ms": 1263
+      },
+      {
+        "step": 3,
+        "name": "CDO Strategy",
+        "input": "step2 \u2192 strategy",
+        "output": "{\n  \"primary_intent\": \"signal_legitimacy\",\n  \"key_risks\": [\n    \"low_trust\",\n    \"unclear_value_prop\",\n    \"overpromising\"\n  ],\n  \"strategic_principles\": [\n    \"credibility_over_creativity\",\n    \"clarity_over_density\",\n    \"confidence_before_action\"\n  ],\n  \"avoidances\": [\n    \"marketing_fluff\",\n    \"aggressive_ctas\",\n    \"unsubstantiated_claims\"\n  ],\n  \"strategies\": [\n    {\n      \"name\": \"Authority and Accessibility\",\n      \"intent\": \"authority_first\",\n      \"hero_focus\": \"authority\",\n      \"information_order\": [\n        \"headline\",\n        \"subheadline\",\n        \"security_compliance\",\n        \"benefits\",\n        \"testimonials\",\n        \"primary_cta\",\n        \"faq\",\n        \"footer\"\n      ],\n      \"risk_controls\": [\n        \"reinforce_authority\",\n        \"simplify_language\",\n        \"increase_proof_density\"\n      ],\n      \"rationale\": \"Establishes institutional legitimacy first to reassure a vulnerable audience that the organization is credible, safe, and competent before inviting enga",
+        "elapsed_ms": 6004
+      },
+      {
+        "step": "3.5",
+        "name": "Brand Traits",
+        "input": "strategy \u2192 brand traits",
+        "output": "{\n  \"brand_name\": \"Refugio Legal\",\n  \"tone\": [\n    \"compassionate\",\n    \"trustworthy\",\n    \"calm\",\n    \"humanitarian\",\n    \"accessible\"\n  ],\n  \"voice_descriptors\": [\n    \"clear\",\n    \"reassuring\",\n    \"respectful\",\n    \"non-judgmental\",\n    \"plain-spoken\"\n  ],\n  \"visual_style\": \"humanitarian_editorial\",\n  \"color_personality\": {\n    \"primary_hue\": \"deep_teal\",\n    \"accent_hue\": \"warm_amber\",\n    \"neutral_base\": \"soft_ivory\",\n    \"mood\": \"safe_and_grounded\",\n    \"contrast_level\": \"medium_high\",\n    \"saturation\": \"muted_with_warm_accents\"\n  },\n  \"typography_personality\": {\n    \"heading_style\": \"humanist_serif\",\n    \"body_style\": \"clean_humanist_sans\",\n    \"pairing_mood\": \"trustworthy_and_human\",\n    \"scale_contrast\": \"moderate\",\n    \"weight_usage\": \"regular_to_semibold\"\n  },\n  \"spacing_density\": \"generous\",\n  \"corner_radius_style\": \"soft_rounded\",\n  \"shadow_style\": \"subtle_soft\",\n  \"imagery_style\": {\n    \"type\": \"documentary_photography\",\n    \"subject_focus\": \"real_people_and_families\",\n ",
+        "elapsed_ms": 8499
+      },
+      {
+        "step": 4,
+        "name": "UI Intent",
+        "input": "strategy + brand \u2192 UI constraints",
+        "output": "{\n  \"primary_focus\": \"value_prop\",\n  \"cta_policy\": {\n    \"timing\": \"delayed\",\n    \"intensity\": \"soft\"\n  },\n  \"proof_policy\": \"balanced\",\n  \"content_density\": \"low\",\n  \"motion_policy\": \"subtle\",\n  \"creative_license\": \"restricted\",\n  \"language_style\": \"plain\",\n  \"interaction_restraint\": \"moderate\"\n}",
+        "elapsed_ms": 2433
+      },
+      {
+        "step": 5,
+        "name": "Code Generation",
+        "input": "UI intent + strategy \u2192 Next.js manifest",
+        "output": "{\n  \"files\": [\n    {\n      \"path\": \"package.json\",\n      \"content\": \"{\\n  \\\"name\\\": \\\"clarity-of-value\\\",\\n  \\\"version\\\": \\\"0.1.0\\\",\\n  \\\"private\\\": true,\\n  \\\"scripts\\\": {\\n    \\\"dev\\\": \\\"next dev\\\",\\n    \\\"build\\\": \\\"next build\\\",\\n    \\\"start\\\": \\\"next start\\\",\\n    \\\"lint\\\": \\\"next lint\\\"\\n  },\\n  \\\"dependencies\\\": {\\n    \\\"next\\\": \\\"14.2.5\\\",\\n    \\\"react\\\": \\\"18.3.1\\\",\\n    \\\"react-dom\\\": \\\"18.3.1\\\"\\n  },\\n  \\\"devDependencies\\\": {\\n    \\\"@types/node\\\": \\\"20.11.30\\\",\\n    \\\"@types/react\\\": \\\"18.2.66\\\",\\n    \\\"@types/react-dom\\\": \\\"18.2.22\\\",\\n    \\\"autoprefixer\\\": \\\"10.4.19\\\",\\n    \\\"postcss\\\": \\\"8.4.38\\\",\\n    \\\"tailwindcss\\\": \\\"3.4.4\\\",\\n    \\\"typescript\\\": \\\"5.4.5\\\"\\n  }\\n}\\n\"\n    },\n    {\n      \"path\": \"next.config.js\",\n      \"content\": \"/** @type {import('next').NextConfig} */\\nc",
+        "elapsed_ms": 56895
+      }
+    ]
+  },
+  "totals": {
+    "v0": {
+      "elapsed_sec": 31.52
+    },
+    "sft": {
+      "elapsed_sec": 125.69
+    },
+    "aicdo": {
+      "elapsed_sec": 105.68
+    }
+  }
+}
