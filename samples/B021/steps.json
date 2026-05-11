@@ -1,0 +1,79 @@
+{
+  "session_id": "2026-05-11T20-54-51",
+  "prompt": "Teletherapy platform connecting adults 25\u201345 to therapists for anxiety, burnout, and life transitions \u2014 warm, safe, and non-clinical with HIPAA compliance, therapist matching quiz, and insurance coverage checker. Positioned against BetterHelp as more therapist-quality-focused",
+  "models": {
+    "v0": [
+      {
+        "step": 1,
+        "name": "Direct Generation",
+        "input": "Teletherapy platform connecting adults 25\u201345 to therapists for anxiety, burnout, and life transitions \u2014 warm, safe, and non-clinical with HIPAA compliance, therapist matching quiz, and insurance coverage checker. Positioned against BetterHelp as more therapist-quality-focused",
+        "output": "'use client';\n\nimport React from 'react';\n\nexport default function Home() {\n  return (\n    <div className=\"min-h-screen bg-white\">\n      {/* Navbar */}\n      <nav className=\"border-b border-gray-200\">\n        <div className=\"max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between\">\n          <div className=\"text-2xl font-semibold text-blue-600\">TherapyMatch</div>\n          <div className=\"hidden md:flex gap-8 text-sm text-gray-700\">\n            <a href=\"#\" className=\"hover:text-blue-600 transition\">How it Works</a>\n            <a href=\"#\" className=\"hover:text-blue-600 transition\">About</a>\n            <a href=\"#\" className=\"hover:text-blue-600 transition\">Insurance</a>\n            <a href=\"#\" className=\"hover:text-blue-600 transition\">Contact</a>\n          </div>\n          <button className=\"bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition\">\n            Start Quiz\n          </button>\n        </div>\n      </nav>\n\n      {",
+        "elapsed_ms": 14829
+      }
+    ],
+    "sft": [
+      {
+        "step": 2,
+        "name": "Classification",
+        "input": "Teletherapy platform connecting adults 25\u201345 to therapists for anxiety, burnout, and life transitions \u2014 warm, safe, and non-clinical with HIPAA compliance, therapist matching quiz, and insurance coverage checker. Positioned against BetterHelp as more therapist-quality-focused",
+        "output": "{\n  \"product_type\": \"marketplace\",\n  \"industry\": \"healthcare\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"evaluating\",\n  \"trust_sensitivity\": \"high\"\n}",
+        "elapsed_ms": 1482
+      },
+      {
+        "step": 5,
+        "name": "Code Generation (no CDO strategy)",
+        "input": "classification \u2192 code",
+        "output": "{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"{\\\"files\\\":[{\\\"path\\\":\\\"src/app/page.tsx\\\",\\\"content\\\":\\\"'use client';\\\\nimport { useState } from 'react';\\\\nimport {\\\\n  Heart,\\\\n  Shield,\\\\n  Star,\\\\n  CheckCircle,\\\\n  ArrowRight,\\\\n  Menu,\\\\n  X,\\\\n  Clock,\\\\n  Users,\\\\n  Award,\\\\n  Lock,\\\\n  ChevronRight,\\\\n  Sparkles,\\\\n  Brain,\\\\n  Leaf,\\\\n} from 'lucide-react';\\\\n\\\\nexport default function Home() {\\\\n  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);\\\\n\\\\n  return (\\\\n    <div className=\\\\\\\"min-h-screen bg-[#FAFAF8] text-[#1C1C1E] font-sans\\\\\\\">\\\\n      {/* Sticky Nav */}\\\\n      <nav className=\\\\\\\"sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#E8E4DE]\\\\\\\">\\\\n        <div className=\\\\\\\"max-w-6xl mx-auto px-6 py-4 flex items-cente",
+        "elapsed_ms": 93267
+      }
+    ],
+    "aicdo": [
+      {
+        "step": 2,
+        "name": "Classification",
+        "input": "Teletherapy platform connecting adults 25\u201345 to therapists for anxiety, burnout, and life transitions \u2014 warm, safe, and non-clinical with HIPAA compliance, therapist matching quiz, and insurance coverage checker. Positioned against BetterHelp as more therapist-quality-focused",
+        "output": "{\n  \"product_type\": \"B2C SaaS\",\n  \"industry\": \"healthcare\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"first_time_visitor\",\n  \"trust_sensitivity\": \"high\"\n}",
+        "elapsed_ms": 1297
+      },
+      {
+        "step": 3,
+        "name": "CDO Strategy",
+        "input": "step2 \u2192 strategy",
+        "output": "{\n  \"primary_intent\": \"signal_legitimacy\",\n  \"key_risks\": [\n    \"low_trust\",\n    \"overpromising\",\n    \"premature_cta\"\n  ],\n  \"strategic_principles\": [\n    \"credibility_over_creativity\",\n    \"confidence_before_action\",\n    \"clarity_over_density\"\n  ],\n  \"avoidances\": [\n    \"unsubstantiated_claims\",\n    \"aggressive_ctas\",\n    \"marketing_fluff\"\n  ],\n  \"strategies\": [\n    {\n      \"name\": \"Credibility-Led Reassurance\",\n      \"intent\": \"trust_first\",\n      \"hero_focus\": \"value_prop\",\n      \"information_order\": [\n        \"headline\",\n        \"subheadline\",\n        \"security_compliance\",\n        \"benefits\",\n        \"testimonials\",\n        \"product_demo\",\n        \"primary_cta\",\n        \"faq\",\n        \"footer\"\n      ],\n      \"risk_controls\": [\n        \"delay_cta\",\n        \"increase_proof_density\",\n        \"simplify_language\"\n      ],\n      \"rationale\": \"In a high-sensitivity healthcare context for first-time visitors, leading with safety, compliance, and human reassurance reduces skepticism before",
+        "elapsed_ms": 6045
+      },
+      {
+        "step": "3.5",
+        "name": "Brand Traits",
+        "input": "strategy \u2192 brand traits",
+        "output": "{\n  \"brand_personality\": {\n    \"primary_traits\": [\n      \"warm\",\n      \"trustworthy\",\n      \"calming\",\n      \"human\"\n    ],\n    \"tone_of_voice\": \"empathetic_conversational\",\n    \"formality_level\": \"casual_professional\",\n    \"emotional_register\": \"reassuring\"\n  },\n  \"visual_identity\": {\n    \"design_style\": \"soft_modern_editorial\",\n    \"aesthetic_direction\": \"warm_minimal_with_organic_touches\",\n    \"visual_metaphor\": \"safe_space_natural_light\",\n    \"imagery_style\": \"candid_lifestyle_photography\",\n    \"illustration_style\": \"soft_organic_shapes\",\n    \"iconography\": \"rounded_outline_friendly\"\n  },\n  \"color_system\": {\n    \"palette_type\": \"warm_earthy_calming\",\n    \"primary_color\": {\n      \"hue\": \"sage_green\",\n      \"hex\": \"#5C7F6B\",\n      \"rationale\": \"Evokes calm, growth, and natural healing without clinical sterility\"\n    },\n    \"secondary_color\": {\n      \"hue\": \"warm_terracotta\",\n      \"hex\": \"#D4906F\",\n      \"rationale\": \"Adds human warmth and approachability\"\n    },\n    \"accent_color\": ",
+        "elapsed_ms": 13400
+      },
+      {
+        "step": 4,
+        "name": "UI Intent",
+        "input": "strategy + brand \u2192 UI constraints",
+        "output": "{\n  \"primary_focus\": \"product_clarity\",\n  \"cta_policy\": {\n    \"timing\": \"progressive\",\n    \"intensity\": \"soft\"\n  },\n  \"proof_policy\": \"balanced\",\n  \"content_density\": \"low\",\n  \"motion_policy\": \"subtle\",\n  \"creative_license\": \"restricted\",\n  \"language_style\": \"plain\",\n  \"interaction_restraint\": \"moderate\"\n}",
+        "elapsed_ms": 1991
+      },
+      {
+        "step": 5,
+        "name": "Code Generation",
+        "input": "UI intent + strategy \u2192 Next.js manifest",
+        "output": "{\n  \"files\": [\n    {\n      \"path\": \"package.json\",\n      \"content\": \"{\\n  \\\"name\\\": \\\"guided-understanding\\\",\\n  \\\"version\\\": \\\"0.1.0\\\",\\n  \\\"private\\\": true,\\n  \\\"scripts\\\": {\\n    \\\"dev\\\": \\\"next dev\\\",\\n    \\\"build\\\": \\\"next build\\\",\\n    \\\"start\\\": \\\"next start\\\",\\n    \\\"lint\\\": \\\"next lint\\\"\\n  },\\n  \\\"dependencies\\\": {\\n    \\\"next\\\": \\\"14.2.5\\\",\\n    \\\"react\\\": \\\"18.3.1\\\",\\n    \\\"react-dom\\\": \\\"18.3.1\\\"\\n  },\\n  \\\"devDependencies\\\": {\\n    \\\"@types/node\\\": \\\"20.11.0\\\",\\n    \\\"@types/react\\\": \\\"18.3.3\\\",\\n    \\\"@types/react-dom\\\": \\\"18.3.0\\\",\\n    \\\"autoprefixer\\\": \\\"10.4.19\\\",\\n    \\\"postcss\\\": \\\"8.4.39\\\",\\n    \\\"tailwindcss\\\": \\\"3.4.7\\\",\\n    \\\"typescript\\\": \\\"5.4.5\\\"\\n  }\\n}\\n\"\n    },\n    {\n      \"path\": \"next.config.js\",\n      \"content\": \"/** @type {import('next').NextConfig} */\\n",
+        "elapsed_ms": 60994
+      }
+    ]
+  },
+  "totals": {
+    "v0": {
+      "elapsed_sec": 35.42
+    },
+    "sft": {
+      "elapsed_sec": 127.84
+    },
+    "aicdo": {
+      "elapsed_sec": 122.95
+    }
+  }
+}
