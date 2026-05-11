@@ -1,5 +1,5 @@
 {
-  "session_id": "2026-05-11T21-13-12",
+  "session_id": "2026-05-11T21-32-22",
   "prompt": "AI-assisted screenwriting and story development platform for independent filmmakers and screenwriters \u2014 dark, cinematic, and filmmaker-peer with script editor UI preview, beat sheet visualization, scripts developed stats, WGA-awareness callout, and festival alumni testimonials. Positioned against Final Draft as AI-augmented and more structured for story development",
   "models": {
     "v0": [
@@ -7,8 +7,8 @@
         "step": 1,
         "name": "Direct Generation",
         "input": "AI-assisted screenwriting and story development platform for independent filmmakers and screenwriters \u2014 dark, cinematic, and filmmaker-peer with script editor UI preview, beat sheet visualization, scripts developed stats, WGA-awareness callout, and festival alumni testimonials. Positioned against Final Draft as AI-augmented and more structured for story development",
-        "output": "import type { ReactNode } from 'react';\n\nconst Navbar = () => (\n  <nav className=\"bg-white border-b border-gray-200\">\n    <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n      <div className=\"flex justify-between items-center h-16\">\n        <div className=\"flex items-center gap-2\">\n          <div className=\"w-8 h-8 bg-blue-600 rounded\"></div>\n          <span className=\"text-xl font-bold text-gray-900\">Scriptwise</span>\n        </div>\n        <div className=\"flex gap-8 items-center\">\n          <a href=\"#features\" className=\"text-gray-700 hover:text-gray-900\">Features</a>\n          <a href=\"#testimonials\" className=\"text-gray-700 hover:text-gray-900\">Testimonials</a>\n          <a href=\"#pricing\" className=\"text-gray-700 hover:text-gray-900\">Pricing</a>\n          <button className=\"bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700\">\n            Sign In\n          </button>\n        </div>\n      </div>\n    </div>\n  </nav>\n);\n\nconst Hero = () => (\n  <section className=\"bg-wh",
-        "elapsed_ms": 13003
+        "output": "import React from 'react';\n\nexport default function Home() {\n  return (\n    <div className=\"min-h-screen bg-white\">\n      {/* Navbar */}\n      <nav className=\"sticky top-0 z-50 bg-white border-b border-gray-200\">\n        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n          <div className=\"flex justify-between items-center h-16\">\n            <div className=\"flex items-center gap-2\">\n              <div className=\"w-8 h-8 bg-blue-600 rounded\"></div>\n              <span className=\"font-semibold text-lg text-gray-900\">Frameforge</span>\n            </div>\n            <div className=\"hidden md:flex gap-8\">\n              <a href=\"#features\" className=\"text-gray-700 hover:text-gray-900 text-sm\">Features</a>\n              <a href=\"#about\" className=\"text-gray-700 hover:text-gray-900 text-sm\">About</a>\n              <a href=\"#testimonials\" className=\"text-gray-700 hover:text-gray-900 text-sm\">Testimonials</a>\n              <a href=\"#contact\" className=\"text-gray-700 hover:text-gray-",
+        "elapsed_ms": 16538
       }
     ],
     "sft": [
@@ -17,14 +17,14 @@
         "name": "Classification",
         "input": "AI-assisted screenwriting and story development platform for independent filmmakers and screenwriters \u2014 dark, cinematic, and filmmaker-peer with script editor UI preview, beat sheet visualization, scripts developed stats, WGA-awareness callout, and festival alumni testimonials. Positioned against Final Draft as AI-augmented and more structured for story development",
         "output": "{\n  \"product_type\": \"B2C SaaS\",\n  \"industry\": \"ai_platform\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"evaluating\",\n  \"trust_sensitivity\": \"medium\"\n}",
-        "elapsed_ms": 1301
+        "elapsed_ms": 1172
       },
       {
         "step": 5,
         "name": "Code Generation (no CDO strategy)",
         "input": "classification \u2192 code",
-        "output": "{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"```json\\n{\\n  \\\"files\\\": [\\n    {\\n      \\\"path\\\": \\\"src/app/page.tsx\\\",\\n      \\\"content\\\": \\\"\\\\\\\"use client\\\\\\\";\\\\nimport { useState } from \\\\\\\"react\\\\\\\";\\\\nimport {\\\\n  Film,\\\\n  Zap,\\\\n  BookOpen,\\\\n  BarChart3,\\\\n  Users,\\\\n  Star,\\\\n  ChevronRight,\\\\n  Menu,\\\\n  X,\\\\n  CheckCircle,\\\\n  Award,\\\\n  FileText,\\\\n  Layers,\\\\n  Sparkles,\\\\n  ArrowRight,\\\\n  Shield,\\\\n} from \\\\\\\"lucide-react\\\\\\\";\\\\n\\\\nexport default function Home() {\\\\n  const [mobileOpen, setMobileOpen] = useState(false);\\\\n\\\\n  const features = [\\\\n    {\\\\n      icon: <Sparkles className=\\\\\\\"w-6 h-6\\\\\\\" />,\\\\n      title: \\\\\\\"AI Scene Intelligence\\\\\\\",\\\\n      desc: \\\\\\\"Generate scene suggestions, dialogue alternatives, and dramatic tension notes in ",
-        "elapsed_ms": 105979
+        "output": "{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"```json\\n{\\n  \\\"files\\\": [\\n    {\\n      \\\"path\\\": \\\"src/app/page.tsx\\\",\\n      \\\"content\\\": \\\"export default function Home() {\\\\n  return (\\\\n    <div className=\\\\\\\"bg-[#0d0f14] text-gray-100 min-h-screen font-sans\\\\\\\">\\\\n\\\\n      {/* NAV */}\\\\n      <nav className=\\\\\\\"sticky top-0 z-50 bg-[#0d0f14]/95 backdrop-blur border-b border-white/10\\\\\\\">\\\\n        <div className=\\\\\\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\\\\\\">\\\\n          <div className=\\\\\\\"flex items-center gap-2\\\\\\\">\\\\n            <div className=\\\\\\\"w-7 h-7 rounded bg-indigo-500 flex items-center justify-center\\\\\\\">\\\\n              <svg width=\\\\\\\"16\\\\\\\" height=\\\\\\\"16\\\\\\\" viewBox=\\\\\\\"0 0 16 16\\\\\\\" fill=\\\\\\\"none\\\\\\\">\\\\n                <p",
+        "elapsed_ms": 108756
       }
     ],
     "aicdo": [
@@ -32,48 +32,48 @@
         "step": 2,
         "name": "Classification",
         "input": "AI-assisted screenwriting and story development platform for independent filmmakers and screenwriters \u2014 dark, cinematic, and filmmaker-peer with script editor UI preview, beat sheet visualization, scripts developed stats, WGA-awareness callout, and festival alumni testimonials. Positioned against Final Draft as AI-augmented and more structured for story development",
-        "output": "{\n  \"product_type\": \"B2C SaaS\",\n  \"industry\": \"ai_platform\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"first_time_visitor\",\n  \"trust_sensitivity\": \"medium\"\n}",
-        "elapsed_ms": 1977
+        "output": "{\n  \"product_type\": \"B2C SaaS\",\n  \"industry\": \"other\",\n  \"page_type\": \"landing\",\n  \"primary_user\": \"end_customer\",\n  \"user_context\": \"first_time_visitor\",\n  \"trust_sensitivity\": \"medium\"\n}",
+        "elapsed_ms": 1221
       },
       {
         "step": 3,
         "name": "CDO Strategy",
         "input": "step2 \u2192 strategy",
-        "output": "{\n  \"primary_intent\": \"accelerate_understanding\",\n  \"key_risks\": [\n    \"unclear_value_prop\",\n    \"overpromising\",\n    \"low_trust\"\n  ],\n  \"strategic_principles\": [\n    \"credibility_over_creativity\",\n    \"confidence_before_action\",\n    \"clarity_over_novelty\"\n  ],\n  \"avoidances\": [\n    \"marketing_fluff\",\n    \"unsubstantiated_claims\",\n    \"flashy_motion\"\n  ],\n  \"strategies\": [\n    {\n      \"intent\": \"product_first\",\n      \"hero_focus\": \"product_visual\",\n      \"information_order\": [\n        \"headline\",\n        \"subheadline\",\n        \"product_demo\",\n        \"benefits\",\n        \"testimonials\",\n        \"primary_cta\",\n        \"footer\"\n      ],\n      \"risk_controls\": [\n        \"simplify_language\",\n        \"delay_cta\"\n      ],\n      \"rationale\": \"Lead with tangible demonstration of the craft tooling so creative professionals immediately grasp differentiation versus incumbents, reducing skepticism through evidence rather than claims.\"\n    },\n    {\n      \"intent\": \"trust_first\",\n      \"hero_focus\": ",
-        "elapsed_ms": 8328
+        "output": "{\n  \"primary_intent\": \"drive_conversion\",\n  \"key_risks\": [\n    \"unclear_value_prop\",\n    \"low_trust\",\n    \"overpromising\"\n  ],\n  \"strategic_principles\": [\n    \"credibility_over_creativity\",\n    \"confidence_before_action\"\n  ],\n  \"avoidances\": [\n    \"marketing_fluff\",\n    \"unsubstantiated_claims\",\n    \"flashy_motion\"\n  ],\n  \"strategies\": [\n    {\n      \"intent\": \"trust_first\",\n      \"hero_focus\": \"social_proof\",\n      \"information_order\": [\n        \"headline\",\n        \"subheadline\",\n        \"testimonials\",\n        \"product_demo\",\n        \"benefits\",\n        \"primary_cta\",\n        \"footer\"\n      ],\n      \"risk_controls\": [\n        \"delay_cta\",\n        \"increase_proof_density\"\n      ],\n      \"rationale\": \"Lead with peer credibility from festival alumni to overcome skepticism toward AI in a craft-driven creative community before asking for commitment.\"\n    },\n    {\n      \"intent\": \"product_first\",\n      \"hero_focus\": \"product_visual\",\n      \"information_order\": [\n        \"headline\",\n        ",
+        "elapsed_ms": 5448
       },
       {
         "step": "3.5",
         "name": "Brand Traits",
         "input": "strategy \u2192 brand traits",
-        "output": "{\n  \"visual_tone\": {\n    \"mood\": [\n      \"cinematic\",\n      \"auteur\",\n      \"nocturnal\",\n      \"craft-reverent\",\n      \"underground-prestige\"\n    ],\n    \"energy\": \"contemplative\",\n    \"formality\": \"editorial\",\n    \"rationale\": \"A filmmaker-peer authority posture demands the hush of a darkened theater and the gravitas of a film journal \\u2014 not startup gloss. The mood evokes late-night writing rooms, festival screening halls, and the reverence of craft, signaling this is a serious instrument for serious storytellers.\"\n  },\n  \"brand_personality\": {\n    \"primary_traits\": [\n      \"craft-obsessed\",\n      \"quietly-confident\",\n      \"cinephile-literate\",\n      \"peer-not-vendor\"\n    ],\n    \"voice\": \"A working screenwriter who has been in the trenches \\u2014 speaks in scene terms, references beat sheets and act breaks naturally, respects the page, and treats AI as a collaborator at the writers' table rather than a magic shortcut.\",\n    \"differentiation\": \"Where Final Draft feels like industry",
-        "elapsed_ms": 19955
+        "output": "{\n  \"visual_tone\": {\n    \"mood\": [\n      \"cinematic\",\n      \"moody\",\n      \"auteur\",\n      \"crafted\",\n      \"nocturnal\"\n    ],\n    \"energy\": \"contemplative\",\n    \"aesthetic\": \"editorial-cinema\",\n    \"formality\": \"elevated-craft\",\n    \"vibe_descriptors\": [\n      \"screening-room\",\n      \"indie-festival\",\n      \"writers-room\",\n      \"celluloid-grain\",\n      \"after-hours\"\n    ]\n  },\n  \"color_profile\": {\n    \"scheme_type\": \"dark\",\n    \"palette_intent\": \"Deep theatrical blacks and inky charcoals as the dominant canvas, evoking a darkened cinema. Accented with a single warm signature hue \\u2014 projector amber or marquee gold \\u2014 used sparingly for emphasis, CTAs, and beat-sheet highlights. Secondary muted film-stock tones (desaturated sepia, ember red) for testimonial moments and accents.\",\n    \"contrast_level\": \"high\",\n    \"saturation\": \"muted-with-warm-accent\",\n    \"primary_hue_suggestion\": \"near-black with amber/gold accent\",\n    \"avoid\": [\n      \"bright tech blues\",\n      \"saas pastel",
+        "elapsed_ms": 15951
       },
       {
         "step": 4,
         "name": "UI Intent",
         "input": "strategy + brand \u2192 UI constraints",
-        "output": "{\n  \"primary_focus\": \"authority\",\n  \"cta_policy\": {\n    \"timing\": \"delayed\",\n    \"intensity\": \"soft\"\n  },\n  \"proof_policy\": \"balanced\",\n  \"content_density\": \"medium\",\n  \"motion_policy\": \"subtle\",\n  \"creative_license\": \"restricted\",\n  \"language_style\": \"confident\",\n  \"interaction_restraint\": \"moderate\"\n}",
-        "elapsed_ms": 2123
+        "output": "{\n  \"primary_focus\": \"authority\",\n  \"cta_policy\": {\n    \"timing\": \"delayed\",\n    \"intensity\": \"neutral\"\n  },\n  \"proof_policy\": \"heavy\",\n  \"content_density\": \"medium\",\n  \"motion_policy\": \"subtle\",\n  \"creative_license\": \"restricted\",\n  \"language_style\": \"confident\",\n  \"interaction_restraint\": \"moderate\"\n}",
+        "elapsed_ms": 1936
       },
       {
         "step": 5,
         "name": "Code Generation",
         "input": "UI intent + strategy \u2192 Next.js manifest",
-        "output": "{\n  \"files\": [\n    {\n      \"path\": \"package.json\",\n      \"content\": \"{\\n  \\\"name\\\": \\\"craft-screenwriting\\\",\\n  \\\"version\\\": \\\"0.1.0\\\",\\n  \\\"private\\\": true,\\n  \\\"scripts\\\": {\\n    \\\"dev\\\": \\\"next dev\\\",\\n    \\\"build\\\": \\\"next build\\\",\\n    \\\"start\\\": \\\"next start\\\",\\n    \\\"lint\\\": \\\"next lint\\\"\\n  },\\n  \\\"dependencies\\\": {\\n    \\\"next\\\": \\\"14.2.5\\\",\\n    \\\"react\\\": \\\"18.3.1\\\",\\n    \\\"react-dom\\\": \\\"18.3.1\\\"\\n  },\\n  \\\"devDependencies\\\": {\\n    \\\"@types/node\\\": \\\"20.11.30\\\",\\n    \\\"@types/react\\\": \\\"18.2.66\\\",\\n    \\\"@types/react-dom\\\": \\\"18.2.22\\\",\\n    \\\"autoprefixer\\\": \\\"10.4.19\\\",\\n    \\\"postcss\\\": \\\"8.4.38\\\",\\n    \\\"tailwindcss\\\": \\\"3.4.4\\\",\\n    \\\"typescript\\\": \\\"5.4.5\\\"\\n  }\\n}\\n\"\n    },\n    {\n      \"path\": \"next.config.js\",\n      \"content\": \"/** @type {import('next').NextConfig} */",
-        "elapsed_ms": 90057
+        "output": "{\n  \"files\": [\n    {\n      \"path\": \"package.json\",\n      \"content\": \"{\\n  \\\"name\\\": \\\"authority-screenwriting\\\",\\n  \\\"version\\\": \\\"0.1.0\\\",\\n  \\\"private\\\": true,\\n  \\\"scripts\\\": {\\n    \\\"dev\\\": \\\"next dev\\\",\\n    \\\"build\\\": \\\"next build\\\",\\n    \\\"start\\\": \\\"next start\\\",\\n    \\\"lint\\\": \\\"next lint\\\"\\n  },\\n  \\\"dependencies\\\": {\\n    \\\"next\\\": \\\"14.2.5\\\",\\n    \\\"react\\\": \\\"18.3.1\\\",\\n    \\\"react-dom\\\": \\\"18.3.1\\\"\\n  },\\n  \\\"devDependencies\\\": {\\n    \\\"@types/node\\\": \\\"20.11.0\\\",\\n    \\\"@types/react\\\": \\\"18.3.3\\\",\\n    \\\"@types/react-dom\\\": \\\"18.3.0\\\",\\n    \\\"autoprefixer\\\": \\\"10.4.19\\\",\\n    \\\"postcss\\\": \\\"8.4.39\\\",\\n    \\\"tailwindcss\\\": \\\"3.4.7\\\",\\n    \\\"typescript\\\": \\\"5.4.5\\\"\\n  }\\n}\\n\"\n    },\n    {\n      \"path\": \"next.config.js\",\n      \"content\": \"/** @type {import('next').NextConfig} *",
+        "elapsed_ms": 86303
       }
     ]
   },
   "totals": {
     "v0": {
-      "elapsed_sec": 24.26
+      "elapsed_sec": 36.24
     },
     "sft": {
-      "elapsed_sec": 142.1
+      "elapsed_sec": 145.97
     },
     "aicdo": {
-      "elapsed_sec": 150.82
+      "elapsed_sec": 151.87
     }
   }
 }

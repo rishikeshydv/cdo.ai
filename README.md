@@ -130,33 +130,26 @@ This directory includes:
 <details>
 <summary><strong>v0.dev · Baseline</strong> — 1 step</summary>
 
-**Step 1 · Direct Generation** (13003 ms)
+**Step 1 · Direct Generation** (16538 ms)
 ```json
-import type { ReactNode } from 'react';
+import React from 'react';
 
-const Navbar = () => (
-  <nav className="bg-white border-b border-gray-200">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex justify-between items-center h-16">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-blue-600 rounded"></div>
-          <span className="text-xl font-bold text-gray-900">Scriptwise</span>
-        </div>
-        <div className="flex gap-8 items-center">
-          <a href="#features" className="text-gray-700 hover:text-gray-900">Features</a>
-          <a href="#testimonials" className="text-gray-700 hover:text-gray-900">Testimonials</a>
-          <a href="#pricing" className="text-gray-700 hover:text-gray-900">Pricing</a>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
-            Sign In
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-);
-
-const Hero = () => (
-  <section className="bg-wh
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Navbar */}
+      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-blue-600 rounded"></div>
+              <span className="font-semibold text-lg text-gray-900">Frameforge</span>
+            </div>
+            <div className="hidden md:flex gap-8">
+              <a href="#features" className="text-gray-700 hover:text-gray-900 text-sm">Features</a>
+              <a href="#about" className="text-gray-700 hover:text-gray-900 text-sm">About</a>
+              <a href="#testimonials" className="text-gray-700 hover:text-gray-900 text-sm">Testimonials</a>
+              <a href="#contact" className="text-gray-700 hover:text-gray-
 ```
 
 </details>
@@ -164,7 +157,7 @@ const Hero = () => (
 <details>
 <summary><strong>SFT only</strong> — 2 steps</summary>
 
-**Step 2 · Classification** (1301 ms)
+**Step 2 · Classification** (1172 ms)
 ```json
 {
   "product_type": "B2C SaaS",
@@ -176,13 +169,13 @@ const Hero = () => (
 }
 ```
 
-**Step 5 · Code Generation (no CDO strategy)** (105979 ms)
+**Step 5 · Code Generation (no CDO strategy)** (108756 ms)
 ```json
 {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "```json\n{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"\\\"use client\\\";\\nimport { useState } from \\\"react\\\";\\nimport {\\n  Film,\\n  Zap,\\n  BookOpen,\\n  BarChart3,\\n  Users,\\n  Star,\\n  ChevronRight,\\n  Menu,\\n  X,\\n  CheckCircle,\\n  Award,\\n  FileText,\\n  Layers,\\n  Sparkles,\\n  ArrowRight,\\n  Shield,\\n} from \\\"lucide-react\\\";\\n\\nexport default function Home() {\\n  const [mobileOpen, setMobileOpen] = useState(false);\\n\\n  const features = [\\n    {\\n      icon: <Sparkles className=\\\"w-6 h-6\\\" />,\\n      title: \\\"AI Scene Intelligence\\\",\\n      desc: \\\"Generate scene suggestions, dialogue alternatives, and dramatic tension notes in 
+      "content": "```json\n{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"export default function Home() {\\n  return (\\n    <div className=\\\"bg-[#0d0f14] text-gray-100 min-h-screen font-sans\\\">\\n\\n      {/* NAV */}\\n      <nav className=\\\"sticky top-0 z-50 bg-[#0d0f14]/95 backdrop-blur border-b border-white/10\\\">\\n        <div className=\\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\\">\\n          <div className=\\\"flex items-center gap-2\\\">\\n            <div className=\\\"w-7 h-7 rounded bg-indigo-500 flex items-center justify-center\\\">\\n              <svg width=\\\"16\\\" height=\\\"16\\\" viewBox=\\\"0 0 16 16\\\" fill=\\\"none\\\">\\n                <p
 ```
 
 </details>
@@ -190,11 +183,11 @@ const Hero = () => (
 <details>
 <summary><strong>AI CDO · Best</strong> — 5 steps</summary>
 
-**Step 2 · Classification** (1977 ms)
+**Step 2 · Classification** (1221 ms)
 ```json
 {
   "product_type": "B2C SaaS",
-  "industry": "ai_platform",
+  "industry": "other",
   "page_type": "landing",
   "primary_user": "end_customer",
   "user_context": "first_time_visitor",
@@ -202,19 +195,18 @@ const Hero = () => (
 }
 ```
 
-**Step 3 · CDO Strategy** (8328 ms)
+**Step 3 · CDO Strategy** (5448 ms)
 ```json
 {
-  "primary_intent": "accelerate_understanding",
+  "primary_intent": "drive_conversion",
   "key_risks": [
     "unclear_value_prop",
-    "overpromising",
-    "low_trust"
+    "low_trust",
+    "overpromising"
   ],
   "strategic_principles": [
     "credibility_over_creativity",
-    "confidence_before_action",
-    "clarity_over_novelty"
+    "confidence_before_action"
   ],
   "avoidances": [
     "marketing_fluff",
@@ -223,63 +215,73 @@ const Hero = () => (
   ],
   "strategies": [
     {
-      "intent": "product_first",
-      "hero_focus": "product_visual",
+      "intent": "trust_first",
+      "hero_focus": "social_proof",
       "information_order": [
         "headline",
         "subheadline",
+        "testimonials",
         "product_demo",
         "benefits",
-        "testimonials",
         "primary_cta",
         "footer"
       ],
       "risk_controls": [
-        "simplify_language",
-        "delay_cta"
+        "delay_cta",
+        "increase_proof_density"
       ],
-      "rationale": "Lead with tangible demonstration of the craft tooling so creative professionals immediately grasp differentiation versus incumbents, reducing skepticism through evidence rather than claims."
+      "rationale": "Lead with peer credibility from festival alumni to overcome skepticism toward AI in a craft-driven creative community before asking for commitment."
     },
     {
-      "intent": "trust_first",
-      "hero_focus": 
+      "intent": "product_first",
+      "hero_focus": "product_visual",
+      "information_order": [
+        "headline",
+        
 ```
 
-**Step 3.5 · Brand Traits** (19955 ms)
+**Step 3.5 · Brand Traits** (15951 ms)
 ```json
 {
   "visual_tone": {
     "mood": [
       "cinematic",
+      "moody",
       "auteur",
-      "nocturnal",
-      "craft-reverent",
-      "underground-prestige"
+      "crafted",
+      "nocturnal"
     ],
     "energy": "contemplative",
-    "formality": "editorial",
-    "rationale": "A filmmaker-peer authority posture demands the hush of a darkened theater and the gravitas of a film journal \u2014 not startup gloss. The mood evokes late-night writing rooms, festival screening halls, and the reverence of craft, signaling this is a serious instrument for serious storytellers."
+    "aesthetic": "editorial-cinema",
+    "formality": "elevated-craft",
+    "vibe_descriptors": [
+      "screening-room",
+      "indie-festival",
+      "writers-room",
+      "celluloid-grain",
+      "after-hours"
+    ]
   },
-  "brand_personality": {
-    "primary_traits": [
-      "craft-obsessed",
-      "quietly-confident",
-      "cinephile-literate",
-      "peer-not-vendor"
-    ],
-    "voice": "A working screenwriter who has been in the trenches \u2014 speaks in scene terms, references beat sheets and act breaks naturally, respects the page, and treats AI as a collaborator at the writers' table rather than a magic shortcut.",
-    "differentiation": "Where Final Draft feels like industry
+  "color_profile": {
+    "scheme_type": "dark",
+    "palette_intent": "Deep theatrical blacks and inky charcoals as the dominant canvas, evoking a darkened cinema. Accented with a single warm signature hue \u2014 projector amber or marquee gold \u2014 used sparingly for emphasis, CTAs, and beat-sheet highlights. Secondary muted film-stock tones (desaturated sepia, ember red) for testimonial moments and accents.",
+    "contrast_level": "high",
+    "saturation": "muted-with-warm-accent",
+    "primary_hue_suggestion": "near-black with amber/gold accent",
+    "avoid": [
+      "bright tech blues",
+      "saas pastel
 ```
 
-**Step 4 · UI Intent** (2123 ms)
+**Step 4 · UI Intent** (1936 ms)
 ```json
 {
   "primary_focus": "authority",
   "cta_policy": {
     "timing": "delayed",
-    "intensity": "soft"
+    "intensity": "neutral"
   },
-  "proof_policy": "balanced",
+  "proof_policy": "heavy",
   "content_density": "medium",
   "motion_policy": "subtle",
   "creative_license": "restricted",
@@ -288,17 +290,17 @@ const Hero = () => (
 }
 ```
 
-**Step 5 · Code Generation** (90057 ms)
+**Step 5 · Code Generation** (86303 ms)
 ```json
 {
   "files": [
     {
       "path": "package.json",
-      "content": "{\n  \"name\": \"craft-screenwriting\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.11.30\",\n    \"@types/react\": \"18.2.66\",\n    \"@types/react-dom\": \"18.2.22\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.4\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
+      "content": "{\n  \"name\": \"authority-screenwriting\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.11.0\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.39\",\n    \"tailwindcss\": \"3.4.7\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */
+      "content": "/** @type {import('next').NextConfig} *
 ```
 
 </details>
@@ -314,26 +316,27 @@ const Hero = () => (
 <details>
 <summary><strong>v0.dev · Baseline</strong> — 1 step</summary>
 
-**Step 1 · Direct Generation** (14355 ms)
+**Step 1 · Direct Generation** (11856 ms)
 ```json
 import React from 'react';
 
-export default function HomePage() {
+export default function Page() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       {/* Navbar */}
-      <nav className="border-b border-gray-200 sticky top-0 bg-white z-50">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <nav className="border-b border-gray-200 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-md flex items-center justify-center">
-              <span className="text-white font-bold text-sm">CH</span>
-            </div>
-            <span className="font-semibold text-lg text-gray-900">City Hall Portal</span>
+            <div className="w-8 h-8 bg-blue-600 rounded-lg"></div>
+            <span className="text-xl font-semibold text-gray-900">City Services</span>
           </div>
-          <div className="flex gap-8 items-center">
-            <a href="#services" className="text-gray-700 hover:text-gray-900 text-sm font-medium">Services</a>
-            <a href="#accessibility" className="text-gray-700 hover:text-gray-900 text-sm font-medium">Accessibility</a>
-            <a href="#support" className="text-gray-70
+          <div className="hidden md:flex gap-8">
+            <a href="#services" className="text-gray-600 hover:text-gray-900 text-sm">Services</a>
+            <a href="#features" className="text-gray-600 hover:text-gray-900 text-sm">Features</a>
+            <a href="#help" className="text-gray-600 hover:text-gray-900 text-sm">Help</a>
+          </div>
+          <button className="text-gray-600 hover:text-gray-900 md:hidden">
+            <svg className="w-6 h-
 ```
 
 </details>
@@ -341,7 +344,7 @@ export default function HomePage() {
 <details>
 <summary><strong>SFT only</strong> — 2 steps</summary>
 
-**Step 2 · Classification** (3167 ms)
+**Step 2 · Classification** (1700 ms)
 ```json
 {
   "product_type": "B2C SaaS",
@@ -353,13 +356,13 @@ export default function HomePage() {
 }
 ```
 
-**Step 5 · Code Generation (no CDO strategy)** (94667 ms)
+**Step 5 · Code Generation (no CDO strategy)** (95044 ms)
 ```json
 {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "{\"files\":[{\"path\":\"src/app/page.tsx\",\"content\":\"'use client';\\n\\nimport {\\n  CheckCircle,\\n  Clock,\\n  FileText,\\n  CreditCard,\\n  Home,\\n  Car,\\n  Leaf,\\n  Shield,\\n  Star,\\n  ChevronRight,\\n  Menu,\\n  X,\\n  Accessibility,\\n  BarChart3,\\n  Users,\\n  Zap,\\n  Phone,\\n  Mail,\\n  MapPin,\\n  ArrowRight,\\n  Building2,\\n  Globe,\\n} from 'lucide-react';\\nimport { useState } from 'react';\\n\\nexport default function Page() {\\n  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);\\n\\n  const services = [\\n    { icon: FileText, label: 'Building Permits', time: '8 min', color: 'bg-blue-50 text-blue-700 border-blue-100' },\\n    { icon: CreditCard, label: 'Pay Utility Bills', time: 
+      "content": "```json\n{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"export default function Home() {\\n  return (\\n    <div className=\\\"min-h-screen bg-white text-gray-900 font-sans\\\">\\n\\n      {/* Sticky Nav */}\\n      <header className=\\\"sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm\\\">\\n        <div className=\\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\\">\\n          <div className=\\\"flex items-center gap-3\\\">\\n            <div className=\\\"w-8 h-8 rounded-md bg-blue-700 flex items-center justify-center\\\">\\n              <svg width=\\\"18\\\" height=\\\"18\\\" viewBox=\\\"0 0 24 24\\\" fill=\\\"none\\\" stroke=\\\"white\\\" stro
 ```
 
 </details>
@@ -367,7 +370,7 @@ export default function HomePage() {
 <details>
 <summary><strong>AI CDO · Best</strong> — 5 steps</summary>
 
-**Step 2 · Classification** (1254 ms)
+**Step 2 · Classification** (1266 ms)
 ```json
 {
   "product_type": "internal_tool",
@@ -379,7 +382,7 @@ export default function HomePage() {
 }
 ```
 
-**Step 3 · CDO Strategy** (5698 ms)
+**Step 3 · CDO Strategy** (7030 ms)
 ```json
 {
   "primary_intent": "accelerate_understanding",
@@ -391,7 +394,7 @@ export default function HomePage() {
   "strategic_principles": [
     "clarity_over_density",
     "familiarity_over_novelty",
-    "confidence_before_action"
+    "progressive_disclosure"
   ],
   "avoidances": [
     "marketing_fluff",
@@ -400,7 +403,6 @@ export default function HomePage() {
   ],
   "strategies": [
     {
-      "name": "Service-Led Clarity",
       "intent": "product_first",
       "hero_focus": "value_prop",
       "information_order": [
@@ -409,7 +411,6 @@ export default function HomePage() {
         "product_demo",
         "benefits",
         "security_compliance",
-        "primary_cta",
         "faq",
         "footer"
       ],
@@ -417,13 +418,15 @@ export default function HomePage() {
         "simplify_language",
         "limit_choices"
       ],
-      "rationale": "Prioritize immediate comprehension of available services so residents quickly understand what they can accomplish online, reducing confusion for first-time visitors."
+      "rationale": "Lead with the practical value of digital service access so residents immediately understand what they can accomplish, reducing confusion for a broad and diverse first-time audience."
     },
     {
-      "name": "Civic A
+      "intent": "authority_first",
+      "hero_focus": "authority",
+
 ```
 
-**Step 3.5 · Brand Traits** (14562 ms)
+**Step 3.5 · Brand Traits** (12623 ms)
 ```json
 {
   "brand_personality": {
@@ -431,41 +434,34 @@ export default function HomePage() {
       "trustworthy",
       "accessible",
       "civic",
-      "transparent"
+      "straightforward"
     ],
-    "tone": "clear, plain-spoken, respectful, reassuring",
+    "tone": "clear, reassuring, and respectful \u2014 plain language that treats residents as capable adults without bureaucratic jargon",
     "voice_attributes": [
-      "plain-language",
-      "neutral",
-      "informative",
-      "human"
+      "plain-spoken",
+      "patient",
+      "inclusive",
+      "authoritative-but-warm"
     ]
   },
   "visual_identity": {
-    "design_language": "civic-modern",
-    "aesthetic": "clean, utilitarian, dignified, accessible-first with generous whitespace and high-legibility hierarchy",
-    "visual_weight": "balanced",
-    "complexity": "minimal"
+    "aesthetic": "civic-modern",
+    "design_language": "clean, structured, and unmistakably governmental \u2014 evoking public-sector credibility while feeling contemporary and digitally native",
+    "visual_density": "comfortable",
+    "whitespace": "generous",
+    "corner_radius": "subtle",
+    "border_treatment": "defined-borders",
+    "shadow_usage": "minimal",
+    "texture": "flat"
   },
-  "color_strategy": {
-    "palette_type": "institutional",
-    "primary_color": "#1B4D89",
-    "secondary_color": "#0B7A3B",
-    "accent_color": "#C8511C",
-    "neutral_base": "#F5F6F7",
-    "text_primary": "#0E1726",
-    "background": "#FFFFFF",
-    "semantic_colors": {
-      "success": "#0B7A3B",
-      "warning": "#A86A00",
-      "error": "#B3261E",
-      "info": "#1B4D89"
-    },
-    "contrast_level": "AAA",
-    "rationale": "Deep civic 
+  "color_direction": {
+    "palette_type": "restrained-institutional",
+    "primary_hue": "deep civic blue",
+    "secondary_hue": "neutral slate gray",
+    "accent_hue": "trustwo
 ```
 
-**Step 4 · UI Intent** (2029 ms)
+**Step 4 · UI Intent** (2122 ms)
 ```json
 {
   "primary_focus": "value_prop",
@@ -475,24 +471,24 @@ export default function HomePage() {
   },
   "proof_policy": "heavy",
   "content_density": "low",
-  "motion_policy": "subtle",
+  "motion_policy": "none",
   "creative_license": "restricted",
   "language_style": "plain",
   "interaction_restraint": "strict"
 }
 ```
 
-**Step 5 · Code Generation** (81153 ms)
+**Step 5 · Code Generation** (81347 ms)
 ```json
 {
   "files": [
     {
       "path": "package.json",
-      "content": "{\n  \"name\": \"civic-portal\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.11.30\",\n    \"@types/react\": \"18.2.74\",\n    \"@types/react-dom\": \"18.2.24\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.4\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
+      "content": "{\n  \"name\": \"city-services\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.12.7\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.7\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */\nmodul
+      "content": "/** @type {import('next').NextConfig} */\nconst n
 ```
 
 </details>
@@ -508,29 +504,33 @@ export default function HomePage() {
 <details>
 <summary><strong>v0.dev · Baseline</strong> — 1 step</summary>
 
-**Step 1 · Direct Generation** (14134 ms)
+**Step 1 · Direct Generation** (14335 ms)
 ```json
-import React from 'react';
+'use client';
+
+import { useState } from 'react';
 
 export default function Home() {
-  const [commuteDays, setCommuteDays] = React.useState(20);
-  const [distancePerDay, setDistancePerDay] = React.useState(10);
-  
-  const monthlySavings = Math.round((commuteDays * distancePerDay * 0.15) / 100 * 1000);
+  const [monthlyCommute, setMonthlyCommute] = useState(500);
+  const [gasSavings, setGasSavings] = useState(100);
+
+  const handleCommuteChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseFloat(e.target.value);
+    setMonthlyCommute(value);
+    // Assume $0.20 per km on car, $0.02 per km on e-bike
+    setGasSavings(Math.round((value * (0.20 - 0.02)) / 12));
+  };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       {/* Navbar */}
-      <nav className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <nav className="border-b border-gray-200 sticky top-0 z-50 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-black rounded-full"></div>
-            <span className="font-bold text-lg">UrbanPulse</span>
-          </div>
-          <div className="flex items-center gap-8">
-            <a href="#features" className="text-sm text-gray-600 hover:text-black">Features</a>
-            <a href="#savings" className="text-sm text-gray-600 hover:text-black">Savings</a>
-            <a href="#footer" className="text-sm
+            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">⚡</span>
+            </div>
+            <span class
 ```
 
 </details>
@@ -538,7 +538,7 @@ export default function Home() {
 <details>
 <summary><strong>SFT only</strong> — 2 steps</summary>
 
-**Step 2 · Classification** (1230 ms)
+**Step 2 · Classification** (1244 ms)
 ```json
 {
   "product_type": "B2C SaaS",
@@ -550,13 +550,18 @@ export default function Home() {
 }
 ```
 
-**Step 5 · Code Generation (no CDO strategy)** (102277 ms)
+**Step 5 · Code Generation (no CDO strategy)** (95735 ms)
 ```json
 {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "```json\n{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"\\\"use client\\\";\\nimport { useState } from \\\"react\\\";\\nimport {\\n  Zap,\\n  MapPin,\\n  TrendingDown,\\n  Shield,\\n  Wind,\\n  Battery,\\n  ChevronRight,\\n  Star,\\n  ArrowRight,\\n  Check,\\n  Menu,\\n  X,\\n  Bike,\\n  DollarSign,\\n  Clock,\\n  Leaf,\\n} from \\\"lucide-react\\\";\\n\\nexport default function Home() {\\n  const [mobileOpen, setMobileOpen] = useState(false);\\n  const [miles, setMiles] = useState(10);\\n  const [daysPerWeek, setDaysPerWeek] = useState(5);\\n\\n  const gasCostPerMile = 0.18;\\n  const ebikeCostPerMile = 0.01;\\n  const weeklyGas = miles * 2 * daysPerWeek * gasCostPerMile;\\n  co
+      "content": "```json
+{
+  \"files\": [
+    {
+      \"path\": \"src/app/page.tsx\",
+      \"content\": \"export default function Home() {\n  return (\n    <div className=\\"min-h-screen bg-zinc-950 text-white\\">\n      {/* Sticky Nav */}\n      <nav className=\\"sticky top-0 z-50 bg-zinc-950/95 border-b border-zinc-800 backdrop-blur\\">\n        <div className=\\"max-w-7xl mx-auto px-6 py-4 flex items-center justify-between\\">\n          <div className=\\"flex items-center gap-2\\">\n            <div className=\\"w-8 h-8 bg-lime-400 rounded-md flex items-center justify-center\\">\n              <svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"#09090b\\" strokeWi
 ```
 
 </details>
@@ -564,10 +569,10 @@ export default function Home() {
 <details>
 <summary><strong>AI CDO · Best</strong> — 5 steps</summary>
 
-**Step 2 · Classification** (2313 ms)
+**Step 2 · Classification** (1414 ms)
 ```json
 {
-  "product_type": "content_site",
+  "product_type": "ecommerce",
   "industry": "ecommerce",
   "page_type": "landing",
   "primary_user": "end_customer",
@@ -576,7 +581,7 @@ export default function Home() {
 }
 ```
 
-**Step 3 · CDO Strategy** (5928 ms)
+**Step 3 · CDO Strategy** (6247 ms)
 ```json
 {
   "primary_intent": "drive_conversion",
@@ -597,7 +602,6 @@ export default function Home() {
   ],
   "strategies": [
     {
-      "name": "Performance Proof",
       "intent": "product_first",
       "hero_focus": "value_prop",
       "information_order": [
@@ -611,62 +615,65 @@ export default function Home() {
         "footer"
       ],
       "risk_controls": [
-        "increase_proof_density",
-        "simplify_language"
+        "simplify_language",
+        "increase_proof_density"
       ],
-      "rationale": "Lead with concrete commuter-engineered differentiation and quantified performance to establish category superiority before inviting action."
+      "rationale": "Lead with the differentiated commuter-engineered value proposition and let the product itself carry conviction, since the audience is evaluating a significant lifestyle and financial shift away from cars."
     },
     {
-      "name": "Confidence Through Utility",
-
+      "intent"
 ```
 
-**Step 3.5 · Brand Traits** (14195 ms)
+**Step 3.5 · Brand Traits** (17523 ms)
 ```json
 {
-  "brand_personality": {
-    "primary_traits": [
-      "bold",
-      "performance-driven",
+  "design_personality": {
+    "primary": "bold",
+    "secondary": [
+      "performance",
       "engineered",
       "confident"
     ],
-    "tone": "assertive and technical with urban edge",
-    "voice_attributes": [
-      "direct",
-      "spec-forward",
-      "punchy",
-      "credible"
+    "avoid": [
+      "playful",
+      "delicate",
+      "decorative",
+      "vintage"
     ]
   },
-  "visual_identity": {
-    "aesthetic": "high-contrast performance tech",
-    "design_language": "industrial-modern with motorsport influence",
-    "visual_weight": "heavy",
-    "imagery_style": "cinematic urban commute photography with motion blur, dawn cityscapes, and detail shots of engineered components"
+  "visual_tone": {
+    "energy": "high",
+    "formality": "casual_premium",
+    "warmth": "cool",
+    "density": "spacious_with_data_moments"
   },
-  "color_direction": {
-    "palette_type": "high_contrast_mono_with_accent",
-    "primary_mood": "electric and decisive",
-    "background_treatment": "deep near-black with sharp white space breaks",
-    "suggested_palette": {
-      "base": "#0A0A0B",
-      "surface": "#15161A",
-      "text_primary": "#F5F5F2",
-      "text_secondary": "#9A9CA3",
-      "accent_primary": "#D7FF1E",
+  "color_strategy": {
+    "scheme": "high_contrast_dark",
+    "base": "near_black",
+    "surface": "deep_charcoal",
+    "text": "off_white",
+    "accent_role": "performance_signal",
+    "accent": "electric_lime",
+    "secondary_accent": "signal_orange",
+    "contrast_level": "very_high",
+    "usage_notes": "Dark canvas with punchy accent for stats, CTAs, and range/savings numerics. Avoid pastels and gradients-as-decor; use accent sparingly to preserve impact."
+  },
+  "typography": {
+    "style": "industrial_geometric",
+    "headline_weight": "extra_bold",
+    "headline_treatment": "tight_tracking_large_scale",
   
 ```
 
-**Step 4 · UI Intent** (3394 ms)
+**Step 4 · UI Intent** (1931 ms)
 ```json
 {
-  "primary_focus": "social_proof",
+  "primary_focus": "value_prop",
   "cta_policy": {
-    "timing": "delayed",
+    "timing": "immediate",
     "intensity": "assertive"
   },
-  "proof_policy": "heavy",
+  "proof_policy": "balanced",
   "content_density": "medium",
   "motion_policy": "subtle",
   "creative_license": "restricted",
@@ -675,17 +682,43 @@ export default function Home() {
 }
 ```
 
-**Step 5 · Code Generation** (58976 ms)
+**Step 5 · Code Generation** (97264 ms)
 ```json
 {
   "files": [
     {
       "path": "package.json",
-      "content": "{\n  \"name\": \"validated-conversion\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.11.0\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.39\",\n    \"tailwindcss\": \"3.4.7\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
+      "content": "{
+  \"name\": \"commuter-ebike\",
+  \"version\": \"0.1.0\",
+  \"private\": true,
+  \"scripts\": {
+    \"dev\": \"next dev\",
+    \"build\": \"next build\",
+    \"start\": \"next start\",
+    \"lint\": \"next lint\"
+  },
+  \"dependencies\": {
+    \"next\": \"14.2.5\",
+    \"react\": \"18.3.1\",
+    \"react-dom\": \"18.3.1\"
+  },
+  \"devDependencies\": {
+    \"@types/node\": \"20.12.7\",
+    \"@types/react\": \"18.3.3\",
+    \"@types/react-dom\": \"18.3.0\",
+    \"autoprefixer\": \"10.4.19\",
+    \"postcss\": \"8.4.38\",
+    \"tailwindcss\": \"3.4.4\",
+    \"typescript\": \"5.4.5\"
+  }
+}
+"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */\n
+      "content": "/** @type {import('next').NextConfig} */
+const 
 ```
 
 </details>
@@ -701,29 +734,31 @@ export default function Home() {
 <details>
 <summary><strong>v0.dev · Baseline</strong> — 1 step</summary>
 
-**Step 1 · Direct Generation** (15442 ms)
+**Step 1 · Direct Generation** (17230 ms)
 ```json
-'use client';
-
 import React from 'react';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navbar */}
-      <nav className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded"></div>
-            <span className="text-xl font-bold text-gray-900">CodePath</span>
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-gray-900">Program</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">Outcomes</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">About</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">Contact</a>
-          </div>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue
+      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center">
+              <div className="flex-shrink-0 font-bold text-2xl text-blue-600">
+                DevCareer
+              </div>
+            </div>
+            <div className="hidden md:flex space-x-8">
+              <a href="#features" className="text-gray-700 hover:text-blue-600 text-sm font-medium">
+                Features
+              </a>
+              <a href="#outcomes" className="text-gray-700 hover:text-blue-600 text-sm font-medium">
+                Outcomes
+              </a>
+              <a href="#mentorship" className="text-gray-700 hover:text-blue-600 text-sm font-medium">
+              
 ```
 
 </details>
@@ -731,7 +766,7 @@ export default function Home() {
 <details>
 <summary><strong>SFT only</strong> — 2 steps</summary>
 
-**Step 2 · Classification** (1145 ms)
+**Step 2 · Classification** (1287 ms)
 ```json
 {
   "product_type": "B2C SaaS",
@@ -743,13 +778,25 @@ export default function Home() {
 }
 ```
 
-**Step 5 · Code Generation (no CDO strategy)** (100019 ms)
+**Step 5 · Code Generation (no CDO strategy)** (80623 ms)
 ```json
 {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "{\"files\":[{\"path\":\"src/app/page.tsx\",\"content\":\"'use client';\\nimport { useState } from 'react';\\nimport {\\n  Code2,\\n  Users,\\n  Briefcase,\\n  TrendingUp,\\n  CheckCircle,\\n  Star,\\n  ArrowRight,\\n  Menu,\\n  X,\\n  BookOpen,\\n  MessageSquare,\\n  Award,\\n  Clock,\\n  ChevronRight,\\n  Zap,\\n  Globe,\\n  Shield,\\n} from 'lucide-react';\\n\\nexport default function Home() {\\n  const [menuOpen, setMenuOpen] = useState(false);\\n\\n  const features = [\\n    {\\n      icon: <Users className=\\\"w-6 h-6\\\" />,\\n      title: 'Dedicated 1-on-1 Mentorship',\\n      description:\\n        'Every student gets a senior engineer mentor with weekly live sessions, code reviews, and career coaching \u2014 
+      "content": "export default function Home() {
+  return (
+    <div className=\"min-h-screen bg-white text-gray-900 font-sans\">
+      {/* Sticky Nav */}
+      <nav className=\"sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm\">
+        <div className=\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\">
+          <div className=\"flex items-center gap-2\">
+            <div className=\"w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center\">
+              <span className=\"text-white font-bold text-sm\">L</span>
+            </div>
+            <span className=\"text-xl font-bold text-gray-900\">LaunchCode Academy</span>
+          </div>
+          <div className=\"hidden md:flex items-
 ```
 
 </details>
@@ -757,7 +804,7 @@ export default function Home() {
 <details>
 <summary><strong>AI CDO · Best</strong> — 5 steps</summary>
 
-**Step 2 · Classification** (4733 ms)
+**Step 2 · Classification** (1215 ms)
 ```json
 {
   "product_type": "content_site",
@@ -769,7 +816,7 @@ export default function Home() {
 }
 ```
 
-**Step 3 · CDO Strategy** (6975 ms)
+**Step 3 · CDO Strategy** (6539 ms)
 ```json
 {
   "primary_intent": "increase_confidence",
@@ -790,9 +837,9 @@ export default function Home() {
   ],
   "strategies": [
     {
-      "name": "Outcomes-Backed Credibility",
+      "name": "Outcomes as Proof",
       "intent": "trust_first",
-      "hero_focus": "value_prop",
+      "hero_focus": "social_proof",
       "information_order": [
         "headline",
         "subheadline",
@@ -808,43 +855,50 @@ export default function Home() {
         "delay_cta",
         "simplify_language"
       ],
-      "rationale": "Lead with verifiable outcomes and employer validation to neutralize skepticism inherent to bootcamp claims, earning the right to ask for action only after proof is esta
+      "rationale": "Career changers face significant personal and financial risk, so leading with verifiable outcomes and employer credibility addresses skepticism before any commitment is request
 ```
 
-**Step 3.5 · Brand Traits** (15700 ms)
+**Step 3.5 · Brand Traits** (11785 ms)
 ```json
 {
   "brand_personality": {
     "primary_traits": [
       "motivating",
       "credible",
-      "supportive"
+      "outcome-driven"
     ],
-    "tone": "encouraging-professional",
-    "formality": "approachable",
-    "energy": "high",
-    "rationale": "Career changers need motivation balanced with credibility. Supportive tone reflects mentorship-intensive positioning while professional formality builds trust around major life decision."
+    "tone": "confident-mentor",
+    "energy_level": "high",
+    "formality": "approachable-professional"
   },
-  "visual_style": {
+  "visual_direction": {
     "aesthetic": "modern-editorial",
-    "design_language": "human-centered-professional",
-    "visual_density": "balanced",
-    "imagery_style": "authentic-portraits",
-    "iconography": "rounded-functional",
-    "rationale": "Editorial aesthetic supports testimonial-heavy narrative. Authentic portraits of real graduates reinforce peer credibility over stock imagery."
+    "design_era": "contemporary-2024",
+    "visual_metaphor": "upward-trajectory",
+    "complexity": "structured-clean"
   },
-  "color_direction": {
-    "palette_type": "confident-warm",
-    "primary_hue": "deep-blue",
-    "accent_strategy": "energetic-accent",
-    "accent_hue": "vibrant-coral",
-    "neutra
+  "color_strategy": {
+    "palette_type": "purposeful-accent",
+    "primary_mood": "trustworthy-ambitious",
+    "base": "warm-neutral-white",
+    "primary": "deep-navy",
+    "accent": "vibrant-coral",
+    "supporting": [
+      "soft-sand",
+      "success-green"
+    ],
+    "contrast_level": "high",
+    "rationale": "Navy conveys credibility and academic rigor while coral injects motivational energy and signals transformation; high contrast supports scannability for first-time visitors"
+  },
+  "typography": {
+    "personality": "editorial-confident",
+    "heading_style": "bold-dis
 ```
 
-**Step 4 · UI Intent** (4658 ms)
+**Step 4 · UI Intent** (2309 ms)
 ```json
 {
-  "primary_focus": "social_proof",
+  "primary_focus": "value_prop",
   "cta_policy": {
     "timing": "delayed",
     "intensity": "neutral"
@@ -858,17 +912,43 @@ export default function Home() {
 }
 ```
 
-**Step 5 · Code Generation** (53691 ms)
+**Step 5 · Code Generation** (102848 ms)
 ```json
 {
   "files": [
     {
       "path": "package.json",
-      "content": "{\n  \"name\": \"career-narrative\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.11.0\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.7\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
+      "content": "{
+  \"name\": \"clear-value-path\",
+  \"version\": \"0.1.0\",
+  \"private\": true,
+  \"scripts\": {
+    \"dev\": \"next dev\",
+    \"build\": \"next build\",
+    \"start\": \"next start\",
+    \"lint\": \"next lint\"
+  },
+  \"dependencies\": {
+    \"next\": \"14.2.5\",
+    \"react\": \"18.3.1\",
+    \"react-dom\": \"18.3.1\"
+  },
+  \"devDependencies\": {
+    \"@types/node\": \"20.12.7\",
+    \"@types/react\": \"18.3.3\",
+    \"@types/react-dom\": \"18.3.0\",
+    \"autoprefixer\": \"10.4.19\",
+    \"postcss\": \"8.4.38\",
+    \"tailwindcss\": \"3.4.7\",
+    \"typescript\": \"5.4.5\"
+  }
+}
+"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */\nmodu
+      "content": "/** @type {import('next').NextConfig} */
+modu
 ```
 
 </details>
@@ -884,30 +964,30 @@ export default function Home() {
 <details>
 <summary><strong>v0.dev · Baseline</strong> — 1 step</summary>
 
-**Step 1 · Direct Generation** (15056 ms)
+**Step 1 · Direct Generation** (11854 ms)
 ```json
-import Link from 'next/link';
+'use client';
+
+import { Mail, Phone, Heart, Globe, Users, Scale } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen bg-white">
       {/* Navbar */}
       <nav className="border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-              <span className="text-white text-sm font-bold">L</span>
-            </div>
-            <span className="text-xl font-semibold text-gray-900">LegalAid</span>
+            <div className="w-8 h-8 bg-blue-600 rounded-lg"></div>
+            <span className="text-xl font-bold text-gray-900">ImmigrantAid</span>
           </div>
-          <div className="hidden md:flex gap-8">
-            <Link href="#" className="text-gray-600 hover:text-gray-900 text-sm">
-              About
-            </Link>
-            <Link href="#" className="text-gray-600 hover:text-gray-900 text-sm">
-              Services
-            </Link>
-            <Link href="#" className="text-gray-600 hover:tex
+          <div className="flex items-center gap-8">
+            <a href="#" className="text-gray-700 hover:text-blue-600 text-sm">About</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 text-sm">Services</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 text-sm">Contact</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 text-sm">Donate</a>
+          </div>
+        </div>
+      
 ```
 
 </details>
@@ -915,7 +995,7 @@ export default function Home() {
 <details>
 <summary><strong>SFT only</strong> — 2 steps</summary>
 
-**Step 2 · Classification** (1463 ms)
+**Step 2 · Classification** (2658 ms)
 ```json
 {
   "product_type": "content_site",
@@ -927,13 +1007,18 @@ export default function Home() {
 }
 ```
 
-**Step 5 · Code Generation (no CDO strategy)** (89701 ms)
+**Step 5 · Code Generation (no CDO strategy)** (90721 ms)
 ```json
 {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "{\"files\":[{\"path\":\"src/app/page.tsx\",\"content\":\"'use client';\\nimport {\\n  Globe,\\n  Shield,\\n  Users,\\n  Scale,\\n  Phone,\\n  Mail,\\n  MapPin,\\n  ChevronRight,\\n  CheckCircle,\\n  Heart,\\n  BookOpen,\\n  Handshake,\\n  Star,\\n  ArrowRight,\\n  FileText,\\n  Clock,\\n  Award\\n} from 'lucide-react';\\nimport { useState } from 'react';\\n\\nexport default function Home() {\\n  const [menuOpen, setMenuOpen] = useState(false);\\n\\n  return (\\n    <div className=\\\"min-h-screen bg-white font-sans\\\">\\n      {/* Sticky Nav */}\\n      <header className=\\\"sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100 shadow-sm\\\">\\n        <div className=\\\"max-w-7xl mx-auto px-6 py-4 fl
+      "content": "```json
+{
+  \"files\": [
+    {
+      \"path\": \"src/app/page.tsx\",
+      \"content\": \"export default function Home() {\n  return (\n    <div className=\\"min-h-screen bg-white text-gray-800 font-sans\\">\n      {/* Sticky Nav */}\n      <nav className=\\"sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm\\">\n        <div className=\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\">\n          <div className=\\"flex items-center gap-2\\">\n            <div className=\\"w-8 h-8 rounded-full bg-teal-600 flex items-center justify-center\\">\n              <svg className=\\"w-5 h-5 text-white\\" fill=\\"none\\" stroke=\\"currentColor\\" viewBox=\\"0 0 24 24\\"
 ```
 
 </details>
@@ -941,7 +1026,7 @@ export default function Home() {
 <details>
 <summary><strong>AI CDO · Best</strong> — 5 steps</summary>
 
-**Step 2 · Classification** (1263 ms)
+**Step 2 · Classification** (1215 ms)
 ```json
 {
   "product_type": "content_site",
@@ -953,7 +1038,7 @@ export default function Home() {
 }
 ```
 
-**Step 3 · CDO Strategy** (6004 ms)
+**Step 3 · CDO Strategy** (6023 ms)
 ```json
 {
   "primary_intent": "signal_legitimacy",
@@ -974,8 +1059,8 @@ export default function Home() {
   ],
   "strategies": [
     {
-      "name": "Authority and Accessibility",
-      "intent": "authority_first",
+      "name": "Credibility Foundation",
+      "intent": "trust_first",
       "hero_focus": "authority",
       "information_order": [
         "headline",
@@ -988,84 +1073,102 @@ export default function Home() {
         "footer"
       ],
       "risk_controls": [
+        "increase_proof_density",
         "reinforce_authority",
-        "simplify_language",
-        "increase_proof_density"
+        "simplify_language"
       ],
-      "rationale": "Establishes institutional legitimacy first to reassure a vulnerable audience that the organization is credible, safe, and competent before inviting enga
-```
-
-**Step 3.5 · Brand Traits** (8499 ms)
-```json
-{
-  "brand_name": "Refugio Legal",
-  "tone": [
-    "compassionate",
-    "trustworthy",
-    "calm",
-    "humanitarian",
-    "accessible"
-  ],
-  "voice_descriptors": [
-    "clear",
-    "reassuring",
-    "respectful",
-    "non-judgmental",
-    "plain-spoken"
-  ],
-  "visual_style": "humanitarian_editorial",
-  "color_personality": {
-    "primary_hue": "deep_teal",
-    "accent_hue": "warm_amber",
-    "neutral_base": "soft_ivory",
-    "mood": "safe_and_grounded",
-    "contrast_level": "medium_high",
-    "saturation": "muted_with_warm_accents"
-  },
-  "typography_personality": {
-    "heading_style": "humanist_serif",
-    "body_style": "clean_humanist_sans",
-    "pairing_mood": "trustworthy_and_human",
-    "scale_contrast": "moderate",
-    "weight_usage": "regular_to_semibold"
-  },
-  "spacing_density": "generous",
-  "corner_radius_style": "soft_rounded",
-  "shadow_style": "subtle_soft",
-  "imagery_style": {
-    "type": "documentary_photography",
-    "subject_focus": "real_people_and_families",
+      "rationale": "Vulnerable first-time visitors require institutional legitimacy before engagement; leading with authority mitigates skepticism in a high-stakes legal context."
  
 ```
 
-**Step 4 · UI Intent** (2433 ms)
+**Step 3.5 · Brand Traits** (11890 ms)
 ```json
 {
-  "primary_focus": "value_prop",
+  "visual_tone": {
+    "descriptors": [
+      "compassionate",
+      "trustworthy",
+      "humanitarian",
+      "dignified",
+      "accessible"
+    ],
+    "energy": "calm",
+    "formality": "professional",
+    "warmth": "warm"
+  },
+  "color_direction": {
+    "palette_type": "warm_humanitarian",
+    "primary_hue": "deep_teal",
+    "accent_hue": "warm_amber",
+    "background_strategy": "soft_neutral",
+    "contrast_level": "high",
+    "rationale": "Deep teal conveys legal authority and trust while warm amber accents add humanity and hope. Soft neutral backgrounds with high contrast ensure readability for multilingual users and accessibility compliance."
+  },
+  "typography_direction": {
+    "style": "humanist_sans",
+    "personality": [
+      "clear",
+      "approachable",
+      "globally_legible"
+    ],
+    "scale_contrast": "moderate",
+    "rationale": "Humanist sans-serif typefaces offer warmth while maintaining the clarity needed for legal content and multilingual support including 
+```
+
+**Step 4 · UI Intent** (1980 ms)
+```json
+{
+  "primary_focus": "social_proof",
   "cta_policy": {
     "timing": "delayed",
     "intensity": "soft"
   },
-  "proof_policy": "balanced",
+  "proof_policy": "heavy",
   "content_density": "low",
   "motion_policy": "subtle",
   "creative_license": "restricted",
   "language_style": "plain",
-  "interaction_restraint": "moderate"
+  "interaction_restraint": "strict"
 }
 ```
 
-**Step 5 · Code Generation** (56895 ms)
+**Step 5 · Code Generation** (74774 ms)
 ```json
 {
   "files": [
     {
       "path": "package.json",
-      "content": "{\n  \"name\": \"clarity-of-value\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.11.30\",\n    \"@types/react\": \"18.2.66\",\n    \"@types/react-dom\": \"18.2.22\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.4\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
+      "content": "{
+  \"name\": \"proof-led-assurance\",
+  \"version\": \"0.1.0\",
+  \"private\": true,
+  \"scripts\": {
+    \"dev\": \"next dev\",
+    \"build\": \"next build\",
+    \"start\": \"next start\",
+    \"lint\": \"next lint\"
+  },
+  \"dependencies\": {
+    \"next\": \"14.2.5\",
+    \"react\": \"18.3.1\",
+    \"react-dom\": \"18.3.1\"
+  },
+  \"devDependencies\": {
+    \"@types/node\": \"20.12.7\",
+    \"@types/react\": \"18.3.3\",
+    \"@types/react-dom\": \"18.3.0\",
+    \"autoprefixer\": \"10.4.19\",
+    \"postcss\": \"8.4.38\",
+    \"tailwindcss\": \"3.4.7\",
+    \"typescript\": \"5.4.5\"
+  }
+}
+"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */\nc
+      "content": "/** @type {import('next').NextConfig} */
+c
 ```
 
 </details>
@@ -1081,29 +1184,29 @@ export default function Home() {
 <details>
 <summary><strong>v0.dev · Baseline</strong> — 1 step</summary>
 
-**Step 1 · Direct Generation** (9126 ms)
+**Step 1 · Direct Generation** (14337 ms)
 ```json
-'use client';
+import React from 'react';
 
-import { Volume2, Brain, Zap } from 'lucide-react';
-
-export default function Home() {
+export default function SoundscapeApp() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-gray-900">
       {/* Navbar */}
       <nav className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded"></div>
-            <span className="text-xl font-semibold text-gray-900">SoundMind</span>
+            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <svg
+                className="w-5 h-5 text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V17a2 2 0 01-2 2h-1C9.716 19 3 12.284 3 4V3z" />
+              </svg>
+            </div>
+            <span className="text-xl font-bold">SoundMind</span>
           </div>
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Features</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Science</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Pricing</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Blog</a>
-          </div>
-          <button
+          <div className="flex gap-6 t
 ```
 
 </details>
@@ -1111,25 +1214,30 @@ export default function Home() {
 <details>
 <summary><strong>SFT only</strong> — 2 steps</summary>
 
-**Step 2 · Classification** (1624 ms)
+**Step 2 · Classification** (2734 ms)
 ```json
 {
   "product_type": "B2C SaaS",
   "industry": "healthcare",
   "page_type": "landing",
   "primary_user": "end_customer",
-  "user_context": "evaluating",
+  "user_context": "first_time_visitor",
   "trust_sensitivity": "medium"
 }
 ```
 
-**Step 5 · Code Generation (no CDO strategy)** (96946 ms)
+**Step 5 · Code Generation (no CDO strategy)** (95533 ms)
 ```json
 {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "{\"files\":[{\"path\":\"src/app/page.tsx\",\"content\":\"'use client';\\nimport { useState } from 'react';\\nimport {\\n  Brain,\\n  Moon,\\n  Waves,\\n  Zap,\\n  Shield,\\n  Play,\\n  Pause,\\n  ChevronRight,\\n  Star,\\n  Clock,\\n  Activity,\\n  Headphones,\\n  CheckCircle,\\n  ArrowRight,\\n  Volume2,\\n  Wind,\\n  CloudRain,\\n  Music\\n} from 'lucide-react';\\n\\nconst NAV_LINKS = ['Features', 'Science', 'Sounds', 'Pricing'];\\n\\nconst FEATURES = [\\n  {\\n    icon: Brain,\\n    title: 'Neuroscience-Backed Design',\\n    desc: 'Every soundscape is engineered with binaural beats, isochronic tones, and spectral masking protocols reviewed by sleep researchers.'\\n  },\\n  {\\n    icon: Moon,\\n    title: 'Sleep On
+      "content": "```json
+{
+  \"files\": [
+    {
+      \"path\": \"src/app/page.tsx\",
+      \"content\": \"export default function Home() {\n  return (\n    <div className=\\"min-h-screen bg-gray-950 text-gray-100\\">\n      {/* Sticky Nav */}\n      <nav className=\\"sticky top-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800\\">\n        <div className=\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\">\n          <div className=\\"flex items-center gap-2\\">\n            <div className=\\"w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center\\">\n              <svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" fill=\\"none\\">\n                <path d
 ```
 
 </details>
@@ -1137,7 +1245,7 @@ export default function Home() {
 <details>
 <summary><strong>AI CDO · Best</strong> — 5 steps</summary>
 
-**Step 2 · Classification** (2424 ms)
+**Step 2 · Classification** (1204 ms)
 ```json
 {
   "product_type": "B2C SaaS",
@@ -1149,7 +1257,7 @@ export default function Home() {
 }
 ```
 
-**Step 3 · CDO Strategy** (5874 ms)
+**Step 3 · CDO Strategy** (6019 ms)
 ```json
 {
   "primary_intent": "increase_confidence",
@@ -1170,13 +1278,12 @@ export default function Home() {
   ],
   "strategies": [
     {
-      "name": "Science-Led Credibility",
+      "name": "Science-Led Confidence",
       "intent": "authority_first",
       "hero_focus": "authority",
       "information_order": [
         "headline",
         "subheadline",
-        "security_compliance",
         "benefits",
         "product_demo",
         "testimonials",
@@ -1185,43 +1292,61 @@ export default function Home() {
         "footer"
       ],
       "risk_controls": [
-        "increase_proof_density",
         "reinforce_authority",
+        "increase_proof_density",
         "delay_cta"
       ],
-      "rationale": "Lead with neuroscience credibility to differentiate from lifestyle competitors and justify the product's outcome claims before any conversio
+      "rationale": "Lead with neuroscience credibility to differentiate from lifestyle-focused competitors and justify category-specific claims before asking for commitment."
+    },
+    {
+    
 ```
 
-**Step 3.5 · Brand Traits** (12670 ms)
+**Step 3.5 · Brand Traits** (11809 ms)
 ```json
 {
-  "design_inference": {
-    "design_keywords": [
-      "serene",
-      "nocturnal",
-      "scientific",
-      "immersive",
-      "minimal",
-      "atmospheric"
+  "brand_name_suggestion": "Hush",
+  "brand_personality": [
+    "calm",
+    "scientific",
+    "immersive",
+    "minimal",
+    "trustworthy"
+  ],
+  "tone_of_voice": {
+    "style": "quiet-confident",
+    "characteristics": [
+      "soft-spoken",
+      "precise",
+      "evocative",
+      "unhurried"
     ],
-    "personality_tone": "Calm, intelligent, and grounded \u2014 speaks softly with clinical authority. Evokes the quiet clarity of late-night focus and the gentle pull of sleep. Confident but never clinical-cold.",
-    "emotional_response": [
-      "calm",
-      "trust",
-      "curiosity",
-      "relief"
+    "avoid": [
+      "hype",
+      "exclamations",
+      "jargon-heavy claims",
+      "aggressive CTAs"
     ],
-    "visual_metaphor": "A waveform dissolving into stillness \u2014 sound as visible texture against deep night space, like binaural frequencies rendered as light.",
-    "design_principles": [
-      "Sensory-first: let motion and sound visualizations carry the narrative",
-      "Restful negative space \u2014 no visual noise competes with audio focus",
-      "Scientific credibility through restraint, not clutter",
-      "Dark-mode native, with luminous accents for hierarchy"
-    ],
-    "brand_archetype": "The Sage
+    "example_phrases": [
+      "Sound, engineered for stillness.",
+      "Fall asleep in 12 minutes. On average.",
+      "Built with neuroscientists, tuned for your brain."
+    ]
+  },
+  "visual_identity": {
+    "aesthetic": "ambient-minimal",
+    "design_language": "dark-first, generous whitespace, waveform-driven visuals, soft gradients evoking dusk and deep focus",
+    "color_palette": {
+      "primary": "#0B0F1A",
+      "secondary": "#141A2B",
+      "accent": "#7DA8FF",
+      "accent_secondary": "#B8A4FF",
+      "background": "#070912",
+      "surface": "#0F1422",
+      "t
 ```
 
-**Step 4 · UI Intent** (2463 ms)
+**Step 4 · UI Intent** (3329 ms)
 ```json
 {
   "primary_focus": "product_clarity",
@@ -1233,22 +1358,48 @@ export default function Home() {
   "content_density": "low",
   "motion_policy": "subtle",
   "creative_license": "restricted",
-  "language_style": "plain",
+  "language_style": "precise",
   "interaction_restraint": "moderate"
 }
 ```
 
-**Step 5 · Code Generation** (53201 ms)
+**Step 5 · Code Generation** (66650 ms)
 ```json
 {
   "files": [
     {
       "path": "package.json",
-      "content": "{\n  \"name\": \"experience-demonstration\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.12.7\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.7\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
+      "content": "{
+  \"name\": \"lumen-landing\",
+  \"version\": \"0.1.0\",
+  \"private\": true,
+  \"scripts\": {
+    \"dev\": \"next dev\",
+    \"build\": \"next build\",
+    \"start\": \"next start\",
+    \"lint\": \"next lint\"
+  },
+  \"dependencies\": {
+    \"next\": \"14.2.5\",
+    \"react\": \"18.3.1\",
+    \"react-dom\": \"18.3.1\"
+  },
+  \"devDependencies\": {
+    \"@types/node\": \"20.11.30\",
+    \"@types/react\": \"18.2.73\",
+    \"@types/react-dom\": \"18.2.22\",
+    \"autoprefixer\": \"10.4.19\",
+    \"postcss\": \"8.4.38\",
+    \"tailwindcss\": \"3.4.4\",
+    \"typescript\": \"5.4.5\"
+  }
+}
+"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} 
+      "content": "/** @type {import('next').NextConfig} */
+modu
 ```
 
 </details>
@@ -1264,32 +1415,29 @@ export default function Home() {
 <details>
 <summary><strong>v0.dev · Baseline</strong> — 1 step</summary>
 
-**Step 1 · Direct Generation** (18475 ms)
+**Step 1 · Direct Generation** (17365 ms)
 ```json
 import React from 'react';
 
-export default function CashManagementPage() {
+export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-slate-950 text-white">
       {/* Navbar */}
-      <nav className="border-b border-slate-800 bg-slate-950">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded bg-blue-500 font-bold">
-              CF
+      <nav className="border-b border-slate-800 bg-slate-950/95 backdrop-blur">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center gap-2">
+              <div className="h-8 w-8 rounded bg-emerald-500"></div>
+              <span className="text-lg font-semibold">CashFlow</span>
             </div>
-            <span className="text-lg font-semibold">CashFlow Pro</span>
-          </div>
-          <div className="flex gap-8">
-            <a href="#features" className="text-sm text-slate-300 hover:text-white">
-              Features
-            </a>
-            <a href="#yields" className="text-sm text-slate-300 hover:text-white">
-              Yields
-            </a>
-            <a href="#security" className="text-sm text-slate-300 hover:text-white">
-              Security
-            
+            <div className="hidden md:flex gap-8">
+              <a href="#features" className="text-sm text-slate-300 hover:text-white transition">
+                Features
+              </a>
+              <a href="#security" className="text-sm text-slate-300 hover:text-white transition">
+                Security
+              </a>
+              <a href="#pricing" className="text-sm text-slate-300 hover:text-white trans
 ```
 
 </details>
@@ -1297,7 +1445,7 @@ export default function CashManagementPage() {
 <details>
 <summary><strong>SFT only</strong> — 2 steps</summary>
 
-**Step 2 · Classification** (1801 ms)
+**Step 2 · Classification** (4185 ms)
 ```json
 {
   "product_type": "B2B SaaS",
@@ -1309,13 +1457,18 @@ export default function CashManagementPage() {
 }
 ```
 
-**Step 5 · Code Generation (no CDO strategy)** (95379 ms)
+**Step 5 · Code Generation (no CDO strategy)** (108166 ms)
 ```json
 {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "{\"files\":[{\"path\":\"src/app/page.tsx\",\"content\":\"'use client';\\nimport { useState } from 'react';\\nimport {\\n  TrendingUp,\\n  Shield,\\n  Zap,\\n  ChevronRight,\\n  BarChart3,\\n  Lock,\\n  ArrowUpRight,\\n  CheckCircle2,\\n  Star,\\n  DollarSign,\\n  PieChart,\\n  RefreshCw,\\n  AlertCircle,\\n  Menu,\\n  X,\\n} from 'lucide-react';\\n\\nconst YIELD_DATA = [\\n  { label: 'Apex Treasury', rate: 5.42, highlight: true },\\n  { label: 'Mercury', rate: 4.71, highlight: false },\\n  { label: 'Brex', rate: 4.58, highlight: false },\\n  { label: 'Traditional Bank', rate: 0.48, highlight: false },\\n];\\n\\nconst FEATURES = [\\n  {\\n    icon: TrendingUp,\\n    title: 'Yield-Optimized Allocation',\\n    descriptio
+      "content": "```json
+{
+  \"files\": [
+    {
+      \"path\": \"src/app/page.tsx\",
+      \"content\": \"export default function Home() {\n  return (\n    <div className=\\"min-h-screen bg-gray-950 text-gray-100\\">\n      {/* Sticky Nav */}\n      <nav className=\\"sticky top-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800\\">\n        <div className=\\"max-w-7xl mx-auto px-6 py-4 flex items-center justify-between\\">\n          <div className=\\"flex items-center gap-2\\">\n            <div className=\\"w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center\\">\n              <svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" fill=\\"none\\">\n                <path d
 ```
 
 </details>
@@ -1323,7 +1476,7 @@ export default function CashManagementPage() {
 <details>
 <summary><strong>AI CDO · Best</strong> — 5 steps</summary>
 
-**Step 2 · Classification** (1166 ms)
+**Step 2 · Classification** (1164 ms)
 ```json
 {
   "product_type": "B2B SaaS",
@@ -1335,14 +1488,14 @@ export default function CashManagementPage() {
 }
 ```
 
-**Step 3 · CDO Strategy** (7042 ms)
+**Step 3 · CDO Strategy** (5918 ms)
 ```json
 {
   "primary_intent": "signal_legitimacy",
   "key_risks": [
     "low_trust",
-    "overpromising",
-    "unclear_value_prop"
+    "unclear_value_prop",
+    "premature_cta"
   ],
   "strategic_principles": [
     "credibility_over_creativity",
@@ -1356,7 +1509,7 @@ export default function CashManagementPage() {
   ],
   "strategies": [
     {
-      "name": "Authority-Led Legitimacy",
+      "name": "Authority-Led Credibility",
       "intent": "authority_first",
       "hero_focus": "authority",
       "information_order": [
@@ -1375,62 +1528,56 @@ export default function CashManagementPage() {
         "increase_proof_density",
         "delay_cta"
       ],
-      "rationale": "CFOs managing significant capital require institutional legitimacy before considering value. Leading with regulatory standing and authori
+      "rationale": "Lead with regulatory legitimacy and institutional credibility to address the high trust sensitivity of CFOs evaluating where to place si
 ```
 
-**Step 3.5 · Brand Traits** (11972 ms)
+**Step 3.5 · Brand Traits** (16142 ms)
 ```json
 {
-  "brand_name": "Vault Yield",
-  "brand_personality": [
-    "sophisticated",
-    "precise",
-    "institutional",
-    "analytical",
-    "premium"
-  ],
-  "tone_of_voice": {
-    "primary": "authoritative",
-    "characteristics": [
-      "data-driven",
-      "concise",
-      "confident",
-      "technically-fluent"
+  "brand_personality": {
+    "primary_traits": [
+      "sophisticated",
+      "precise",
+      "authoritative"
     ],
-    "avoid": [
-      "playful",
-      "casual",
-      "hyperbolic",
-      "consumer-friendly slang"
-    ]
+    "secondary_traits": [
+      "calm",
+      "institutional",
+      "data-driven"
+    ],
+    "tone_of_voice": "confident-expert",
+    "formality_level": "formal",
+    "energy_level": "composed"
   },
-  "visual_style": {
-    "aesthetic": "dark-mode premium financial terminal",
-    "design_language": "precision-engineered minimalism with data density",
-    "mood": "serious, refined, institutional-grade",
-    "inspiration": [
-      "Bloomberg Terminal",
-      "Linear",
-      "Arc",
+  "visual_identity": {
+    "design_archetype": "premium-financial",
+    "aesthetic_direction": "dark-mode-institutional",
+    "visual_complexity": "refined-detailed",
+    "mood": "serious-trustworthy",
+    "inspiration_references": [
       "Ramp",
-      "Brex"
+      "Arc",
+      "Brex Premium",
+      "Bloomberg Terminal",
+      "Linear"
     ]
   },
-  "color_palette": {
-    "mode": "dark",
-    "primary_background": "#0A0B0D",
-    "secondary_background": "#111316",
-    "surface": "#16191D",
-    "border": "#23272E",
-    "primary_text": "#F5F6F7",
-    "secondary_text": "#9BA1A8",
-    "muted_tex
+  "color_system": {
+    "palette_type": "dark-premium-monochrome-with-accent",
+    "primary_color": {
+      "hue": "deep-charcoal-near-black",
+      "usage": "primary background, dominant surface",
+      "hex_suggestion": "#0A0B0D"
+    },
+    "secondary_color": {
+      "hue": "elevated-graphite",
+      "usage": "card surfaces, elevated panel
 ```
 
-**Step 4 · UI Intent** (2089 ms)
+**Step 4 · UI Intent** (2096 ms)
 ```json
 {
-  "primary_focus": "product_clarity",
+  "primary_focus": "value_prop",
   "cta_policy": {
     "timing": "delayed",
     "intensity": "neutral"
@@ -1444,17 +1591,43 @@ export default function CashManagementPage() {
 }
 ```
 
-**Step 5 · Code Generation** (69082 ms)
+**Step 5 · Code Generation** (99249 ms)
 ```json
 {
   "files": [
     {
       "path": "package.json",
-      "content": "{\n  \"name\": \"treasury-landing\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.12.7\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.7\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
+      "content": "{
+  \"name\": \"ledger-treasury\",
+  \"version\": \"0.1.0\",
+  \"private\": true,
+  \"scripts\": {
+    \"dev\": \"next dev\",
+    \"build\": \"next build\",
+    \"start\": \"next start\",
+    \"lint\": \"next lint\"
+  },
+  \"dependencies\": {
+    \"next\": \"14.2.5\",
+    \"react\": \"18.3.1\",
+    \"react-dom\": \"18.3.1\"
+  },
+  \"devDependencies\": {
+    \"@types/node\": \"20.12.7\",
+    \"@types/react\": \"18.3.3\",
+    \"@types/react-dom\": \"18.3.0\",
+    \"autoprefixer\": \"10.4.19\",
+    \"postcss\": \"8.4.38\",
+    \"tailwindcss\": \"3.4.6\",
+    \"typescript\": \"5.4.5\"
+  }
+}
+"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */\ncons
+      "content": "/** @type {import('next').NextConfig} */
+const
 ```
 
 </details>
@@ -1470,7 +1643,7 @@ export default function CashManagementPage() {
 <details>
 <summary><strong>v0.dev · Baseline</strong> — 1 step</summary>
 
-**Step 1 · Direct Generation** (12219 ms)
+**Step 1 · Direct Generation** (11809 ms)
 ```json
 'use client';
 
@@ -1482,21 +1655,21 @@ export default function Home() {
       {/* Navbar */}
       <nav className="border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-blue-600 rounded"></div>
             <span className="text-xl font-semibold text-gray-900">InvestStart</span>
           </div>
-          <div className="hidden md:flex space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-gray-900 text-sm">
-              Features
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">
-              Learn
-            </a>
+          <div className="hidden md:flex gap-8">
             <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">
               About
             </a>
-            <a href="#" className="text-gray-600 hover:text-g
+            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">
+              Features
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">
+              Security
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 text-
 ```
 
 </details>
@@ -1504,7 +1677,7 @@ export default function Home() {
 <details>
 <summary><strong>SFT only</strong> — 2 steps</summary>
 
-**Step 2 · Classification** (971 ms)
+**Step 2 · Classification** (2095 ms)
 ```json
 {
   "product_type": "B2C SaaS",
@@ -1516,13 +1689,18 @@ export default function Home() {
 }
 ```
 
-**Step 5 · Code Generation (no CDO strategy)** (97154 ms)
+**Step 5 · Code Generation (no CDO strategy)** (96007 ms)
 ```json
 {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "{\"files\":[{\"path\":\"src/app/page.tsx\",\"content\":\"\\\"use client\\\";\\nimport {\\n  Shield,\\n  TrendingUp,\\n  BookOpen,\\n  DollarSign,\\n  Users,\\n  CheckCircle,\\n  ArrowRight,\\n  Star,\\n  Layers,\\n  Lock,\\n  ChevronRight,\\n  BarChart2,\\n  Zap,\\n} from \\\"lucide-react\\\";\\n\\nexport default function Home() {\\n  return (\\n    <div className=\\\"min-h-screen bg-[#0a0f1e] text-white font-sans\\\">\\n      {/* NAV */}\\n      <nav className=\\\"sticky top-0 z-50 bg-[#0a0f1e]/90 backdrop-blur-md border-b border-white/10\\\">\\n        <div className=\\\"max-w-7xl mx-auto px-6 py-4 flex items-center justify-between\\\">\\n          <div className=\\\"flex items-center gap-2\\\">\\n            <div c
+      "content": "```json
+{
+  \"files\": [
+    {
+      \"path\": \"src/app/page.tsx\",
+      \"content\": \"export default function Home() {\n  return (\n    <div className=\\"min-h-screen bg-white text-slate-800 font-sans\\">\n\n      {/* Sticky Nav */}\n      <header className=\\"sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm\\">\n        <div className=\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\">\n          <div className=\\"flex items-center gap-2\\">\n            <div className=\\"w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center\\">\n              <span className=\\"text-white font-bold text-sm\\">S</span>\n            </div>\n            <span cl
 ```
 
 </details>
@@ -1530,7 +1708,7 @@ export default function Home() {
 <details>
 <summary><strong>AI CDO · Best</strong> — 5 steps</summary>
 
-**Step 2 · Classification** (1345 ms)
+**Step 2 · Classification** (1233 ms)
 ```json
 {
   "product_type": "B2C SaaS",
@@ -1542,7 +1720,7 @@ export default function Home() {
 }
 ```
 
-**Step 3 · CDO Strategy** (7263 ms)
+**Step 3 · CDO Strategy** (6148 ms)
 ```json
 {
   "primary_intent": "increase_confidence",
@@ -1563,7 +1741,7 @@ export default function Home() {
   ],
   "strategies": [
     {
-      "name": "Education-Led Confidence Build",
+      "name": "Education-led confidence building",
       "intent": "trust_first",
       "hero_focus": "value_prop",
       "information_order": [
@@ -1582,53 +1760,63 @@ export default function Home() {
         "simplify_language",
         "increase_proof_density"
       ],
-      "rationale": "First-generation investors need understanding before commitment. Leading with accessible value framing and education establishes psychol
+      "rationale": "Prioritizes lowering psychological barriers for first-time investors by leading with accessible value framing and education before an
 ```
 
-**Step 3.5 · Brand Traits** (12956 ms)
+**Step 3.5 · Brand Traits** (13887 ms)
 ```json
 {
-  "brand_personality": {
+  "personality": {
     "primary_traits": [
       "empowering",
       "approachable",
       "trustworthy"
     ],
     "secondary_traits": [
-      "educational",
-      "inclusive",
-      "confident"
+      "warm",
+      "confident",
+      "educational"
     ],
-    "tone_of_voice": "warm_clear_encouraging",
-    "formality_level": "casual_professional",
-    "emotional_register": "uplifting_and_reassuring"
+    "voice": "friendly_human",
+    "formality": "casual_professional",
+    "energy": "calm_assured"
   },
   "visual_style": {
-    "design_language": "modern_friendly_editorial",
-    "aesthetic_direction": "soft_minimalism_with_human_warmth",
-    "visual_complexity": "moderate",
-    "whitespace_usage": "generous",
-    "imagery_style": "diverse_real_people_and_illustrative_charts",
-    "iconography": "rounded_simple_didactic",
-    "data_visualization": "simplified_annotated_friendly",
-    "motion_principles": "gentle_purposeful_guiding"
+    "aesthetic": "warm_modern",
+    "design_era": "2024_contemporary",
+    "inspiration": [
+      "Cash App approachability",
+      "Ellevest empowerment",
+      "Public.com community",
+      "Acorns simplicity"
+    ],
+    "avoid": [
+      "Wall Street imagery",
+      "bull/bear iconography",
+      "intimidating charts",
+      "corporate stock photos",
+      "neon trading aesthetics",
+      "casino-like gamification"
+    ]
   },
   "color_direction": {
-    "palette_type": "warm_optimistic_with_trust_anchor",
-    "primary_hue_family": "deep_teal_or_indigo",
-    "accent_hue_family": "warm_coral_or_golden_yellow",
-    "neutral_
+    "palette_type": "warm_inclusive",
+    "primary_hue": "deep_teal",
+    "accent_hue": "warm_coral",
+    "mood": "welcoming_grounded",
+    "contrast_level": "high",
+    "background_treatment": "soft_off_white_with_warm_
 ```
 
-**Step 4 · UI Intent** (2189 ms)
+**Step 4 · UI Intent** (2192 ms)
 ```json
 {
-  "primary_focus": "product_clarity",
+  "primary_focus": "social_proof",
   "cta_policy": {
     "timing": "delayed",
     "intensity": "soft"
   },
-  "proof_policy": "balanced",
+  "proof_policy": "heavy",
   "content_density": "low",
   "motion_policy": "subtle",
   "creative_license": "restricted",
@@ -1637,17 +1825,42 @@ export default function Home() {
 }
 ```
 
-**Step 5 · Code Generation** (55398 ms)
+**Step 5 · Code Generation** (91036 ms)
 ```json
 {
   "files": [
     {
       "path": "package.json",
-      "content": "{\n  \"name\": \"accessible-investing\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.12.12\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.4\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
+      "content": "{
+  \"name\": \"peer-validation-landing\",
+  \"version\": \"0.1.0\",
+  \"private\": true,
+  \"scripts\": {
+    \"dev\": \"next dev\",
+    \"build\": \"next build\",
+    \"start\": \"next start\",
+    \"lint\": \"next lint\"
+  },
+  \"dependencies\": {
+    \"next\": \"14.2.5\",
+    \"react\": \"18.3.1\",
+    \"react-dom\": \"18.3.1\"
+  },
+  \"devDependencies\": {
+    \"@types/node\": \"20.12.12\",
+    \"@types/react\": \"18.3.3\",
+    \"@types/react-dom\": \"18.3.0\",
+    \"autoprefixer\": \"10.4.19\",
+    \"postcss\": \"8.4.38\",
+    \"tailwindcss\": \"3.4.4\",
+    \"typescript\": \"5.4.5\"
+  }
+}
+"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */\
+      "content": "/** @type {import('next').NextConfig} 
 ```
 
 </details>
