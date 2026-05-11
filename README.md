@@ -122,7 +122,7 @@ This directory includes:
 ### B131
 > AI-assisted screenwriting and story development platform for independent filmmakers and screenwriters — dark, cinematic, and filmmaker-peer with script editor UI preview, beat sheet visualization, scripts developed stats, WGA-awareness callout, and festival alumni testimonials. Positioned against Final Draft as AI-augmented and more structured for story development
 
-| v0.dev · Baseline | SFT only | AI CDO · Best |
+| v0.dev · Baseline | SFT only | AI CDO |
 |:---:|:---:|:---:|
 | ![v0](samples/B131/v0.png) | ![sft](samples/B131/sft.png) | ![aicdo](samples/B131/aicdo.png) |
 
@@ -181,7 +181,7 @@ export default function Home() {
 </details>
 
 <details>
-<summary><strong>AI CDO · Best</strong> — 5 steps</summary>
+<summary><strong>AI CDO</strong> — 5 steps</summary>
 
 **Step 2 · Classification** (1221 ms)
 ```json
@@ -308,7 +308,7 @@ export default function Home() {
 ### B126
 > Digital services portal for a mid-size city government enabling residents to complete permits, payments, and city services online — clear, accessible, WCAG AAA compliant with plain language, services catalog, average task completion time, and accessibility score. Positioned as replacing in-person city hall visits with digital-first services
 
-| v0.dev · Baseline | SFT only | AI CDO · Best |
+| v0.dev · Baseline | SFT only | AI CDO |
 |:---:|:---:|:---:|
 | ![v0](samples/B126/v0.png) | ![sft](samples/B126/sft.png) | ![aicdo](samples/B126/aicdo.png) |
 
@@ -368,7 +368,7 @@ export default function Page() {
 </details>
 
 <details>
-<summary><strong>AI CDO · Best</strong> — 5 steps</summary>
+<summary><strong>AI CDO</strong> — 5 steps</summary>
 
 **Step 2 · Classification** (1266 ms)
 ```json
@@ -496,7 +496,7 @@ export default function Page() {
 ### B077
 > Direct-to-consumer electric commuter bike brand for urban commuters 25–45 seeking a car replacement — bold, high-contrast, and performance-forward with range stats, commute cost savings calculator, and test ride finder. Positioned against entry-level e-bikes as more commuter-engineered
 
-| v0.dev · Baseline | SFT only | AI CDO · Best |
+| v0.dev · Baseline | SFT only | AI CDO |
 |:---:|:---:|:---:|
 | ![v0](samples/B077/v0.png) | ![sft](samples/B077/sft.png) | ![aicdo](samples/B077/aicdo.png) |
 
@@ -556,18 +556,13 @@ export default function Home() {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "```json
-{
-  \"files\": [
-    {
-      \"path\": \"src/app/page.tsx\",
-      \"content\": \"export default function Home() {\n  return (\n    <div className=\\"min-h-screen bg-zinc-950 text-white\\">\n      {/* Sticky Nav */}\n      <nav className=\\"sticky top-0 z-50 bg-zinc-950/95 border-b border-zinc-800 backdrop-blur\\">\n        <div className=\\"max-w-7xl mx-auto px-6 py-4 flex items-center justify-between\\">\n          <div className=\\"flex items-center gap-2\\">\n            <div className=\\"w-8 h-8 bg-lime-400 rounded-md flex items-center justify-center\\">\n              <svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"#09090b\\" strokeWi
+      "content": "```json\n{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"export default function Home() {\\n  return (\\n    <div className=\\\"min-h-screen bg-zinc-950 text-white\\\">\\n      {/* Sticky Nav */}\\n      <nav className=\\\"sticky top-0 z-50 bg-zinc-950/95 border-b border-zinc-800 backdrop-blur\\\">\\n        <div className=\\\"max-w-7xl mx-auto px-6 py-4 flex items-center justify-between\\\">\\n          <div className=\\\"flex items-center gap-2\\\">\\n            <div className=\\\"w-8 h-8 bg-lime-400 rounded-md flex items-center justify-center\\\">\\n              <svg width=\\\"18\\\" height=\\\"18\\\" viewBox=\\\"0 0 24 24\\\" fill=\\\"none\\\" stroke=\\\"#09090b\\\" strokeWi
 ```
 
 </details>
 
 <details>
-<summary><strong>AI CDO · Best</strong> — 5 steps</summary>
+<summary><strong>AI CDO</strong> — 5 steps</summary>
 
 **Step 2 · Classification** (1414 ms)
 ```json
@@ -688,37 +683,11 @@ export default function Home() {
   "files": [
     {
       "path": "package.json",
-      "content": "{
-  \"name\": \"commuter-ebike\",
-  \"version\": \"0.1.0\",
-  \"private\": true,
-  \"scripts\": {
-    \"dev\": \"next dev\",
-    \"build\": \"next build\",
-    \"start\": \"next start\",
-    \"lint\": \"next lint\"
-  },
-  \"dependencies\": {
-    \"next\": \"14.2.5\",
-    \"react\": \"18.3.1\",
-    \"react-dom\": \"18.3.1\"
-  },
-  \"devDependencies\": {
-    \"@types/node\": \"20.12.7\",
-    \"@types/react\": \"18.3.3\",
-    \"@types/react-dom\": \"18.3.0\",
-    \"autoprefixer\": \"10.4.19\",
-    \"postcss\": \"8.4.38\",
-    \"tailwindcss\": \"3.4.4\",
-    \"typescript\": \"5.4.5\"
-  }
-}
-"
+      "content": "{\n  \"name\": \"commuter-ebike\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.12.7\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.4\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */
-const 
+      "content": "/** @type {import('next').NextConfig} */\nconst 
 ```
 
 </details>
@@ -726,7 +695,7 @@ const
 ### B061
 > Coding bootcamp for career changers entering software development — motivating, outcome-focused, and credible with strong job placement rates, average starting salary stats, and employer partner logos. Positioned against top bootcamps as more mentorship-intensive
 
-| v0.dev · Baseline | SFT only | AI CDO · Best |
+| v0.dev · Baseline | SFT only | AI CDO |
 |:---:|:---:|:---:|
 | ![v0](samples/B061/v0.png) | ![sft](samples/B061/sft.png) | ![aicdo](samples/B061/aicdo.png) |
 
@@ -784,25 +753,13 @@ export default function Home() {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "export default function Home() {
-  return (
-    <div className=\"min-h-screen bg-white text-gray-900 font-sans\">
-      {/* Sticky Nav */}
-      <nav className=\"sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm\">
-        <div className=\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\">
-          <div className=\"flex items-center gap-2\">
-            <div className=\"w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center\">
-              <span className=\"text-white font-bold text-sm\">L</span>
-            </div>
-            <span className=\"text-xl font-bold text-gray-900\">LaunchCode Academy</span>
-          </div>
-          <div className=\"hidden md:flex items-
+      "content": "export default function Home() {\n  return (\n    <div className=\"min-h-screen bg-white text-gray-900 font-sans\">\n      {/* Sticky Nav */}\n      <nav className=\"sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm\">\n        <div className=\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\">\n          <div className=\"flex items-center gap-2\">\n            <div className=\"w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center\">\n              <span className=\"text-white font-bold text-sm\">L</span>\n            </div>\n            <span className=\"text-xl font-bold text-gray-900\">LaunchCode Academy</span>\n          </div>\n          <div className=\"hidden md:flex items-
 ```
 
 </details>
 
 <details>
-<summary><strong>AI CDO · Best</strong> — 5 steps</summary>
+<summary><strong>AI CDO</strong> — 5 steps</summary>
 
 **Step 2 · Classification** (1215 ms)
 ```json
@@ -918,37 +875,11 @@ export default function Home() {
   "files": [
     {
       "path": "package.json",
-      "content": "{
-  \"name\": \"clear-value-path\",
-  \"version\": \"0.1.0\",
-  \"private\": true,
-  \"scripts\": {
-    \"dev\": \"next dev\",
-    \"build\": \"next build\",
-    \"start\": \"next start\",
-    \"lint\": \"next lint\"
-  },
-  \"dependencies\": {
-    \"next\": \"14.2.5\",
-    \"react\": \"18.3.1\",
-    \"react-dom\": \"18.3.1\"
-  },
-  \"devDependencies\": {
-    \"@types/node\": \"20.12.7\",
-    \"@types/react\": \"18.3.3\",
-    \"@types/react-dom\": \"18.3.0\",
-    \"autoprefixer\": \"10.4.19\",
-    \"postcss\": \"8.4.38\",
-    \"tailwindcss\": \"3.4.7\",
-    \"typescript\": \"5.4.5\"
-  }
-}
-"
+      "content": "{\n  \"name\": \"clear-value-path\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.12.7\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.7\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */
-modu
+      "content": "/** @type {import('next').NextConfig} */\nmodu
 ```
 
 </details>
@@ -956,7 +887,7 @@ modu
 ### B116
 > Immigration legal aid nonprofit providing pro bono services to immigrants and asylum seekers — compassionate, trustworthy, and multilingual with cases handled stats, languages supported, and pro bono attorney network. Positioned as the most accessible immigration legal resource for unrepresented immigrants
 
-| v0.dev · Baseline | SFT only | AI CDO · Best |
+| v0.dev · Baseline | SFT only | AI CDO |
 |:---:|:---:|:---:|
 | ![v0](samples/B116/v0.png) | ![sft](samples/B116/sft.png) | ![aicdo](samples/B116/aicdo.png) |
 
@@ -1013,18 +944,13 @@ export default function Home() {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "```json
-{
-  \"files\": [
-    {
-      \"path\": \"src/app/page.tsx\",
-      \"content\": \"export default function Home() {\n  return (\n    <div className=\\"min-h-screen bg-white text-gray-800 font-sans\\">\n      {/* Sticky Nav */}\n      <nav className=\\"sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm\\">\n        <div className=\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\">\n          <div className=\\"flex items-center gap-2\\">\n            <div className=\\"w-8 h-8 rounded-full bg-teal-600 flex items-center justify-center\\">\n              <svg className=\\"w-5 h-5 text-white\\" fill=\\"none\\" stroke=\\"currentColor\\" viewBox=\\"0 0 24 24\\"
+      "content": "```json\n{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"export default function Home() {\\n  return (\\n    <div className=\\\"min-h-screen bg-white text-gray-800 font-sans\\\">\\n      {/* Sticky Nav */}\\n      <nav className=\\\"sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm\\\">\\n        <div className=\\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\\">\\n          <div className=\\\"flex items-center gap-2\\\">\\n            <div className=\\\"w-8 h-8 rounded-full bg-teal-600 flex items-center justify-center\\\">\\n              <svg className=\\\"w-5 h-5 text-white\\\" fill=\\\"none\\\" stroke=\\\"currentColor\\\" viewBox=\\\"0 0 24 24\\\"
 ```
 
 </details>
 
 <details>
-<summary><strong>AI CDO · Best</strong> — 5 steps</summary>
+<summary><strong>AI CDO</strong> — 5 steps</summary>
 
 **Step 2 · Classification** (1215 ms)
 ```json
@@ -1138,37 +1064,11 @@ export default function Home() {
   "files": [
     {
       "path": "package.json",
-      "content": "{
-  \"name\": \"proof-led-assurance\",
-  \"version\": \"0.1.0\",
-  \"private\": true,
-  \"scripts\": {
-    \"dev\": \"next dev\",
-    \"build\": \"next build\",
-    \"start\": \"next start\",
-    \"lint\": \"next lint\"
-  },
-  \"dependencies\": {
-    \"next\": \"14.2.5\",
-    \"react\": \"18.3.1\",
-    \"react-dom\": \"18.3.1\"
-  },
-  \"devDependencies\": {
-    \"@types/node\": \"20.12.7\",
-    \"@types/react\": \"18.3.3\",
-    \"@types/react-dom\": \"18.3.0\",
-    \"autoprefixer\": \"10.4.19\",
-    \"postcss\": \"8.4.38\",
-    \"tailwindcss\": \"3.4.7\",
-    \"typescript\": \"5.4.5\"
-  }
-}
-"
+      "content": "{\n  \"name\": \"proof-led-assurance\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.12.7\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.7\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */
-c
+      "content": "/** @type {import('next').NextConfig} */\nc
 ```
 
 </details>
@@ -1176,7 +1076,7 @@ c
 ### B103
 > Sleep and focus soundscape app with science-backed audio design for adults struggling with sleep onset or deep work — calm, dark-mode friendly with waveform visualizations, sound category previews, sleep improvement stats, and neuroscience credentials. Positioned against Calm as more focus-and-sleep-specific
 
-| v0.dev · Baseline | SFT only | AI CDO · Best |
+| v0.dev · Baseline | SFT only | AI CDO |
 |:---:|:---:|:---:|
 | ![v0](samples/B103/v0.png) | ![sft](samples/B103/sft.png) | ![aicdo](samples/B103/aicdo.png) |
 
@@ -1232,18 +1132,13 @@ export default function SoundscapeApp() {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "```json
-{
-  \"files\": [
-    {
-      \"path\": \"src/app/page.tsx\",
-      \"content\": \"export default function Home() {\n  return (\n    <div className=\\"min-h-screen bg-gray-950 text-gray-100\\">\n      {/* Sticky Nav */}\n      <nav className=\\"sticky top-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800\\">\n        <div className=\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\">\n          <div className=\\"flex items-center gap-2\\">\n            <div className=\\"w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center\\">\n              <svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" fill=\\"none\\">\n                <path d
+      "content": "```json\n{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"export default function Home() {\\n  return (\\n    <div className=\\\"min-h-screen bg-gray-950 text-gray-100\\\">\\n      {/* Sticky Nav */}\\n      <nav className=\\\"sticky top-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800\\\">\\n        <div className=\\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\\">\\n          <div className=\\\"flex items-center gap-2\\\">\\n            <div className=\\\"w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center\\\">\\n              <svg width=\\\"18\\\" height=\\\"18\\\" viewBox=\\\"0 0 18 18\\\" fill=\\\"none\\\">\\n                <path d
 ```
 
 </details>
 
 <details>
-<summary><strong>AI CDO · Best</strong> — 5 steps</summary>
+<summary><strong>AI CDO</strong> — 5 steps</summary>
 
 **Step 2 · Classification** (1204 ms)
 ```json
@@ -1369,37 +1264,11 @@ export default function SoundscapeApp() {
   "files": [
     {
       "path": "package.json",
-      "content": "{
-  \"name\": \"lumen-landing\",
-  \"version\": \"0.1.0\",
-  \"private\": true,
-  \"scripts\": {
-    \"dev\": \"next dev\",
-    \"build\": \"next build\",
-    \"start\": \"next start\",
-    \"lint\": \"next lint\"
-  },
-  \"dependencies\": {
-    \"next\": \"14.2.5\",
-    \"react\": \"18.3.1\",
-    \"react-dom\": \"18.3.1\"
-  },
-  \"devDependencies\": {
-    \"@types/node\": \"20.11.30\",
-    \"@types/react\": \"18.2.73\",
-    \"@types/react-dom\": \"18.2.22\",
-    \"autoprefixer\": \"10.4.19\",
-    \"postcss\": \"8.4.38\",
-    \"tailwindcss\": \"3.4.4\",
-    \"typescript\": \"5.4.5\"
-  }
-}
-"
+      "content": "{\n  \"name\": \"lumen-landing\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.11.30\",\n    \"@types/react\": \"18.2.73\",\n    \"@types/react-dom\": \"18.2.22\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.4\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */
-modu
+      "content": "/** @type {import('next').NextConfig} */\nmodu
 ```
 
 </details>
@@ -1407,7 +1276,7 @@ modu
 ### B040
 > Cash management and yield optimization platform for Series A–C startup CFOs managing $1M–$50M in cash — sophisticated, precise, and dark-mode premium with yield rate comparisons, FDIC coverage explainer, and VC-backed client logos. Positioned against Mercury as yield-optimized rather than just banking
 
-| v0.dev · Baseline | SFT only | AI CDO · Best |
+| v0.dev · Baseline | SFT only | AI CDO |
 |:---:|:---:|:---:|
 | ![v0](samples/B040/v0.png) | ![sft](samples/B040/sft.png) | ![aicdo](samples/B040/aicdo.png) |
 
@@ -1471,7 +1340,7 @@ export default function Home() {
 </details>
 
 <details>
-<summary><strong>AI CDO · Best</strong> — 5 steps</summary>
+<summary><strong>AI CDO</strong> — 5 steps</summary>
 
 **Step 2 · Classification** (1517 ms)
 ```json
@@ -1599,7 +1468,7 @@ export default function Home() {
 ### B037
 > Micro-investment platform for first-generation investors from underrepresented backgrounds — empowering, accessible, and jargon-free with $5 minimum investment, diversification education, and SIPC protection. Positioned against Robinhood as education-first rather than trading-first
 
-| v0.dev · Baseline | SFT only | AI CDO · Best |
+| v0.dev · Baseline | SFT only | AI CDO |
 |:---:|:---:|:---:|
 | ![v0](samples/B037/v0.png) | ![sft](samples/B037/sft.png) | ![aicdo](samples/B037/aicdo.png) |
 
@@ -1659,18 +1528,13 @@ export default function Home() {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "```json
-{
-  \"files\": [
-    {
-      \"path\": \"src/app/page.tsx\",
-      \"content\": \"export default function Home() {\n  return (\n    <div className=\\"min-h-screen bg-white text-slate-800 font-sans\\">\n\n      {/* Sticky Nav */}\n      <header className=\\"sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm\\">\n        <div className=\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\">\n          <div className=\\"flex items-center gap-2\\">\n            <div className=\\"w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center\\">\n              <span className=\\"text-white font-bold text-sm\\">S</span>\n            </div>\n            <span cl
+      "content": "```json\n{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"export default function Home() {\\n  return (\\n    <div className=\\\"min-h-screen bg-white text-slate-800 font-sans\\\">\\n\\n      {/* Sticky Nav */}\\n      <header className=\\\"sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm\\\">\\n        <div className=\\\"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between\\\">\\n          <div className=\\\"flex items-center gap-2\\\">\\n            <div className=\\\"w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center\\\">\\n              <span className=\\\"text-white font-bold text-sm\\\">S</span>\\n            </div>\\n            <span cl
 ```
 
 </details>
 
 <details>
-<summary><strong>AI CDO · Best</strong> — 5 steps</summary>
+<summary><strong>AI CDO</strong> — 5 steps</summary>
 
 **Step 2 · Classification** (1233 ms)
 ```json
@@ -1795,32 +1659,7 @@ export default function Home() {
   "files": [
     {
       "path": "package.json",
-      "content": "{
-  \"name\": \"peer-validation-landing\",
-  \"version\": \"0.1.0\",
-  \"private\": true,
-  \"scripts\": {
-    \"dev\": \"next dev\",
-    \"build\": \"next build\",
-    \"start\": \"next start\",
-    \"lint\": \"next lint\"
-  },
-  \"dependencies\": {
-    \"next\": \"14.2.5\",
-    \"react\": \"18.3.1\",
-    \"react-dom\": \"18.3.1\"
-  },
-  \"devDependencies\": {
-    \"@types/node\": \"20.12.12\",
-    \"@types/react\": \"18.3.3\",
-    \"@types/react-dom\": \"18.3.0\",
-    \"autoprefixer\": \"10.4.19\",
-    \"postcss\": \"8.4.38\",
-    \"tailwindcss\": \"3.4.4\",
-    \"typescript\": \"5.4.5\"
-  }
-}
-"
+      "content": "{\n  \"name\": \"peer-validation-landing\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.12.12\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.4\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
     },
     {
       "path": "next.config.js",
@@ -1832,7 +1671,7 @@ export default function Home() {
 ### B021
 > Teletherapy platform connecting adults 25–45 to therapists for anxiety, burnout, and life transitions — warm, safe, and non-clinical with HIPAA compliance, therapist matching quiz, and insurance coverage checker. Positioned against BetterHelp as more therapist-quality-focused
 
-| v0.dev · Baseline | SFT only | AI CDO · Best |
+| v0.dev · Baseline | SFT only | AI CDO |
 |:---:|:---:|:---:|
 | ![v0](samples/B021/v0.png) | ![sft](samples/B021/sft.png) | ![aicdo](samples/B021/aicdo.png) |
 
@@ -1891,13 +1730,13 @@ export default function Home() {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "{\"files\":[{\"path\":\"src/app/page.tsx\",\"content\":\"'use client';\nimport { useState } from 'react';\nimport {\n  Heart,\n  Shield,\n  Star,\n  CheckCircle,\n  ArrowRight,\n  Menu,\n  X,\n  Clock,\n  Users,\n  Award,\n  Lock,\n  ChevronRight,\n  Sparkles,\n  Brain,\n  Leaf,\n} from 'lucide-react';\n\nexport default function Home() {\n  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);\n\n  return (\n    <div className=\\"min-h-screen bg-[#FAFAF8] text-[#1C1C1E] font-sans\\">\n      {/* Sticky Nav */}\n      <nav className=\\"sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#E8E4DE]\\">\n        <div className=\\"max-w-6xl mx-auto px-6 py-4 flex items-cente
+      "content": "{\"files\":[{\"path\":\"src/app/page.tsx\",\"content\":\"'use client';\\nimport { useState } from 'react';\\nimport {\\n  Heart,\\n  Shield,\\n  Star,\\n  CheckCircle,\\n  ArrowRight,\\n  Menu,\\n  X,\\n  Clock,\\n  Users,\\n  Award,\\n  Lock,\\n  ChevronRight,\\n  Sparkles,\\n  Brain,\\n  Leaf,\\n} from 'lucide-react';\\n\\nexport default function Home() {\\n  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);\\n\\n  return (\\n    <div className=\\\"min-h-screen bg-[#FAFAF8] text-[#1C1C1E] font-sans\\\">\\n      {/* Sticky Nav */}\\n      <nav className=\\\"sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#E8E4DE]\\\">\\n        <div className=\\\"max-w-6xl mx-auto px-6 py-4 flex items-cente
 ```
 
 </details>
 
 <details>
-<summary><strong>AI CDO · Best</strong> — 5 steps</summary>
+<summary><strong>AI CDO</strong> — 5 steps</summary>
 
 **Step 2 · Classification** (1297 ms)
 ```json
@@ -2014,37 +1853,11 @@ export default function Home() {
   "files": [
     {
       "path": "package.json",
-      "content": "{
-  \"name\": \"guided-understanding\",
-  \"version\": \"0.1.0\",
-  \"private\": true,
-  \"scripts\": {
-    \"dev\": \"next dev\",
-    \"build\": \"next build\",
-    \"start\": \"next start\",
-    \"lint\": \"next lint\"
-  },
-  \"dependencies\": {
-    \"next\": \"14.2.5\",
-    \"react\": \"18.3.1\",
-    \"react-dom\": \"18.3.1\"
-  },
-  \"devDependencies\": {
-    \"@types/node\": \"20.11.0\",
-    \"@types/react\": \"18.3.3\",
-    \"@types/react-dom\": \"18.3.0\",
-    \"autoprefixer\": \"10.4.19\",
-    \"postcss\": \"8.4.39\",
-    \"tailwindcss\": \"3.4.7\",
-    \"typescript\": \"5.4.5\"
-  }
-}
-"
+      "content": "{\n  \"name\": \"guided-understanding\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.11.0\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.39\",\n    \"tailwindcss\": \"3.4.7\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */
-
+      "content": "/** @type {import('next').NextConfig} */\n
 ```
 
 </details>
@@ -2052,7 +1865,7 @@ export default function Home() {
 ### B007
 > AI contract review and redlining platform for in-house counsel and legal ops at mid-market companies, offering bar association-endorsed accuracy with Fortune 500 client validation — positioned against Ironclad as more affordable for non-enterprise legal teams
 
-| v0.dev · Baseline | SFT only | AI CDO · Best |
+| v0.dev · Baseline | SFT only | AI CDO |
 |:---:|:---:|:---:|
 | ![v0](samples/B007/v0.png) | ![sft](samples/B007/sft.png) | ![aicdo](samples/B007/aicdo.png) |
 
@@ -2108,18 +1921,13 @@ export default function Page() {
   "files": [
     {
       "path": "src/app/page.tsx",
-      "content": "```json
-{
-  \"files\": [
-    {
-      \"path\": \"src/app/page.tsx\",
-      \"content\": \"\\"use client\\";\nimport {\n  Shield,\n  CheckCircle,\n  Zap,\n  FileText,\n  BarChart2,\n  Lock,\n  ArrowRight,\n  Star,\n  Users,\n  Clock,\n  Award,\n  ChevronRight,\n  Menu,\n  X,\n} from \\"lucide-react\\";\nimport { useState } from \\"react\\";\n\nexport default function Home() {\n  const [menuOpen, setMenuOpen] = useState(false);\n\n  return (\n    <div className=\\"min-h-screen bg-[#0A0F1E] text-white font-sans\\">\n      {/* STICKY NAV */}\n      <nav className=\\"sticky top-0 z-50 bg-[#0A0F1E]/95 backdrop-blur border-b border-white/10\\">\n        <div className=\\"max-w-7xl mx
+      "content": "```json\n{\n  \"files\": [\n    {\n      \"path\": \"src/app/page.tsx\",\n      \"content\": \"\\\"use client\\\";\\nimport {\\n  Shield,\\n  CheckCircle,\\n  Zap,\\n  FileText,\\n  BarChart2,\\n  Lock,\\n  ArrowRight,\\n  Star,\\n  Users,\\n  Clock,\\n  Award,\\n  ChevronRight,\\n  Menu,\\n  X,\\n} from \\\"lucide-react\\\";\\nimport { useState } from \\\"react\\\";\\n\\nexport default function Home() {\\n  const [menuOpen, setMenuOpen] = useState(false);\\n\\n  return (\\n    <div className=\\\"min-h-screen bg-[#0A0F1E] text-white font-sans\\\">\\n      {/* STICKY NAV */}\\n      <nav className=\\\"sticky top-0 z-50 bg-[#0A0F1E]/95 backdrop-blur border-b border-white/10\\\">\\n        <div className=\\\"max-w-7xl mx
 ```
 
 </details>
 
 <details>
-<summary><strong>AI CDO · Best</strong> — 5 steps</summary>
+<summary><strong>AI CDO</strong> — 5 steps</summary>
 
 **Step 2 · Classification** (1243 ms)
 ```json
@@ -2236,37 +2044,11 @@ export default function Page() {
   "files": [
     {
       "path": "package.json",
-      "content": "{
-  \"name\": \"clarity-landing\",
-  \"version\": \"0.1.0\",
-  \"private\": true,
-  \"scripts\": {
-    \"dev\": \"next dev\",
-    \"build\": \"next build\",
-    \"start\": \"next start\",
-    \"lint\": \"next lint\"
-  },
-  \"dependencies\": {
-    \"next\": \"14.2.5\",
-    \"react\": \"18.3.1\",
-    \"react-dom\": \"18.3.1\"
-  },
-  \"devDependencies\": {
-    \"@types/node\": \"20.12.7\",
-    \"@types/react\": \"18.3.3\",
-    \"@types/react-dom\": \"18.3.0\",
-    \"autoprefixer\": \"10.4.19\",
-    \"postcss\": \"8.4.38\",
-    \"tailwindcss\": \"3.4.7\",
-    \"typescript\": \"5.4.5\"
-  }
-}
-"
+      "content": "{\n  \"name\": \"clarity-landing\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"next\": \"14.2.5\",\n    \"react\": \"18.3.1\",\n    \"react-dom\": \"18.3.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"20.12.7\",\n    \"@types/react\": \"18.3.3\",\n    \"@types/react-dom\": \"18.3.0\",\n    \"autoprefixer\": \"10.4.19\",\n    \"postcss\": \"8.4.38\",\n    \"tailwindcss\": \"3.4.7\",\n    \"typescript\": \"5.4.5\"\n  }\n}\n"
     },
     {
       "path": "next.config.js",
-      "content": "/** @type {import('next').NextConfig} */
-const
+      "content": "/** @type {import('next').NextConfig} */\nconst
 ```
 
 </details>
